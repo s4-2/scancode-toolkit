@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Contributing to the Documentation &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Roadmap" href="roadmap.html" />
+    <link rel="prev" title="How to cut a new release:" href="cut_new_release.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli-reference/index.html"><strong>Command Line Interface Reference</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Contribute</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="contrib_dev.html">Contributing to Code Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cut_new_release.html">How to cut a new release:</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Contributing to the Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup-local-build">Setup Local Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#share-document-improvements">Share Document Improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#continuous-integration">Continuous Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#style-checks-using-doc8">Style Checks Using <code class="docutils literal notranslate"><span class="pre">Doc8</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-run-style-tests">How To Run Style Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-checked">What is Checked?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#interspinx">Interspinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#style-conventions-for-the-documentaion">Style Conventions for the Documentaion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#converting-from-markdown">Converting from Markdown</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc17_final_report.html">Google Summer of Code 2017 - Final report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc19_final_report.html">Google Summer of Code 2019 - Final report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long_running_issues.html">Long Running Issues - Help Needed</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Contribute</strong></a> &raquo;</li>
+        
+      <li>Contributing to the Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/contribute/contrib_doc.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="contributing-to-the-documentation">
+<span id="contrib-doc-dev"></span><h1>Contributing to the Documentation<a class="headerlink" href="#contributing-to-the-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setup-local-build">
+<span id="contrib-doc-setup-local"></span><h2>Setup Local Build<a class="headerlink" href="#setup-local-build" title="Permalink to this headline">¶</a></h2>
+<p>To get started, create or identify a working directory on your local machine.</p>
+<p>Open that directory and execute the following command in a terminal session:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nexB</span><span class="o">/</span><span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>That will create an <code class="docutils literal notranslate"><span class="pre">/scancode-toolkit</span></code> directory in your working directory.
+Now you can install the dependencies in a virtualenv:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span>
+<span class="n">virtualenv</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span> <span class="n">docs</span><span class="o">-</span><span class="n">venv</span>
+<span class="n">source</span> <span class="n">docs</span><span class="o">-</span><span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+<p>Now, the following prerequisites are installed</p>
+<ul class="simple">
+<li><p>Sphinx</p></li>
+<li><p>sphinx_rtd_theme (the format theme used by ReadTheDocs)</p></li>
+<li><p>docs8 (style linter)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">Sphinx</span> <span class="n">sphinx_rtd_theme</span> <span class="n">doc8</span>
+</pre></div>
+</div>
+<p>Now you can build the HTML documents locally:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">docs</span>
+<span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>Assuming that your Sphinx installation was successful, Sphinx should build a local instance of the
+documentation .html files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="n">build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In case this command did not work, for example on Ubuntu 18.04 you may get a message like “Couldn’t
+get a file descriptor referring to the console”, try:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">see</span> <span class="n">build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+</div>
+<p>You now have a local build of the AboutCode documents.</p>
+</div>
+<div class="section" id="share-document-improvements">
+<span id="contrib-doc-share-improvements"></span><h2>Share Document Improvements<a class="headerlink" href="#share-document-improvements" title="Permalink to this headline">¶</a></h2>
+<p>Ensure that you have the latest files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span>
+<span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p>Before commiting changes run Continious Integration Scripts locally to run tests. Refer
+<a class="reference internal" href="#doc-ci"><span class="std std-ref">Continuous Integration</span></a> for instructions on the same.</p>
+<p>Follow standard git procedures to upload your new and modified files. The following commands are
+examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+<span class="n">git</span> <span class="n">add</span> <span class="n">source</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">rst</span>
+<span class="n">git</span> <span class="n">add</span> <span class="n">source</span><span class="o">/</span><span class="n">how</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">scan</span><span class="o">.</span><span class="n">rst</span>
+<span class="n">git</span> <span class="n">status</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;New how-to document that explains how to scan&quot;</span>
+<span class="n">git</span> <span class="n">status</span>
+<span class="n">git</span> <span class="n">push</span>
+<span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p>The Scancode-Toolkit webhook with ReadTheDocs should rebuild the documentation after your
+Pull Request is Merged.</p>
+<p>Refer the <a class="reference external" href="https://git-scm.com/book/en/v2/">Pro Git Book</a> available online for Git tutorials
+covering more complex topics on Branching, Merging, Rebasing etc.</p>
+</div>
+<div class="section" id="continuous-integration">
+<span id="doc-ci"></span><h2>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permalink to this headline">¶</a></h2>
+<p>The documentations are checked on every new commit through Travis-CI, so that common errors are
+avoided and documentation standards are enforced. Travis-CI presently checks for these 3 aspects
+of the documentation :</p>
+<ol class="arabic simple">
+<li><p>Successful Builds (By using <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code>)</p></li>
+<li><p>No Broken Links   (By Using <code class="docutils literal notranslate"><span class="pre">link-check</span></code>)</p></li>
+<li><p>Linting Errors    (By Using <code class="docutils literal notranslate"><span class="pre">Doc8</span></code>)</p></li>
+</ol>
+<p>So run these scripts at your local system before creating a Pull Request:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">docs</span>
+<span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">sphinx_build_link_check</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">doc8_style_check</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="style-checks-using-doc8">
+<span id="doc-style-docs8"></span><h2>Style Checks Using <code class="docutils literal notranslate"><span class="pre">Doc8</span></code><a class="headerlink" href="#style-checks-using-doc8" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-to-run-style-tests">
+<h3>How To Run Style Tests<a class="headerlink" href="#how-to-run-style-tests" title="Permalink to this headline">¶</a></h3>
+<p>In the project root, run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ doc8 --max-line-length 100 docs/source/ --ignore D000
+</pre></div>
+</div>
+<p>A sample output is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Scanning</span><span class="o">...</span>
+<span class="n">Validating</span><span class="o">...</span>
+<span class="n">docs</span><span class="o">/</span><span class="n">source</span><span class="o">/</span><span class="n">misc</span><span class="o">/</span><span class="n">licence_policy_plugin</span><span class="o">.</span><span class="n">rst</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span> <span class="n">D002</span> <span class="n">Trailing</span> <span class="n">whitespace</span>
+<span class="n">docs</span><span class="o">/</span><span class="n">source</span><span class="o">/</span><span class="n">misc</span><span class="o">/</span><span class="n">faq</span><span class="o">.</span><span class="n">rst</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span> <span class="n">D003</span> <span class="n">Tabulation</span> <span class="n">used</span> <span class="k">for</span> <span class="n">indentation</span>
+<span class="n">docs</span><span class="o">/</span><span class="n">source</span><span class="o">/</span><span class="n">misc</span><span class="o">/</span><span class="n">faq</span><span class="o">.</span><span class="n">rst</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span> <span class="n">D001</span> <span class="n">Line</span> <span class="n">too</span> <span class="n">long</span>
+<span class="n">docs</span><span class="o">/</span><span class="n">source</span><span class="o">/</span><span class="n">misc</span><span class="o">/</span><span class="n">support</span><span class="o">.</span><span class="n">rst</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span> <span class="n">D005</span> <span class="n">No</span> <span class="n">newline</span> <span class="n">at</span> <span class="n">end</span> <span class="n">of</span> <span class="n">file</span>
+<span class="o">========</span>
+<span class="n">Total</span> <span class="n">files</span> <span class="n">scanned</span> <span class="o">=</span> <span class="mi">34</span>
+<span class="n">Total</span> <span class="n">files</span> <span class="n">ignored</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">Total</span> <span class="n">accumulated</span> <span class="n">errors</span> <span class="o">=</span> <span class="mi">326</span>
+<span class="n">Detailed</span> <span class="n">error</span> <span class="n">counts</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">CheckCarriageReturn</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="o">-</span> <span class="n">CheckIndentationNoTab</span> <span class="o">=</span> <span class="mi">75</span>
+    <span class="o">-</span> <span class="n">CheckMaxLineLength</span> <span class="o">=</span> <span class="mi">190</span>
+    <span class="o">-</span> <span class="n">CheckNewlineEndOfFile</span> <span class="o">=</span> <span class="mi">13</span>
+    <span class="o">-</span> <span class="n">CheckTrailingWhitespace</span> <span class="o">=</span> <span class="mi">47</span>
+    <span class="o">-</span> <span class="n">CheckValidity</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Now fix the errors and run again till there isn’t any style error in the documentation.</p>
+</div>
+<div class="section" id="what-is-checked">
+<h3>What is Checked?<a class="headerlink" href="#what-is-checked" title="Permalink to this headline">¶</a></h3>
+<p>PyCQA is an Organization for code quality tools (and plugins) for the Python programming language.
+Doc8 is a sub-project of the same Organization. Refer this <a class="reference external" href="https://github.com/PyCQA/doc8/blob/master/README.rst">README</a> for more details.</p>
+<p>What is checked:</p>
+<blockquote>
+<div><ul>
+<li><p>invalid rst format - D000</p></li>
+<li><p>lines should not be longer than 100 characters - D001</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>RST exception: line with no whitespace except in the beginning</p></li>
+<li><p>RST exception: lines with http or https URLs</p></li>
+<li><p>RST exception: literal blocks</p></li>
+<li><p>RST exception: rst target directives</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>no trailing whitespace - D002</p></li>
+<li><p>no tabulation for indentation - D003</p></li>
+<li><p>no carriage returns (use UNIX newlines) - D004</p></li>
+<li><p>no newline at end of file - D005</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="interspinx">
+<span id="doc-interspinx"></span><h2>Interspinx<a class="headerlink" href="#interspinx" title="Permalink to this headline">¶</a></h2>
+<p>ScanCode toolkit documentation uses <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html">Intersphinx</a>
+to link to other Sphinx Documentations, to maintain links to other Aboutcode Projects.</p>
+<p>To link sections in the same documentation, standart reST labels are used. Refer
+<a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role">Cross-Referencing</a> for more information.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. _my-reference-label:
+
+Section to cross-reference
+--------------------------
+
+This is the text of the section.
+
+It refers to the section itself, see :ref:`my-reference-label`.
+</pre></div>
+</div>
+<p>Now, using Intersphinx, you can create these labels in one Sphinx Documentation and then referance
+these labels from another Sphinx Documentation, hosted in different locations.</p>
+<p>You just have to add the following in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file for your Sphinx Documentation, where you
+want to add the links:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+<span class="s1">&#39;sphinx.ext.intersphinx&#39;</span>
+<span class="p">]</span>
+
+<span class="n">intersphinx_mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;aboutcode&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;https://aboutcode.readthedocs.io/en/latest/&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)}</span>
+</pre></div>
+</div>
+<p>To show all Intersphinx links and their targets of an Intersphinx mapping file, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">msphinx</span><span class="o">.</span><span class="n">ext</span><span class="o">.</span><span class="n">intersphinx</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">aboutcode</span><span class="o">.</span><span class="n">readthedocs</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">en</span><span class="o">/</span><span class="n">latest</span><span class="o">/</span><span class="n">objects</span><span class="o">.</span><span class="n">inv</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-msphinx.ext.intersphinx</span> <span class="pre">https://aboutcode.readthedocs.io/objects.inv</span></code> will give
+error.</p>
+</div>
+<p>This enables you to create links to the <code class="docutils literal notranslate"><span class="pre">aboutcode</span></code> Documentation in your own Documentation,
+where you modified the configuration file. Links can be added like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>For more details refer :ref:`aboutcode:doc_style_guide`.
+</pre></div>
+</div>
+<p>You can also not use the <code class="docutils literal notranslate"><span class="pre">aboutcode</span></code> label assigned to all links from aboutcode.readthedocs.io,
+if you don’t have a label having the same name in your Sphinx Documentation. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>For more details refer :ref:`doc_style_guide`.
+</pre></div>
+</div>
+<p>If you have a label in your documentation which is also present in the documentation linked by
+Intersphinx, and you link to that label, it will create a link to the local label.</p>
+<p>For more information, refer this tutorial named
+<a class="reference external" href="https://my-favorite-documentation-test.readthedocs.io/en/latest/using_intersphinx.html">Using Intersphinx</a>.</p>
+</div>
+<div class="section" id="style-conventions-for-the-documentaion">
+<span id="doc-style-conv"></span><h2>Style Conventions for the Documentaion<a class="headerlink" href="#style-conventions-for-the-documentaion" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Headings</p>
+<blockquote>
+<div><p>(<a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#sections">Refer</a>)
+Normally, there are no heading levels assigned to certain characters as the structure is
+determined from the succession of headings. However, this convention is used in Python’s Style
+Guide for documenting which you may follow:</p>
+<p># with overline, for parts</p>
+<ul class="simple">
+<li><p>with overline, for chapters</p></li>
+</ul>
+<p>=, for sections</p>
+<p>-, for subsections</p>
+<p>^, for sub-subsections</p>
+<p>“, for paragraphs</p>
+</div></blockquote>
+</li>
+<li><p>Heading Underlines</p>
+<blockquote>
+<div><p>Do not use underlines that are longer/shorter than the title headline itself. As in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Correct</span> <span class="p">:</span>
+
+<span class="n">Extra</span> <span class="n">Style</span> <span class="n">Checks</span>
+<span class="o">------------------</span>
+
+<span class="n">Incorrect</span> <span class="p">:</span>
+
+<span class="n">Extra</span> <span class="n">Style</span> <span class="n">Checks</span>
+<span class="o">------------------------</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Underlines shorter than the Title text generates Errors on sphinx-build.</p>
+</div>
+<ol class="arabic" start="3">
+<li><p>Internal Links</p>
+<blockquote>
+<div><p>Using <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> is advised over standard reStructuredText links to sections (like
+<code class="docutils literal notranslate"><span class="pre">`Section</span> <span class="pre">title`_</span></code>) because it works across files, when section headings are changed, will
+raise warnings if incorrect, and works for all builders that support cross-references.
+However, external links are created by using the standard <code class="docutils literal notranslate"><span class="pre">`Section</span> <span class="pre">title`_</span></code> method.</p>
+</div></blockquote>
+</li>
+<li><p>Eliminate Redundancy</p>
+<blockquote>
+<div><p>If a section/file has to be repeated somewhere else, do not write the exact same section/file
+twice. Use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">include:</span> <span class="pre">../README.rst</span></code> instead. Here, <code class="docutils literal notranslate"><span class="pre">../</span></code> refers to the documentation
+root, so file location can be used accordingly. This enables us to link documents from other
+upstream folders.</p>
+</div></blockquote>
+</li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> only when necessary</p>
+<blockquote>
+<div><p>Use <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> to create internal links only when needed, i.e. it is referenced somewhere.
+Do not create references for all the sections and then only reference some of them, because
+this created unnecessary references. This also generates ERROR in <code class="docutils literal notranslate"><span class="pre">restructuredtext-lint</span></code>.</p>
+</div></blockquote>
+</li>
+<li><p>Spelling</p>
+<blockquote>
+<div><p>You should check for spelling errors before you push changes. <a class="reference external" href="http://aspell.net/">Aspell</a>
+is a GNU project Command Line tool you can use for this purpose. Download and install Aspell,
+then execute <code class="docutils literal notranslate"><span class="pre">aspell</span> <span class="pre">check</span> <span class="pre">&lt;file-name&gt;</span></code> for all the files changed. Be careful about not
+changing commands or other stuff as Aspell gives prompts for a lot of them. Also delete the
+temporary <code class="docutils literal notranslate"><span class="pre">.bak</span></code> files generated. Refer the <a class="reference external" href="http://aspell.net/man-html/">manual</a> for more
+information on how to use.</p>
+</div></blockquote>
+</li>
+<li><p>Notes and Warning Snippets</p>
+<blockquote>
+<div><p>Every <code class="docutils literal notranslate"><span class="pre">Note</span></code> and <code class="docutils literal notranslate"><span class="pre">Warning</span></code> sections are to be kept in <code class="docutils literal notranslate"><span class="pre">rst_snippets/note_snippets/</span></code> and
+<code class="docutils literal notranslate"><span class="pre">rst_snippets/warning_snippets/</span></code> and then included to eliminate redundancy, as these are
+frequently used in multiple files.</p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="converting-from-markdown">
+<h2>Converting from Markdown<a class="headerlink" href="#converting-from-markdown" title="Permalink to this headline">¶</a></h2>
+<p>If you want to convert a <code class="docutils literal notranslate"><span class="pre">.md</span></code> file to a <code class="docutils literal notranslate"><span class="pre">.rst</span></code> file, this <a class="reference external" href="https://github.com/chrissimpkins/md2rst">tool</a>
+does it pretty well. You’d still have to clean up and check for errors as this contains a lot of
+bugs. But this is definitely better than converting everything by yourself.</p>
+<p>This will be helpful in converting GitHub wiki’s (Markdown Files) to reStructuredtext files for
+Sphinx/ReadTheDocs hosting.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="roadmap.html" class="btn btn-neutral float-right" title="Roadmap" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cut_new_release.html" class="btn btn-neutral float-left" title="How to cut a new release:" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

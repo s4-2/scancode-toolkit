@@ -1,0 +1,500 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Add A Post-Scan Plugin &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How-To Guides" href="../how-to-guides/index.html" />
+    <link rel="prev" title="How to set what will be detected in Scan" href="how_to_set_what_will_be_detected_in_a_scan.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli-reference/index.html"><strong>Command Line Interface Reference</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Basic Tutorials</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="how_to_run_a_scan.html">How to Run a Scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_visualize_scan_results.html">How to Visualize Scan results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_extract_archives.html">How To Extract Archives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_format_scan_output.html">How to specify Scancode Output Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_set_what_will_be_detected_in_a_scan.html">How to set what will be detected in Scan</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Add A Post-Scan Plugin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#built-in-vs-optional-installation">Built-In vs. Optional Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#built-in">Built-In</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#optional">Optional</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#example-post-scan-plugin-hello-scancode">Example Post-Scan Plugin: Hello ScanCode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#top-level-folder-scancode-hello">1. Top-level folder – <code class="docutils literal notranslate"><span class="pre">/scancode-hello/</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nd-level-folder-src">2. 2nd-level folder – <code class="docutils literal notranslate"><span class="pre">/src/</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rd-level-folder-hello-scancode">3. 3rd-level folder – <code class="docutils literal notranslate"><span class="pre">/hello_scancode/</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#load-the-plugin">Load the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-complex-examples">More-complex examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Basic Tutorials</strong></a> &raquo;</li>
+        
+      <li>Add A Post-Scan Plugin</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tutorials/how_to_add_a_post_scan_plugin.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="add-a-post-scan-plugin">
+<span id="how-to-add-post-scan-plugin"></span><h1>Add A Post-Scan Plugin<a class="headerlink" href="#add-a-post-scan-plugin" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="built-in-vs-optional-installation">
+<h2>Built-In vs. Optional Installation<a class="headerlink" href="#built-in-vs-optional-installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="built-in">
+<h3>Built-In<a class="headerlink" href="#built-in" title="Permalink to this headline">¶</a></h3>
+<p>Some post-scan plugins are installed when ScanCode itself is installed, e.g., the
+<a class="reference internal" href="../plugins/licence_policy_plugin.html#license-policy-plugin"><span class="std std-ref">License Policy Plugin</span></a>, whose code is located here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nexB</span><span class="o">/</span><span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span><span class="o">/</span><span class="n">blob</span><span class="o">/</span><span class="n">develop</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">licensedcode</span><span class="o">/</span><span class="n">plugin_license_policy</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>These plugins do not require any additional installation steps and can be used as soon as ScanCode
+is up and running.</p>
+</div>
+<div class="section" id="optional">
+<h3>Optional<a class="headerlink" href="#optional" title="Permalink to this headline">¶</a></h3>
+<p>ScanCode is also designed to use post-scan plugins that must be installed separately from the
+installation of ScanCode. The code for this sort of plugin is located here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nexB</span><span class="o">/</span><span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span><span class="o">/</span><span class="n">tree</span><span class="o">/</span><span class="n">develop</span><span class="o">/</span><span class="n">plugins</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>This wiki page will focus on optional post-scan plugins.</p>
+</div>
+</div>
+<div class="section" id="example-post-scan-plugin-hello-scancode">
+<h2>Example Post-Scan Plugin: Hello ScanCode<a class="headerlink" href="#example-post-scan-plugin-hello-scancode" title="Permalink to this headline">¶</a></h2>
+<p>To illustrate the creation of a simple post-scan plugin, we’ll create a hypothetical plugin named
+<code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">ScanCode</span></code>, which will print <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">ScanCode!</span></code> in your terminal after you’ve run a scan.
+Your command will look like something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">n</span> <span class="mi">2</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">target</span> <span class="n">codebase</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">hello</span> <span class="o">--</span><span class="n">json</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">JSON</span> <span class="n">output</span> <span class="n">file</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>We’ll start by creating three folders:</p>
+<ol class="arabic simple">
+<li><p>Top-level folder – <code class="docutils literal notranslate"><span class="pre">/scancode-hello/</span></code></p></li>
+<li><p>2nd-level folder – <code class="docutils literal notranslate"><span class="pre">/src/</span></code></p></li>
+<li><p>3rd-level folder – <code class="docutils literal notranslate"><span class="pre">/hello_scancode/</span></code></p></li>
+</ol>
+<div class="section" id="top-level-folder-scancode-hello">
+<h3>1. Top-level folder – <code class="docutils literal notranslate"><span class="pre">/scancode-hello/</span></code><a class="headerlink" href="#top-level-folder-scancode-hello" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">/scancode-toolkit/plugins/</span></code> directory, add a folder with a relevant name, e.g.,
+<code class="docutils literal notranslate"><span class="pre">scancode-hello</span></code>. This folder will hold all of your plugin code.</p></li>
+<li><p>Inside the <code class="docutils literal notranslate"><span class="pre">/scancode-hello/</span></code> folder you’ll need to add a folder named <code class="docutils literal notranslate"><span class="pre">src</span></code> and 7 files.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/src/</span></code> – This folder will contain your primary Python code and is discussed in more detail
+in the following section.</p></li>
+</ol>
+<p>The 7 Files are:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> – See, e.g.,
+<a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/plugins/scancode-ignore-binaries/.gitignore">/plugins/scancode-ignore-binaries/.gitignore</a></p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">build</span><span class="o">/</span>
+<span class="o">/</span><span class="n">dist</span><span class="o">/</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">apache-2.0.LICENSE</span></code> – See, e.g.,
+<a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/plugins/scancode-ignore-binaries/apache-2.0.LICENSE">/plugins/scancode-ignore-binaries/apache-2.0.LICENSE</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MANIFEST.in</span></code></p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">graft</span> <span class="n">src</span>
+
+<span class="n">include</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+<span class="n">include</span> <span class="n">setup</span><span class="o">.</span><span class="n">cfg</span>
+<span class="n">include</span> <span class="o">.</span><span class="n">gitignore</span>
+<span class="n">include</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
+<span class="n">include</span> <span class="n">MANIFEST</span><span class="o">.</span><span class="ow">in</span>
+<span class="n">include</span> <span class="n">NOTICE</span>
+<span class="n">include</span> <span class="n">apache</span><span class="o">-</span><span class="mf">2.0</span><span class="o">.</span><span class="n">LICENSE</span>
+
+<span class="k">global</span><span class="o">-</span><span class="n">exclude</span> <span class="o">*.</span><span class="n">py</span><span class="p">[</span><span class="n">co</span><span class="p">]</span> <span class="n">__pycache__</span> <span class="o">*.*~</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">NOTICE</span></code> – See, e.g.,
+<a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/plugins/scancode-ignore-binaries/NOTICE">/plugins/scancode-ignore-binaries/NOTICE</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">README.md</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code></p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">metadata</span><span class="p">]</span>
+<span class="n">license_file</span> <span class="o">=</span> <span class="n">NOTICE</span>
+
+<span class="p">[</span><span class="n">bdist_wheel</span><span class="p">]</span>
+<span class="n">universal</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="p">[</span><span class="n">aliases</span><span class="p">]</span>
+<span class="n">release</span> <span class="o">=</span> <span class="n">clean</span> <span class="o">--</span><span class="nb">all</span>  <span class="n">bdist_wheel</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p><code class="docutils literal notranslate"><span class="pre">setup.py</span></code> – This is an example of what our <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file would look like:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># -*- encoding: utf-8 -*-</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
+<span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">basename</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">splitext</span>
+
+<span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">find_packages</span>
+<span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
+
+
+<span class="n">desc</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;A ScanCode post-scan plugin to to illustrate the creation of a simple post-scan plugin.&#39;&#39;&#39;</span>
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;scancode-hello&#39;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0.0&#39;</span><span class="p">,</span>
+    <span class="n">license</span><span class="o">=</span><span class="s1">&#39;Apache-2.0 with ScanCode acknowledgment&#39;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="n">desc</span><span class="p">,</span>
+    <span class="n">long_description</span><span class="o">=</span><span class="n">desc</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s1">&#39;nexB&#39;</span><span class="p">,</span>
+    <span class="n">author_email</span><span class="o">=</span><span class="s1">&#39;info@aboutcode.org&#39;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://github.com/nexB/scancode-toolkit/plugins/scancode-categories&#39;</span><span class="p">,</span>
+    <span class="n">packages</span><span class="o">=</span><span class="n">find_packages</span><span class="p">(</span><span class="s1">&#39;src&#39;</span><span class="p">),</span>
+    <span class="n">package_dir</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;&#39;</span><span class="p">:</span> <span class="s1">&#39;src&#39;</span><span class="p">},</span>
+    <span class="n">py_modules</span><span class="o">=</span><span class="p">[</span><span class="n">splitext</span><span class="p">(</span><span class="n">basename</span><span class="p">(</span><span class="n">path</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">glob</span><span class="p">(</span><span class="s1">&#39;src/*.py&#39;</span><span class="p">)],</span>
+    <span class="n">include_package_data</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">zip_safe</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
+        <span class="c1"># complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers</span>
+        <span class="s1">&#39;Development Status :: 4 - Beta&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Intended Audience :: Developers&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;License :: OSI Approved :: Apache Software License&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Programming Language :: Python&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Programming Language :: Python :: 2.7&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Topic :: Utilities&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">keywords</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;scancode&#39;</span><span class="p">,</span> <span class="s1">&#39;plugin&#39;</span><span class="p">,</span> <span class="s1">&#39;post-scan&#39;</span>
+    <span class="p">],</span>
+    <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;scancode-toolkit&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;scancode_post_scan&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;hello = hello_scancode.hello_scancode:SayHello&#39;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nd-level-folder-src">
+<h3>2. 2nd-level folder – <code class="docutils literal notranslate"><span class="pre">/src/</span></code><a class="headerlink" href="#nd-level-folder-src" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Add an <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file inside the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. This file can be empty, and is used to
+indicate that the folder should be treated as a Python package directory.</p></li>
+<li><p>Add a folder that will contain our primary code – we’ll name the folder <code class="docutils literal notranslate"><span class="pre">hello_scancode</span></code>.
+If you look at the example of the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file above, you’ll see this line in the
+<code class="docutils literal notranslate"><span class="pre">entry_points</span></code> section:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hello = hello_scancode.hello_scancode:SayHello&#39;</span><span class="p">,</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hello</span></code> refers to the name of the command flag.</p></li>
+<li><p>The first <code class="docutils literal notranslate"><span class="pre">hello_scancode</span></code> is the name of the folder we just created.</p></li>
+<li><p>The second <code class="docutils literal notranslate"><span class="pre">hello_scancode</span></code> is the name of the <code class="docutils literal notranslate"><span class="pre">.py</span></code> file containing our code (discussed in
+the next section).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SayHello</span></code> is the name of the <code class="docutils literal notranslate"><span class="pre">PostScanPlugin</span></code> class we create in that file (see sample
+code below).</p></li>
+</ul>
+</div>
+<div class="section" id="rd-level-folder-hello-scancode">
+<h3>3. 3rd-level folder – <code class="docutils literal notranslate"><span class="pre">/hello_scancode/</span></code><a class="headerlink" href="#rd-level-folder-hello-scancode" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Add an <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file inside the <code class="docutils literal notranslate"><span class="pre">hello_scancode</span></code> folder. As noted above, this file can
+be empty.</p></li>
+<li><p>Add a <code class="docutils literal notranslate"><span class="pre">hello_scancode.py</span></code> file.</p></li>
+</ol>
+<div class="section" id="imports">
+<h4>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">plugincode.post_scan</span> <span class="kn">import</span> <span class="n">PostScanPlugin</span>
+<span class="kn">from</span> <span class="nn">plugincode.post_scan</span> <span class="kn">import</span> <span class="n">post_scan_impl</span>
+<span class="kn">from</span> <span class="nn">scancode</span> <span class="kn">import</span> <span class="n">CommandLineOption</span>
+<span class="kn">from</span> <span class="nn">scancode</span> <span class="kn">import</span> <span class="n">POST_SCAN_GROUP</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-postscanplugin-class">
+<h4>Create a <code class="docutils literal notranslate"><span class="pre">PostScanPlugin</span></code> class<a class="headerlink" href="#create-a-postscanplugin-class" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">PostScanPlugin</span></code> class
+<a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/src/plugincode/post_scan.py">PostScanPlugin code</a>)
+inherits from the <code class="docutils literal notranslate"><span class="pre">CodebasePlugin</span></code> class (see
+<a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/794d7acf78480823084def703b5d61ade12efdf2/src/plugincode/__init__.py#L139-L150">CodebasePlugin code</a>),
+which inherits from the <code class="docutils literal notranslate"><span class="pre">BasePlugin</span></code> class (see
+<a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/794d7acf78480823084def703b5d61ade12efdf2/src/plugincode/__init__.py#L38-L136">BasePlugin code</a>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@post_scan_impl</span>
+<span class="k">class</span> <span class="nc">SayHello</span><span class="p">(</span><span class="n">PostScanPlugin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Illustrate a simple &quot;Hello World&quot; post-scan plugin.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">options</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">CommandLineOption</span><span class="p">((</span><span class="s1">&#39;--hello&#39;</span><span class="p">,),</span>
+        <span class="n">is_flag</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Generate a simple &quot;Hello ScanCode&quot; greeting in the terminal.&#39;</span><span class="p">,</span>
+        <span class="n">help_group</span><span class="o">=</span><span class="n">POST_SCAN_GROUP</span><span class="p">)</span>
+    <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">is_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hello</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">hello</span>
+
+    <span class="k">def</span> <span class="nf">process_codebase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codebase</span><span class="p">,</span> <span class="n">hello</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Say hello.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_enabled</span><span class="p">(</span><span class="n">hello</span><span class="p">):</span>
+            <span class="k">return</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello ScanCode!!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-the-plugin">
+<h2>Load the plugin<a class="headerlink" href="#load-the-plugin" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>To load and use the plugin in the normal course, navigate to the plugin’s root folder (in this
+example: <code class="docutils literal notranslate"><span class="pre">/plugins/scancode-hello/</span></code>) and run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code> (don’t forget the final <code class="docutils literal notranslate"><span class="pre">.</span></code>).</p></li>
+<li><p>If you’re developing and want to test your work, save your edits and run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code>
+from the same folder.</p></li>
+</ul>
+</div>
+<div class="section" id="more-complex-examples">
+<h2>More-complex examples<a class="headerlink" href="#more-complex-examples" title="Permalink to this headline">¶</a></h2>
+<p>This Hello ScanCode example is quite simple. For examples of more-complex structures and
+functionalities you can take a look at the other post-scan plugins for guidance and ideas.</p>
+<p>One good example is the License Policy post-scan plugin. This plugin is installed when ScanCode
+is installed and consequently is not located in the <code class="docutils literal notranslate"><span class="pre">/plugins/</span></code> directory used for
+manually-installed post-scan plugins. The code for the License Policy plugin can be found at
+<a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/src/licensedcode/plugin_license_policy.py">/scancode-toolkit/src/licensedcode/plugin_license_policy.py</a>
+and illustrates how a plugin can be used to analyze the results of a ScanCode scan using external
+data files and add the results of that analysis as a new field in the ScanCode JSON output file.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../how-to-guides/index.html" class="btn btn-neutral float-right" title="How-To Guides" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="how_to_set_what_will_be_detected_in_a_scan.html" class="btn btn-neutral float-left" title="How to set what will be detected in Scan" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

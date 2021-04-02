@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Dwarf Plugin &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Miscellaneous" href="../misc/index.html" />
+    <link rel="prev" title="LKMClue Plugin" href="lkmclue.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli-reference/index.html"><strong>Command Line Interface Reference</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Plugins</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="plugin_arch.html">Plugin Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licence_policy_plugin.html">License Policy Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin_tutorials.html">Plugin Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpp_includes_plugin.html">CPP Includes Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lkmclue.html">LKMClue Plugin</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Dwarf Plugin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#specification">Specification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-plugin">Using the Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-output">Example Output</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Plugins</strong></a> &raquo;</li>
+        
+      <li>Dwarf Plugin</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/plugins/dwarf.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dwarf-plugin">
+<span id="id1"></span><h1>Dwarf Plugin<a class="headerlink" href="#dwarf-plugin" title="Permalink to this headline">¶</a></h1>
+<p>This plugin allows users to collect source code path/name from compilation units found in
+ELF DWARFs.</p>
+<div class="section" id="specification">
+<h2>Specification<a class="headerlink" href="#specification" title="Permalink to this headline">¶</a></h2>
+<p>This plugin will only work with non-stripped ELFs with debug symbols.</p>
+</div>
+<div class="section" id="using-the-plugin">
+<h2>Using the Plugin<a class="headerlink" href="#using-the-plugin" title="Permalink to this headline">¶</a></h2>
+<p>User needs to use the <code class="docutils literal notranslate"><span class="pre">--dwarf</span></code> option.</p>
+<p>The following command will collect all the dwarf references found in non-stripped ELFs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scancode --dwarf /path/to/codebase/ --json-pp ~/path/to/scan-output.json
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-output">
+<h2>Example Output<a class="headerlink" href="#example-output" title="Permalink to this headline">¶</a></h2>
+<p>Here is an sample output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;project/stripped.ELF&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;dwarf_source_path&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;scan_errors&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">},</span>
+<span class="p">{</span>
+  <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;project/non-stripped.ELF&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;dwarf_source_path&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;/tmp/test.c],</span>
+  <span class="s2">&quot;scan_errors&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../misc/index.html" class="btn btn-neutral float-right" title="Miscellaneous" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lkmclue.html" class="btn btn-neutral float-left" title="LKMClue Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

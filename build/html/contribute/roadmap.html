@@ -1,0 +1,482 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Roadmap &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Google Summer of Code 2017 - Final report" href="gsoc17_final_report.html" />
+    <link rel="prev" title="Contributing to the Documentation" href="contrib_doc.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli-reference/index.html"><strong>Command Line Interface Reference</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Contribute</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="contrib_dev.html">Contributing to Code Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cut_new_release.html">How to cut a new release:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contrib_doc.html">Contributing to the Documentation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Roadmap</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#legend">Legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#work-in-progress">Work in Progress</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#packages-manifests-and-dependencies-parsers">Packages manifests and dependencies parsers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#license-detection">License Detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copyrights">Copyrights</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#core-features">Core features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#classification-summarization-and-deduction">Classification, summarization and deduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source-code-support-some-will-be-spawned-as-their-own-tool">Source code support (some will be spawned as their own tool)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compiled-code-support-will-be-spawned-as-their-own-tool">Compiled code support (will be spawned as their own tool)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-exchange">Data exchange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#packaging">Packaging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ci-integration">CI integration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#other-work-in-progress">Other work in progress</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#package-mining-and-matching">Package mining and matching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#completed-features">Completed features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#core-scans">Core scans</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outputs-and-ui">Outputs and UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#package-and-dependencies">Package and dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#speed">Speed!</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Other</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc17_final_report.html">Google Summer of Code 2017 - Final report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc19_final_report.html">Google Summer of Code 2019 - Final report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long_running_issues.html">Long Running Issues - Help Needed</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Contribute</strong></a> &raquo;</li>
+        
+      <li>Roadmap</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/contribute/roadmap.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="roadmap">
+<span id="id1"></span><h1>Roadmap<a class="headerlink" href="#roadmap" title="Permalink to this headline">¶</a></h1>
+<p>This is a high level list of what we are working on and what is completed.</p>
+<div class="section" id="legend">
+<h2>Legend<a class="headerlink" href="#legend" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a>      completed       <a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a>     In progress     <a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a>    Planned, not started</p>
+</div>
+<div class="section" id="work-in-progress">
+<h2>Work in Progress<a class="headerlink" href="#work-in-progress" title="Permalink to this headline">¶</a></h2>
+<p>(see Completed features below)</p>
+<div class="section" id="packages-manifests-and-dependencies-parsers">
+<h3>Packages manifests and dependencies parsers<a class="headerlink" href="#packages-manifests-and-dependencies-parsers" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> Docker images base (as part of: <a class="reference external" href="https://github.com/pombredanne/conan">https://github.com/pombredanne/conan</a> ) #651</p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> RubyGems base and dependencies #650 (code in <a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib/">https://github.com/nexB/scancode-toolkit-contrib/</a> )</p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> Perl, CPAN (basic in <a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib/">https://github.com/nexB/scancode-toolkit-contrib/</a>)</p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> Go : parsing for Godep in <a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib/">https://github.com/nexB/scancode-toolkit-contrib/</a></p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> Windows PE #652</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> RPMs dependencies #649</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> Windows Nuget dependencies #648</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> Bower packages #654</p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> Python dependencies #653</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> CRAN</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> Plain packages</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> other Java-related meta files (SBT, Ivy, Gradle, etc.)</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> Debian debs</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> other JavaScript (jspm, etc.)</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> other Linux distro packages</p></li>
+</ul>
+</div>
+<div class="section" id="license-detection">
+<h3>License Detection<a class="headerlink" href="#license-detection" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> support and detect license expressions (code in <a class="reference external" href="https://github.com/nexB/license-expression">https://github.com/nexB/license-expression</a>)</p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> support and detect composite licenses</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> support custom licenses</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> move licenses data set to external separate repository</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> Improved unknown license detection</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> sync with external sources (DejaCode, SPDX, etc.)</p></li>
+</ul>
+</div>
+<div class="section" id="copyrights">
+<h3>Copyrights<a class="headerlink" href="#copyrights" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> speed up copyright detection</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> improved detected lines range</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> streamline grammar of copyright parser</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> normalize holders and authors for summarizing</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> normalize and streamline results data format</p></li>
+</ul>
+</div>
+<div class="section" id="core-features">
+<h3>Core features<a class="headerlink" href="#core-features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> pre scan filtering (ignore binaries, etc)</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> pre/post/ouput plugins! (worked as part of the GSoC by &#64;yadsharaf )</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> scan plugins (e.g. plugins that run a scan to collect data)</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> support Python 3 #295</p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> transparent archive extraction (as opposed to on-demand with extractcode)</p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> scancode.yml configuration file for exclusions, defaults, scan failure conditions,
+etc.</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> support scan pipelines and rules to organize more complex scans</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> scan baselining, delta scan and failure conditions (such as license change,
+etc) ( spawned as its the <a class="reference external" href="https://github.com/nexB/deltacode/">DeltaCode</a> project)</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> dedupe and similarities to avoid re-scanning. For now only identical files
+are scanned only once.</p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> Improved logging, tracing and error diagnostics</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> native support for ABC Data (See <a class="reference external" href="https://aboutcode.readthedocs.io/en/latest/aboutcode-data/abcd.html#aboutcode-data" title="(in AboutCode)"><span>AboutCode Data : ABCD</span></a> )</p></li>
+</ul>
+</div>
+<div class="section" id="classification-summarization-and-deduction">
+<h3>Classification, summarization and deduction<a class="headerlink" href="#classification-summarization-and-deduction" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> File classification #426</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> summarize and aggregate data #377 at the top level</p></li>
+</ul>
+</div>
+<div class="section" id="source-code-support-some-will-be-spawned-as-their-own-tool">
+<h3>Source code support (some will be spawned as their own tool)<a class="headerlink" href="#source-code-support-some-will-be-spawned-as-their-own-tool" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> symbols : parsing complete in <a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib/">https://github.com/nexB/scancode-toolkit-contrib/</a></p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> metrics : some elements in <a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib/">https://github.com/nexB/scancode-toolkit-contrib/</a></p></li>
+</ul>
+</div>
+<div class="section" id="compiled-code-support-will-be-spawned-as-their-own-tool">
+<h3>Compiled code support (will be spawned as their own tool)<a class="headerlink" href="#compiled-code-support-will-be-spawned-as-their-own-tool" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> ELFs : parsing complete in <a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib/">https://github.com/nexB/scancode-toolkit-contrib/</a></p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> Java bytecode : parsing complete in <a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib/">https://github.com/nexB/scancode-toolkit-contrib/</a></p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> Windows PE : parsing complete in <a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib/">https://github.com/nexB/scancode-toolkit-contrib/</a></p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> Mach-O : parsing complete in in <a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib/">https://github.com/nexB/scancode-toolkit-contrib/</a></p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> Dalvik/dex</p></li>
+</ul>
+</div>
+<div class="section" id="data-exchange">
+<h3>Data exchange<a class="headerlink" href="#data-exchange" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> SPDX data conversion #338</p></li>
+</ul>
+</div>
+<div class="section" id="packaging">
+<h3>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> simpler installation, automated installer</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> distro-friendly packaging</p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> unbundle and package as multiple libaries (commoncode, extractcode, etc)</p></li>
+</ul>
+</div>
+<div class="section" id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> integration in a build/CI loop</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> end to end guide to analyze a codebase</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> hacking guides</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> API doc when using ScanCode as a library</p></li>
+</ul>
+</div>
+<div class="section" id="ci-integration">
+<h3>CI integration<a class="headerlink" href="#ci-integration" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> Plugins for CI (Jenkins, etc)</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> Integration for CI (Travis, Appveyor, Drone, etc)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="other-work-in-progress">
+<h2>Other work in progress<a class="headerlink" href="#other-work-in-progress" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> ScanCode server: Spawned as its own project: <a class="reference external" href="https://github.com/nexB/scancode-server">https://github.com/nexB/scancode-server</a>.
+Will include Integration / webhooks for Github, Bitbucket.</p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> VulnerableCode: NVD and CVE lookups: Spawned as its own project:
+<a class="reference external" href="https://github.com/nexB/vulnerablecode">https://github.com/nexB/vulnerablecode</a></p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> ScanCode Workbench: desktop app for scan review: Spawned as its own project:
+<a class="reference external" href="https://github.com/nexB/scancode-workbench">https://github.com/nexB/scancode-workbench</a></p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> DependentCode: dynamic dependencies resolutions: Spawned as its own project:
+<a class="reference external" href="https://github.com/nexB/dependentcode">https://github.com/nexB/dependentcode</a></p></li>
+</ul>
+<div class="section" id="package-mining-and-matching">
+<h3>Package mining and matching<a class="headerlink" href="#package-mining-and-matching" title="Permalink to this headline">¶</a></h3>
+<p>(Note that this will be spawned in its project)
+Some code is in <a class="reference external" href="https://github.com/nexB/scancode-toolkit-contrib/">https://github.com/nexB/scancode-toolkit-contrib/</a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> exact matching</p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> attribute-based matching</p></li>
+<li><p><a class="reference internal" href="../_images/clock.png"><img alt="clock1030" src="../_images/clock.png" style="width: 12.8px; height: 12.8px;" /></a> fuzzy matching</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> peer-reviewed meta packages repo</p></li>
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> basic mining of package repositories</p></li>
+</ul>
+</div>
+<div class="section" id="other">
+<h3>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/planned.png"><img alt="white_large_square" src="../_images/planned.png" style="width: 12.8px; height: 12.8px;" /></a> Crypto code detection</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="completed-features">
+<h2>Completed features<a class="headerlink" href="#completed-features" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="core-scans">
+<h3>Core scans<a class="headerlink" href="#core-scans" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> exact license detection</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> approximate license detection</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> copyright detection</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> file information (size, type, etc.)</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> URLs, emails, authors</p></li>
+</ul>
+</div>
+<div class="section" id="outputs-and-ui">
+<h3>Outputs and UI<a class="headerlink" href="#outputs-and-ui" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> JSON compact and pretty</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> plain HTML tables, also usable in a spreadsheet</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> fancy HTML ‘app’ with a file tree navigation, and scan results filtering,
+search and sorting</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> improved scans GUI now its own project: <a class="reference external" href="https://github.com/nexB/aboutcode-manager">https://github.com/nexB/aboutcode-manager</a></p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> simple scan summary</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> SPDX output</p></li>
+</ul>
+</div>
+<div class="section" id="package-and-dependencies">
+<h3>Package and dependencies<a class="headerlink" href="#package-and-dependencies" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> common model for packages data</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> basic support for common packages format</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> RPM packages base</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> NuGet packages base</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> Python packages base</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> PHP Composer packages support with dependencies</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> Java Maven POM packages support with dependencies</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> npm packages support with dependencies</p></li>
+</ul>
+</div>
+<div class="section" id="speed">
+<h3>Speed!<a class="headerlink" href="#speed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> accelerate license detection indexing and scanning; include caching</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> scan using multiple processes to speed up overall scan</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> cache per-file scan to disk and stream final results</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Other<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> archive extraction with extractcode</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> conversion of scan results to CSV</p></li>
+<li><p><a class="reference internal" href="../_images/done.png"><img alt="white_check_mark" src="../_images/done.png" style="width: 12.8px; height: 12.8px;" /></a> improved error handling, verbose and diagnostic output</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="gsoc17_final_report.html" class="btn btn-neutral float-right" title="Google Summer of Code 2017 - Final report" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="contrib_doc.html" class="btn btn-neutral float-left" title="Contributing to the Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

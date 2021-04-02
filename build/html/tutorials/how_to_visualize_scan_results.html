@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>How to Visualize Scan results &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How To Extract Archives" href="how_to_extract_archives.html" />
+    <link rel="prev" title="How to Run a Scan" href="how_to_run_a_scan.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli-reference/index.html"><strong>Command Line Interface Reference</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Basic Tutorials</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="how_to_run_a_scan.html">How to Run a Scan</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How to Visualize Scan results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-scancode-workbench">Setting up Scancode Workbench</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importing-data-into-scancode-workbench">Importing Data into Scancode Workbench</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visualization">Visualization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#views">Views</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#components">Components</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_extract_archives.html">How To Extract Archives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_format_scan_output.html">How to specify Scancode Output Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_set_what_will_be_detected_in_a_scan.html">How to set what will be detected in Scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_add_a_post_scan_plugin.html">Add A Post-Scan Plugin</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Basic Tutorials</strong></a> &raquo;</li>
+        
+      <li>How to Visualize Scan results</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tutorials/how_to_visualize_scan_results.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-visualize-scan-results">
+<span id="id1"></span><h1>How to Visualize Scan results<a class="headerlink" href="#how-to-visualize-scan-results" title="Permalink to this headline">¶</a></h1>
+<p>In this simple tutorial example, we import results from a basic scan performed on the <code class="docutils literal notranslate"><span class="pre">samples</span></code>
+directory distributed by default with Scancode, and visualize the outputs through
+Scancode Workbench.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This tutorial uses the 3.1.1 version of Scancode Toolkit, and Scancode Workbench 3.1.0 (This
+beta version of ScanCode Workbench is compatible with scans from any ScanCode Toolkit develop
+version/branch at or after v3.0.2). If you are using an older version of Scancode Toolkit, check
+respective versions of this documentation. Also refer the Scancode Workbench
+<a class="reference external" href="https://github.com/nexB/scancode-workbench/releases/">release highlights</a>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This tutorial is for Linux based systems presently. Additional Help for Windows/MacOS will be
+added.</p>
+</div>
+<div class="section" id="setting-up-scancode-workbench">
+<h2>Setting up Scancode Workbench<a class="headerlink" href="#setting-up-scancode-workbench" title="Permalink to this headline">¶</a></h2>
+<p>According to the Installation instructions for the Workbench, we have to install Node.js 6.x or later.
+Refer to Node.js install <a class="reference external" href="https://nodejs.org/en/download/package-manager/">instructions</a> here.</p>
+<p>You can also run the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">nodejs</span>
+<span class="n">sudo</span> <span class="n">npm</span> <span class="n">install</span> <span class="n">npm</span><span class="o">@</span><span class="mf">5.2</span><span class="o">.</span><span class="mi">0</span> <span class="o">-</span><span class="n">g</span>
+</pre></div>
+</div>
+<p>After <code class="docutils literal notranslate"><span class="pre">Node.js</span></code> and <code class="docutils literal notranslate"><span class="pre">npm</span></code> is installed and get the Scancode Workbench 3.1.0 tarball from the
+<a class="reference external" href="https://github.com/nexB/scancode-workbench/releases/tag/v3.1.0">Workbench Release Page</a>. Extract
+the package and then launch Scancode Workbench:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">ScanCode</span><span class="o">-</span><span class="n">Workbench</span>
+</pre></div>
+</div>
+<p>This opens the Workbench.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also build Scancode Toolkit and Scancode Workbench from source. Clone the repository,
+don’t forget to checkout to the specific release using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">&lt;release&gt;</span></code>, and follow
+the build instructions. You’ll also have to create a Python 2.7 Virtual Environment, or use the
+same venv-3.1.1 created here at <a class="reference internal" href="../cli-reference/simple-examples.html#how-to-run-a-scan"><span class="std std-ref">How to Run a Scan</span></a>.</p>
+</div>
+</div>
+<div class="section" id="importing-data-into-scancode-workbench">
+<h2>Importing Data into Scancode Workbench<a class="headerlink" href="#importing-data-into-scancode-workbench" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Import</span> <span class="pre">JSON</span> <span class="pre">File</span></code> or Press <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">I</span></code>.</p></li>
+<li><p>Select the file from the pop-up window.</p></li>
+<li><p>Select a Name and Location (where you want it later) for the .sqlite output file.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also import a .sqlite file you’ve saved in the past to load scan results. As it is much
+faster, once you’ve imported the JSON file and a corresponding SQLite file has been created,
+you shouldn’t repeat this. Instead, import the SQLite file next time you want to visualize the
+same scan result.</p>
+</div>
+</div>
+<div class="section" id="visualization">
+<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="views">
+<h3>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h3>
+<p>Refer to the workbench documentation for more information on Visualization.</p>
+<p>The dashboard has a general overview.</p>
+<img alt="../_images/workbench_dashboard.png" src="../_images/workbench_dashboard.png" />
+<p>There are 3 principal views (They appear in the same order in the GIFs):</p>
+<ul class="simple">
+<li><p>Chart Summary View,</p></li>
+<li><p>Table View,</p></li>
+<li><p>Components Summary View.</p></li>
+</ul>
+<img alt="../_images/views_sample.gif" src="../_images/views_sample.gif" />
+</div>
+<div class="section" id="filters">
+<h3>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h3>
+<p>You can also click any file/directory on the file list located on the right, to filter the results
+such that it only contains results from that File/Directory.</p>
+<img alt="../_images/filter_sample.gif" src="../_images/filter_sample.gif" />
+</div>
+<div class="section" id="components">
+<h3>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h3>
+<p>Refer <a class="reference external" href="https://scancode-workbench.readthedocs.io/en/develop/how-to-guides/create-conclusions/create-conclusions.html#workbench-components" title="(in ScanCode Workbench Documentation v0.0.1)"><span>How-To: Create Conclusions</span></a> for more information on Components.</p>
+<p>In the table view,</p>
+<ol class="arabic simple">
+<li><p>Apply filters by selecting Files/Directories</p></li>
+<li><p>Right Click on the Left Panel</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Component</span></code></p></li>
+<li><p>A pop-up opens with fields, make necessary edits and Save.</p></li>
+<li><p>Go to the Component Summary View to see the Component.</p></li>
+</ol>
+<img alt="../_images/components_sample.gif" src="../_images/components_sample.gif" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="how_to_extract_archives.html" class="btn btn-neutral float-right" title="How To Extract Archives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="how_to_run_a_scan.html" class="btn btn-neutral float-left" title="How to Run a Scan" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

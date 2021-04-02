@@ -1,0 +1,579 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Synopsis &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting Help from the Command Line" href="help-text-options.html" />
+    <link rel="prev" title="Command Line Interface Reference" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Command Line Interface Reference</strong></a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Synopsis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#type-of-options">Type of Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output-formats">Output Formats</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#json-file-output">JSON file output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#static-html-output">Static HTML output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#other-important-documentation">Other Important Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html">Getting Help from the Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html">All Available Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html">How to Run a Scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html"><cite>Basic</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html"><cite>Core</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html">Scancode Output Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-filters-and-control.html">Controlling Scancode Output and Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html">Pre-Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html">Post-Scan Options</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Command Line Interface Reference</strong></a> &raquo;</li>
+        
+      <li>Synopsis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/cli-reference/synopsis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="synopsis">
+<span id="cli-synopsis"></span><h1>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h1>
+<p>ScanCode detects licenses, copyrights, package manifests and direct dependencies and more, both
+in source code and binary files, by scanning the files. This page introduces you to the ScanCode
+Toolkit Command Line Interface in the following sections:</p>
+<ul class="simple">
+<li><p>Installation</p></li>
+<li><p>Quickstart</p></li>
+<li><p>Type of Options</p></li>
+<li><p>Output Formats</p></li>
+<li><p>Other Important Documentation</p></li>
+</ul>
+<div class="section" id="installation">
+<span id="syn-install"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Scancode-Toolkit installation can be done by downloading ScanCode as an application, which
+is recommended generally. For users who wish to use ScanCode as a library, it can be
+installed via <code class="docutils literal notranslate"><span class="pre">pip</span></code>, the default Python Package Manager. Refer the following sections for
+detailed Instructions on the each of the Installation Methods.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../getting-started/install.html#app-install"><span class="std std-ref">Installation as an Application: Downloading Releases</span></a></p></li>
+<li><p><a class="reference internal" href="../getting-started/install.html#pip-install"><span class="std std-ref">Installation as a library: via pip</span></a></p></li>
+<li><p><a class="reference internal" href="../getting-started/install.html#source-code-install"><span class="std std-ref">Installation from Source Code: Git Clone</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="quickstart">
+<span id="synopsis-quickstart"></span><h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
+<p>The basic command to perform a scan, in case of a download and configure installation
+(on Linux/MacOS) is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The basic usage, if Scancode is installed from <code class="docutils literal notranslate"><span class="pre">pip</span></code>, or in Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that different for different install methods, scan commands vary.</p>
+<p>The basic command to perform a scan, in case of a download and configure installation
+(on Linux/MacOS) is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The basic usage, if Scancode is installed from <code class="docutils literal notranslate"><span class="pre">pip</span></code>, or in Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For more information on how the Scan Command varies for Various Installation
+Methods/Operating Systems, refer <a class="reference internal" href="../getting-started/install.html#commands-variation"><span class="std std-ref">Commands Variation</span></a>.</p>
+</div>
+<p>Here Scancode scans the &lt;SCAN INPUT&gt; file or directory for license, origin and packages and saves
+results to FILE(s) using one or more output format option. Error and progress are printed to
+stdout.</p>
+<p>To scan the <code class="docutils literal notranslate"><span class="pre">samples</span></code> directory distributed with ScanCode-Toolkit, the command will be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">samples</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The &lt;OUTPUT FORMAT OPTION(s)&gt; includes both the output option and output file name.
+For example in the command <code class="docutils literal notranslate"><span class="pre">scancode</span> <span class="pre">-clpieu</span> <span class="pre">--json-pp</span> <span class="pre">output.json</span> <span class="pre">samples</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--json-pp</span> <span class="pre">output.json</span></code> is &lt;OUTPUT FORMAT OPTION(s)&gt;.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>There isn’t a “Default” output option in Versions 3.x onwards, you have to
+specify &lt;OUTPUT FORMAT OPTION(s)&gt; explicitly.</p>
+</div>
+<p>Alternatively, in case of download and configure installations, where <code class="docutils literal notranslate"><span class="pre">path/to/scancode</span></code> is used
+(the path from root of file system) we can go into the scancode directory
+(like <code class="docutils literal notranslate"><span class="pre">scancode-toolkit-3.1.1</span></code>) and then use <code class="docutils literal notranslate"><span class="pre">./scancode</span></code>. The same applies for input and
+output options. To scan a folder <code class="docutils literal notranslate"><span class="pre">samples</span></code> inside ScanCode directory, and output to a file
+<code class="docutils literal notranslate"><span class="pre">output.json</span></code> in the same directory, the command will be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<p>While a scan using absolute paths from the file system root will look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">home</span><span class="o">/</span><span class="n">ayansm</span><span class="o">/</span><span class="n">software</span><span class="o">/</span><span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span><span class="o">-</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">home</span><span class="o">/</span><span class="n">ayansm</span><span class="o">/</span><span class="n">scan_scan_results</span><span class="o">/</span><span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">home</span><span class="o">/</span><span class="n">ayansm</span><span class="o">/</span><span class="n">codebases</span><span class="o">/</span><span class="n">samples</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Commands similar to <code class="docutils literal notranslate"><span class="pre">scancode</span> <span class="pre">--clpi</span> <span class="pre">--json-pp</span> <span class="pre">output.json</span> <span class="pre">samples</span></code> will be used as examples
+throughout the documentation.</p>
+<ul class="simple">
+<li><p>Here we are inside the <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> where Scancode-Toolkit is configured.</p></li>
+<li><p>And the default <code class="docutils literal notranslate"><span class="pre">samples</span></code> folder is being scanned, which is distributed by default with
+Scancode-Toolkit.</p></li>
+</ul>
+</div>
+<div class="section" id="type-of-options">
+<span id="scancode-cli-options"></span><h2>Type of Options<a class="headerlink" href="#type-of-options" title="Permalink to this headline">¶</a></h2>
+<p>ScanCode Toolkit Command Line options can be divided into these major sections:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="list-options.html#cli-basic"><span class="std std-ref">All “Basic” Scan Options</span></a></p></li>
+<li><p><a class="reference internal" href="../tutorials/how_to_extract_archives.html#cli-extract"><span class="std std-ref">Extractcode Options</span></a></p></li>
+<li><p><a class="reference internal" href="core-options.html#cli-core"><span class="std std-ref">All “Core” Scan Options</span></a></p></li>
+<li><p><a class="reference internal" href="output-filters-and-control.html#cli-output-control"><span class="std std-ref">Controlling Scancode Output and Filters</span></a></p></li>
+<li><p><a class="reference internal" href="scan-options-pre.html#cli-pre-scan"><span class="std std-ref">Pre-Scan Options</span></a></p></li>
+<li><p><a class="reference internal" href="scan-options-post.html#cli-post-scan"><span class="std std-ref">Post-Scan Options</span></a></p></li>
+</ul>
+<p>Refer the individual pages which are linked to above, for detailed discussions on the Command
+Line Options listed under each section.</p>
+</div>
+<div class="section" id="output-formats">
+<span id="synopsis-output"></span><h2>Output Formats<a class="headerlink" href="#output-formats" title="Permalink to this headline">¶</a></h2>
+<p>The output file format is set by using the various output options. The recommended output format
+is JSON. If <code class="docutils literal notranslate"><span class="pre">--json</span></code> is used, the entire file being in one line, without whitespace characters.</p>
+<p>The following example scans will show you how to run a scan with each of the result formats. For
+the scans, we will use the <code class="docutils literal notranslate"><span class="pre">samples</span></code> directory provided with the ScanCode Toolkit.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also output to <code class="docutils literal notranslate"><span class="pre">stdout</span></code> instead of a file. For more information refer
+<a class="reference internal" href="output-format.html#output-to-stdout"><span class="std std-ref">Print to stdout (Terminal)</span></a>.</p>
+</div>
+<div class="section" id="json-file-output">
+<h3>JSON file output<a class="headerlink" href="#json-file-output" title="Permalink to this headline">¶</a></h3>
+<p>Scan the <code class="docutils literal notranslate"><span class="pre">samples</span></code> directory and save the scan to a JSON file (pretty-printed)::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<p>A sample JSON output file structure will look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;tool_name&quot;</span><span class="p">:</span> <span class="s2">&quot;scancode-toolkit&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;tool_version&quot;</span><span class="p">:</span> <span class="s2">&quot;3.1.1&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;options&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;samples/&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;--copyright&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;--email&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;--info&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;--json-pp&quot;</span><span class="p">:</span> <span class="s2">&quot;output.json&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--license&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;--package&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;--url&quot;</span><span class="p">:</span> <span class="n">true</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;notice&quot;</span><span class="p">:</span> <span class="s2">&quot;Generated with ScanCode and provided on an </span><span class="se">\&quot;</span><span class="s2">AS IS</span><span class="se">\&quot;</span><span class="s2"> BASIS, WITHOUT WARRANTIES</span><span class="se">\n</span><span class="s2">OR CONDITIONS OF ANY KIND, either express or implied. No content created from</span><span class="se">\n</span><span class="s2">ScanCode should be considered or used as legal advice. Consult an Attorney</span><span class="se">\n</span><span class="s2">for any legal advice.</span><span class="se">\n</span><span class="s2">ScanCode is a free software code scanning tool from nexB Inc. and others.</span><span class="se">\n</span><span class="s2">Visit https://github.com/nexB/scancode-toolkit/ for support and download.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-10-19T191117.292858&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;end_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-10-19T191219.743133&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;extra_data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;files_count&quot;</span><span class="p">:</span> <span class="mi">36</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;directory&quot;</span><span class="p">,</span>
+      <span class="o">...</span>
+      <span class="o">...</span>
+      <span class="o">...</span>
+      <span class="s2">&quot;scan_errors&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/README&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;README&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;base_name&quot;</span><span class="p">:</span> <span class="s2">&quot;README&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">236</span><span class="p">,</span>
+      <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-12&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;2e07e32c52d607204fad196052d70e3d18fb8636&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;md5&quot;</span><span class="p">:</span> <span class="s2">&quot;effc6856ef85a9250fb1a470792b3f38&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;mime_type&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;file_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ASCII text&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;is_binary&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;is_text&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s2">&quot;is_archive&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;is_media&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;is_source&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;is_script&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;emails&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;urls&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;files_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;dirs_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;size_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;scan_errors&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">},</span>
+    <span class="o">...</span>
+    <span class="o">...</span>
+    <span class="o">...</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/zlib/iostream2/zstream_test.cpp&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;zstream_test.cpp&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;base_name&quot;</span><span class="p">:</span> <span class="s2">&quot;zstream_test&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;.cpp&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">711</span><span class="p">,</span>
+      <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-12&quot;</span><span class="p">,</span>
+      <span class="o">...</span>
+      <span class="o">...</span>
+      <span class="o">...</span>
+      <span class="s2">&quot;scan_errors&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A sample JSON output for an individual file will look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/zlib/iostream2/zstream.h&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;zstream.h&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;base_name&quot;</span><span class="p">:</span> <span class="s2">&quot;zstream&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;.h&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">9283</span><span class="p">,</span>
+  <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;fca4540d490fff36bb90fd801cf9cd8fc695bb17&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;md5&quot;</span><span class="p">:</span> <span class="s2">&quot;a980b61c1e8be68d5cdb1236ba6b43e7&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;mime_type&quot;</span><span class="p">:</span> <span class="s2">&quot;text/x-c++&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;file_type&quot;</span><span class="p">:</span> <span class="s2">&quot;C++ source, ASCII text&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="s2">&quot;C++&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;is_binary&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_text&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="s2">&quot;is_archive&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_media&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_source&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="s2">&quot;is_script&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;mit-old-style&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MIT Old Style&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;MIT Old Style&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Permissive&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_exception&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;MIT&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;homepage_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://fedoraproject.org/wiki/Licensing:MIT#Old_Style&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;text_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://fedoraproject.org/wiki/Licensing:MIT#Old_Style&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;reference_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://enterprise.dejacode.com/urn/urn:dje:license:mit-old-style&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;spdx_license_key&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;spdx_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+      <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+      <span class="s2">&quot;matched_rule&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;mit-old-style_cmr-no_1.RULE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;license_expression&quot;</span><span class="p">:</span> <span class="s2">&quot;mit-old-style&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;mit-old-style&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;is_license_text&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_license_notice&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;is_license_reference&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;is_license_tag&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;matcher&quot;</span><span class="p">:</span> <span class="s2">&quot;2-aho&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rule_length&quot;</span><span class="p">:</span> <span class="mi">71</span><span class="p">,</span>
+        <span class="s2">&quot;matched_length&quot;</span><span class="p">:</span> <span class="mi">71</span><span class="p">,</span>
+        <span class="s2">&quot;match_coverage&quot;</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span>
+        <span class="s2">&quot;rule_relevance&quot;</span><span class="p">:</span> <span class="mi">100</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;mit-old-style&quot;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) 1997 Christian Michelsen Research AS Advanced Computing&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">5</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Christian Michelsen Research AS Advanced Computing&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">5</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;emails&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;urls&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.cmr.no/&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+      <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">7</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;files_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;dirs_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;size_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;scan_errors&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="static-html-output">
+<h3>Static HTML output<a class="headerlink" href="#static-html-output" title="Permalink to this headline">¶</a></h3>
+<p>Scan the <code class="docutils literal notranslate"><span class="pre">samples</span></code> directory for licenses and copyrights and save the scan results to an HTML
+file. When the scan is done, open <code class="docutils literal notranslate"><span class="pre">samples.html</span></code> in your web browser.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">html</span> <span class="n">output</span><span class="o">.</span><span class="n">html</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<img alt="../_images/scancode-toolkit-static-html1.png" src="../_images/scancode-toolkit-static-html1.png" />
+<img alt="../_images/scancode-toolkit-static-html2.png" src="../_images/scancode-toolkit-static-html2.png" />
+</div>
+</div>
+<div class="section" id="other-important-documentation">
+<h2>Other Important Documentation<a class="headerlink" href="#other-important-documentation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#scancode-cli-options"><span class="std std-ref">Type of Options</span></a></p></li>
+<li><p><a class="reference internal" href="simple-examples.html#how-to-run-a-scan"><span class="std std-ref">How to Run a Scan</span></a></p></li>
+<li><p><a class="reference internal" href="../tutorials/index.html#tutorials"><span class="std std-ref">Basic Tutorials</span></a></p></li>
+<li><p><a class="reference internal" href="../how-to-guides/index.html#how-to-guides"><span class="std std-ref">How-To Guides</span></a></p></li>
+<li><p><a class="reference internal" href="../explanations/index.html#how-it-works"><span class="std std-ref">How it all Works</span></a></p></li>
+<li><p><a class="reference internal" href="../contribute/contrib_dev.html#contrib-code-dev"><span class="std std-ref">Contributing to Code Development</span></a></p></li>
+<li><p><a class="reference internal" href="../contribute/contrib_doc.html#contrib-doc-dev"><span class="std std-ref">Contributing to the Documentation</span></a></p></li>
+<li><p><a class="reference internal" href="../plugins/plugin_arch.html#plugin-arch"><span class="std std-ref">Plugin Architecture</span></a></p></li>
+<li><p><a class="reference internal" href="../misc/faq.html#faq"><span class="std std-ref">FAQ</span></a></p></li>
+<li><p><a class="reference internal" href="../misc/support.html#support"><span class="std std-ref">Support</span></a></p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="help-text-options.html" class="btn btn-neutral float-right" title="Getting Help from the Command Line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Command Line Interface Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

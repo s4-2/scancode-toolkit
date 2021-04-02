@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Contributing to Code Development &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How to cut a new release:" href="cut_new_release.html" />
+    <link rel="prev" title="Contribute" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli-reference/index.html"><strong>Command Line Interface Reference</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Contribute</strong></a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Contributing to Code Development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#code-layout-and-conventions">Code layout and conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-tests">Running tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pip-requirements-and-the-configure-script">pip requirements and the configure script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scancode-requirements-and-third-party-python-libraries">ScanCode requirements and third-party Python libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-scancode-as-a-python-library">Using ScanCode as a Python library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cut_new_release.html">How to cut a new release:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contrib_doc.html">Contributing to the Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc17_final_report.html">Google Summer of Code 2017 - Final report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc19_final_report.html">Google Summer of Code 2019 - Final report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long_running_issues.html">Long Running Issues - Help Needed</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Contribute</strong></a> &raquo;</li>
+        
+      <li>Contributing to Code Development</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/contribute/contrib_dev.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="contributing-to-code-development">
+<span id="contrib-code-dev"></span><h1>Contributing to Code Development<a class="headerlink" href="#contributing-to-code-development" title="Permalink to this headline">¶</a></h1>
+<p>See <a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/master/CONTRIBUTING.rst">CONTRIBUTING.rst</a>
+for details.</p>
+<div class="section" id="code-layout-and-conventions">
+<span id="contrib-code-conven"></span><h2>Code layout and conventions<a class="headerlink" href="#code-layout-and-conventions" title="Permalink to this headline">¶</a></h2>
+<p>Source code is in <code class="docutils literal notranslate"><span class="pre">src/</span></code> Tests are in <code class="docutils literal notranslate"><span class="pre">tests/</span></code>.</p>
+<p>There is one Python package for each major feature under <code class="docutils literal notranslate"><span class="pre">src/</span></code> and a corresponding directory
+with the same name under <code class="docutils literal notranslate"><span class="pre">tests</span></code> (but this is not a package by design).</p>
+<p>Each test script is named <code class="docutils literal notranslate"><span class="pre">test_XXXX</span></code> and while we love to use <code class="docutils literal notranslate"><span class="pre">py.test</span></code> as a test runner,
+most tests have no dependencies on <code class="docutils literal notranslate"><span class="pre">py.test</span></code>, only on the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> module (with the exception
+of some command line tests that depend on pytest monkeypatching capabilities.</p>
+<p>When source or tests need data files, we store these in a <code class="docutils literal notranslate"><span class="pre">data</span></code> subdirectory.</p>
+<p>We use PEP8 conventions with a relaxed line length that can be up to 90’ish characters long when
+needed to keep the code clear and readable.</p>
+<p>We store pre-built bundled native binaries in <code class="docutils literal notranslate"><span class="pre">bin/</span></code> sub-directories of each <code class="docutils literal notranslate"><span class="pre">src/</span></code> packages.
+These binaries are organized by OS and architecture. This ensures that ScanCode works out of the box
+either using a checkout or a download, without needing a compiler and toolchain to be installed.
+The corresponding source code for the pre-built binaries are stored in a separate repository at
+<a class="reference external" href="https://github.com/nexB/scancode-thirdparty-src">https://github.com/nexB/scancode-thirdparty-src</a>.</p>
+<p>We store bundled thirdparty components and libraries in the <code class="docutils literal notranslate"><span class="pre">thirdparty</span></code> directory. Python
+libraries are stored as wheels, eventually pre-built if the corresponding wheel is not available
+in the Pypi repository. Some of these components may be advanced builds with bug fixes or advanced
+patches.</p>
+<p>We write tests, a lot of tests, thousands of tests. Several tests are data-driven and use data
+files as test input and sometimes data files as test expectation (in this case using either
+JSON or YAML files). The tests should pass on Linux 64 bits, Windows 32 and 64 bits and on
+MacOS 10.9 and up. We maintain two CI loops with Travis (Linux) at
+<a class="reference external" href="https://travis-ci.org/nexB/scancode-toolkit">https://travis-ci.org/nexB/scancode-toolkit</a> and Appveyor (Windows) at
+<a class="reference external" href="https://ci.appveyor.com/project/nexB/scancode-toolkit">https://ci.appveyor.com/project/nexB/scancode-toolkit</a>.</p>
+<p>When finding bugs or adding new features, we add tests. See existing test code for examples.</p>
+<p>More info:</p>
+<ul class="simple">
+<li><p>Source code and license datasets are in the /src/ directory.</p></li>
+<li><p>Test code and test data are in the /tests/ directory.</p></li>
+<li><p>Datasets and test data are in /data/ sub-directories.</p></li>
+<li><p>Third-party components are vendored in the /thirdparty/ directory. ScanCode is self contained
+and should not require network access for installation or configuration of third-party libraries.</p></li>
+<li><p>Additional pre-compiled vendored binaries are stored in bin/ sub-directories of the /src/
+directory with their sources in this repo: <a class="reference external" href="https://github.com/nexB/scancode-thirdparty-src/">https://github.com/nexB/scancode-thirdparty-src/</a></p></li>
+<li><p>Porting ScanCode to other OS (FreeBSD, etc.) is possible. Enter an issue for help.</p></li>
+<li><p>Bugs and pull requests are welcomed.</p></li>
+<li><p>See the wiki and CONTRIBUTING.rst for more info.</p></li>
+</ul>
+</div>
+<div class="section" id="running-tests">
+<span id="scancode-toolkit-developement-running-tests"></span><h2>Running tests<a class="headerlink" href="#running-tests" title="Permalink to this headline">¶</a></h2>
+<p>ScanCode comes with over 13,000 unit tests to ensure detection accuracy and stability across Linux,
+Windows and macOS OSes: we kinda love tests, do we?</p>
+<p>We use pytest to run the tests: call the <code class="docutils literal notranslate"><span class="pre">py.test</span></code> script to run the whole test suite. This is
+installed by <code class="docutils literal notranslate"><span class="pre">pytest</span></code>, which is bundled with a ScanCode checkout and installed when you
+run <code class="docutils literal notranslate"><span class="pre">./configure</span></code>).</p>
+<p>If you are running from a fresh git clone and you run <code class="docutils literal notranslate"><span class="pre">./configure</span></code> and then
+<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">bin/activate</span></code> the <code class="docutils literal notranslate"><span class="pre">py.test</span></code> command will be available in your path.</p>
+<p>Alternatively, if you have already configured but are not in an activated “virtualenv” the
+<code class="docutils literal notranslate"><span class="pre">py.test</span></code> command is available under <code class="docutils literal notranslate"><span class="pre">&lt;root</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">checkout&gt;/bin/py.test</span></code></p>
+<p>(Note: paths here are for POSIX, but mostly the same applies to Windows)</p>
+<p>If you have a multiprocessor machine you might want to run the tests in parallel (and faster)
+For instance: <code class="docutils literal notranslate"><span class="pre">py.test</span> <span class="pre">-n4</span></code> runs the tests on 4 CPUs. We typically run the tests in
+verbose mode with <code class="docutils literal notranslate"><span class="pre">py.test</span> <span class="pre">-vvs</span> <span class="pre">-n4</span></code>.</p>
+<p>You can also run a subset of the test suite as shown in the CI configs
+<a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/appveyor.yml#L6">https://github.com/nexB/scancode-toolkit/blob/develop/appveyor.yml#L6</a> e,g,
+<code class="docutils literal notranslate"><span class="pre">py.test</span> <span class="pre">-n</span> <span class="pre">2</span> <span class="pre">-vvs</span> <span class="pre">tests/scancode</span></code> runs only the test scripts present in the <code class="docutils literal notranslate"><span class="pre">tests/scancode</span></code>
+directory. (You can pass a path to a specific test script file there too).</p>
+<p>See also <a class="reference external" href="https://docs.pytest.org">https://docs.pytest.org</a> for details or use the <code class="docutils literal notranslate"><span class="pre">py.test</span> <span class="pre">-h</span></code> command to show the many
+other options available.</p>
+<p>One useful option is to run a select subset of the test functions matching a pattern with the
+<code class="docutils literal notranslate"><span class="pre">-k</span></code> option, for instance: <code class="docutils literal notranslate"><span class="pre">py.test</span> <span class="pre">-vvs</span> <span class="pre">-k</span> <span class="pre">tcpdump</span></code> would only run test functions that contain
+the string “tcpdump” in their name or their class name or module name .</p>
+<p>Another useful option after a test run with some failures is to re-run only the failed tests with
+the <code class="docutils literal notranslate"><span class="pre">--lf</span></code> option, for instance: <code class="docutils literal notranslate"><span class="pre">py.test</span> <span class="pre">-vvs</span> <span class="pre">--lf</span></code> would only run only test functions that
+failed in the previous run.</p>
+</div>
+<div class="section" id="pip-requirements-and-the-configure-script">
+<span id="contrib-dev-pip-and-configure"></span><h2>pip requirements and the configure script<a class="headerlink" href="#pip-requirements-and-the-configure-script" title="Permalink to this headline">¶</a></h2>
+<p>ScanCode use the <code class="docutils literal notranslate"><span class="pre">configure</span></code> and <code class="docutils literal notranslate"><span class="pre">configure.bat</span></code> (and <code class="docutils literal notranslate"><span class="pre">etc/configure.py</span></code> behind the scenes)
+scripts to install a <a class="reference external" href="https://virtualenv.pypa.io/en/stable/">virtualenv</a> , install required
+packaged dependencies as <a class="reference external" href="https://github.com/pypa/pip">pip</a> requirements and more configure tasks
+such that ScanCode can be installed in a self-contained way with no network connectivity required.</p>
+<p>Earlier unreleased versions of ScanCode where using <code class="docutils literal notranslate"><span class="pre">buildout</span></code> to install and configure
+eventually complex dependencies. We had some improvements that were merged in the upstream
+<code class="docutils literal notranslate"><span class="pre">buildout</span></code> to support bootstrapping and installing without a network connection and When we
+migrated to use <code class="docutils literal notranslate"><span class="pre">pip</span></code> and <code class="docutils literal notranslate"><span class="pre">wheels</span></code> as new, improved and faster way to install and configure
+dependencies we missed some of the features of <code class="docutils literal notranslate"><span class="pre">buildout</span></code> like the <code class="docutils literal notranslate"><span class="pre">recipes</span></code>, being able to
+invoke arbitrary Python or shell scripts after installing packages and have scripts or requirements
+that are operating system-specific.</p>
+</div>
+<div class="section" id="scancode-requirements-and-third-party-python-libraries">
+<h2>ScanCode requirements and third-party Python libraries<a class="headerlink" href="#scancode-requirements-and-third-party-python-libraries" title="Permalink to this headline">¶</a></h2>
+<p>In a somewhat unconventional way, all the required libraries are bundled aka. Copied in the repo
+itself in the thirdparty/ directory. If ScanCode were only a library it would not make sense. But
+it is first an application and having a well defined frozen set of dependent packages is important
+for an app. The benefit of this approach (combined with the <code class="docutils literal notranslate"><span class="pre">configure</span></code> script) means that a mere
+checkout of the repository contains everything needed to run ScanCode except for a
+Python interpreter.</p>
+</div>
+<div class="section" id="using-scancode-as-a-python-library">
+<h2>Using ScanCode as a Python library<a class="headerlink" href="#using-scancode-as-a-python-library" title="Permalink to this headline">¶</a></h2>
+<p>ScanCode can be used alright as a Python library and is available as as a Python wheel in Pypi and
+installed with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">scancode-toolkit</span></code>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cut_new_release.html" class="btn btn-neutral float-right" title="How to cut a new release:" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Contribute" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

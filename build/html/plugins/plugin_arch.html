@@ -1,0 +1,438 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Plugin Architecture &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="License Policy Plugin" href="licence_policy_plugin.html" />
+    <link rel="prev" title="Plugins" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli-reference/index.html"><strong>Command Line Interface Reference</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Plugins</strong></a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Plugin Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#abstract">Abstract:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#description">Description:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#why-pluggy">Why pluggy?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pre-scan-hook">1. Pre - scan hook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scan-proper-hook">2. Scan proper hook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#post-scan-hook">3. Post - scan hook</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#existing-solutions">Existing solutions:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="licence_policy_plugin.html">License Policy Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin_tutorials.html">Plugin Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpp_includes_plugin.html">CPP Includes Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lkmclue.html">LKMClue Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dwarf.html">Dwarf Plugin</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Plugins</strong></a> &raquo;</li>
+        
+      <li>Plugin Architecture</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/plugins/plugin_arch.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plugin-architecture">
+<span id="plugin-arch"></span><h1>Plugin Architecture<a class="headerlink" href="#plugin-architecture" title="Permalink to this headline">¶</a></h1>
+<p>Notes: this is the initial design for ScanCode plugins. The actual architecture evolved and is
+different.</p>
+<div class="section" id="abstract">
+<h2>Abstract:<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<p>This project’s purpose is to create a decoupled plugin architecture for scancode such that it can
+handle plugins at different stages of a scan and can be coupled at runtime. These stages would be</p>
+<ul class="simple">
+<li><p>Pre - scan: Before starting the scan</p></li>
+</ul>
+<p>E.g Plugins to handle extraction of different archive types or instructions on how to handle
+certain types of files.</p>
+<ul class="simple">
+<li><p>Scan proper: During the scan</p></li>
+</ul>
+<p>E.g Plugins to add more options for the scan, maybe to ignore certain files or add some
+command line arguments, create new scans (alternative or as a dependency for further scanning) etc.</p>
+<ul class="simple">
+<li><p>Post - scan: After the scan</p></li>
+</ul>
+<p>E.g Plugins for output deduction, formatting or converting output to other formats
+(such as json, spdx, csv, xml, etc.)</p>
+<p>Upside of building a pluggable system would be to allow easier additions and rare modifications
+to code, without having to really fiddle around with core codebase. This will also provide a level
+of abstraction between the plugins and scancode so that any erroneous plugin would not affect the
+functioning of scancode as a whole.</p>
+</div>
+<div class="section" id="description">
+<h2>Description:<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>This project aims at making scancode a “pluggable” system, where new functionalities can be added
+to scancode at runtime as “plugins”. These plugins can be hooked into scancode using some
+predefined hooks. I would consider pluggy as the way to go for a plugin management system.</p>
+<div class="section" id="why-pluggy">
+<h3>Why pluggy?<a class="headerlink" href="#why-pluggy" title="Permalink to this headline">¶</a></h3>
+<p>Pluggy is well documented and maintained regularly, and has proved its worth in projects such as
+py.test. Pluggy relies on hook specifications and hook implementations (callbacks) instead of the
+conventional subclassing approach which may encourage tight-coupling in the overlying framework.
+Basically a hook specification contains method signatures (no code), these are defined by the
+application. A hook implementation contains definitions for methods declared in the corresponding
+hook specification implemented by a plugin.</p>
+<p>As mentioned in the abstract, the plugin architecture will have 3 hook specifications (can be
+increased if required)</p>
+</div>
+<div class="section" id="pre-scan-hook">
+<h3>1. Pre - scan hook<a class="headerlink" href="#pre-scan-hook" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Structure</strong> -</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prescan_hookspec</span> <span class="o">=</span> <span class="n">HookspecMarker</span><span class="p">(</span><span class="s1">&#39;prescan&#39;</span><span class="p">)</span>
+
+<span class="nd">@prescan_hookspec</span>
+<span class="k">def</span> <span class="nf">extract_archive</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>Here the path of the archive to be extracted will be passed as an argument to the extract_archive
+function which will be called before scan, at the time of extraction. This will process the archive
+type and extract the contents accordingly. This functionality can be further extended by calling
+this function if any archive is found inside the scanning tree.</p>
+</div>
+<div class="section" id="scan-proper-hook">
+<h3>2. Scan proper hook<a class="headerlink" href="#scan-proper-hook" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Structure</strong></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scanproper_hookspec</span> <span class="o">=</span> <span class="n">HookspecMarker</span><span class="p">(</span><span class="s1">&#39;scanproper&#39;</span><span class="p">)</span>
+
+<span class="nd">@scanproper_hookspec</span>
+<span class="k">def</span> <span class="nf">add_cmdline_option</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>This function will be called before starting the scan, without any arguments, it will return a dict
+containing the click extension details and possibly some help text. If this option is called by the
+user then the call will be rerouted to the callback defined by the click extension. For instance
+say a plugin implements functionality to add regex as a valid ignore pattern, then this function
+will return a dict as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;--ignore-regex&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;options&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s1">&#39;multiple&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;metavar&#39;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;help&#39;</span><span class="p">:</span> <span class="s1">&#39;Ignore files matching regex &lt;pattern&gt;&#39;</span>
+    <span class="s1">&#39;call_after&#39;</span><span class="p">:</span> <span class="s1">&#39;is_ignored&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>According to the above dict, if the option –ignore-regex is supplied, this function will be called
+after the is_ignored function and the data returned by the is_ignored function will be supplied to
+this function as its argument(s). So if the program flow was:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>scancode() ⇔ scan() ⇔ resource_paths() ⇔ is_ignored()
+</pre></div>
+</div>
+<p>It will now be edited to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>scancode() ⇔ scan() ⇔ resource_paths() ⇔ is_ignored() ⇔ add_cmdline_option()
+</pre></div>
+</div>
+<p>Options such as <strong>call_after, call_before, call_first, call_last</strong> can be defined to determine
+when the function is to be executed.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@scanproper_hookspec</span>
+<span class="k">def</span> <span class="nf">dependency_scan</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>This function will be called before starting the scan without any arguments, it will return a
+list of file types or attributes which if encountered in the scanned tree, will call this function
+with the path to the file as an argument. This function can do some extra processing on those files
+and return the data to be processed as a dependency for the normal scanning process.
+E.g. It can return a list such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="s1">&#39;debian/copyright&#39;</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>Whenever a file matches this pattern, this function will be called and the data returned will be
+supplied to the main scancode function.</p>
+</div>
+<div class="section" id="post-scan-hook">
+<h3>3. Post - scan hook<a class="headerlink" href="#post-scan-hook" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Structure</strong> -</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">postscan_hookspec</span> <span class="o">=</span> <span class="n">HookspecMarker</span><span class="p">(</span><span class="s1">&#39;postscan&#39;</span><span class="p">)</span>
+
+<span class="nd">@postscan_hookspec</span>
+<span class="k">def</span> <span class="nf">format_output</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>This function will be called after a scan is finished. It will be supplied with path to the ABC
+data generated from the scan, path to the root of the scanned code and a path where the output is
+expected to be stored. The function will store the processed data in the output path supplied.
+This can be used to convert output to other formats such as CSV, SPDX, JSON, etc.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@postscan_hookspec</span>
+<span class="k">def</span> <span class="nf">summarize_output</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>This function will be called after a scan is finished. It will be supplied the data to be reported
+to the user as well as a path to the root of the scanned node. The data returned can then be
+reported to the user. This can be used to summarize output, maybe encapsulate the data to be
+reported or omit similar file metadata or even classify files such as tests, code proper, licenses,
+readme, configs, build scripts etc.</p>
+<ul class="simple">
+<li><p><strong>Identifying or configuring plugins</strong></p></li>
+</ul>
+<p>For python plugins, pluggy supports loading modules from setuptools entrypoints,
+E.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">entry_points</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;scancode_plugins&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;name_of_plugin = ignore_regex&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This plugin can be loaded using the PluginManager class’s
+load_setuptools_entrypoints(‘scancode_plugins’) method which will return a list of loaded plugins.</p>
+<p>For non python plugins, all such plugins will be stored in a common directory and each of these
+plugins will have a manifest configuration in YAML format. This directory will be scanned at
+startup for plugins. After parsing the config file of a plugin, the data will be supplied to the
+plugin manager as if it were supplied using setuptools entrypoints.</p>
+<p>In case of non python plugins, the plugin executables will be spawned in their own processes and
+according to their config data, they will be passed arguments and would return data as necessary.
+In addition to this, the desired hook function can be called from a non python plugin using certain
+arguments, which again can be mapped in the config file.</p>
+<p>Sample config file for a ignore_regex plugin calling scanproper hook would be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">ignore_regex</span>
+<span class="n">hook</span><span class="p">:</span> <span class="n">scanproper</span>
+<span class="n">hookfunctions</span><span class="p">:</span>
+  <span class="n">add_cmdline_option</span><span class="p">:</span> <span class="s1">&#39;-aco&#39;</span>
+  <span class="n">dependency_scan</span><span class="p">:</span> <span class="s1">&#39;-dc&#39;</span>
+<span class="n">data</span><span class="p">:</span>
+  <span class="n">add_cmdline_option</span><span class="s1">&#39;:</span>
+    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="s1">&#39;--ignore-regex&#39;</span>
+    <span class="o">-</span> <span class="n">options</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">default</span><span class="p">:</span> <span class="kc">None</span>
+        <span class="o">-</span> <span class="n">multiple</span><span class="p">:</span> <span class="kc">True</span>
+        <span class="o">-</span> <span class="n">metavar</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;</span>
+    <span class="o">-</span> <span class="n">help</span><span class="p">:</span> <span class="s1">&#39;Ignore files matching regex &lt;pattern&gt;&#39;</span>
+    <span class="o">-</span> <span class="n">call_after</span><span class="p">:</span> <span class="s1">&#39;is_ignored&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="existing-solutions">
+<h2>Existing solutions:<a class="headerlink" href="#existing-solutions" title="Permalink to this headline">¶</a></h2>
+<p>An alternate solution to a “pluggable” system would be the more conventional approach of adding
+functionalities directly to the core codebase, which removes the abstraction layer provided by
+a plugin management and hook calling system.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="licence_policy_plugin.html" class="btn btn-neutral float-right" title="License Policy Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Plugins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

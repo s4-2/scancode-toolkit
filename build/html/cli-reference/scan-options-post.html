@@ -1,0 +1,1156 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Post-Scan Options &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Basic Tutorials" href="../tutorials/index.html" />
+    <link rel="prev" title="Pre-Scan Options" href="scan-options-pre.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Command Line Interface Reference</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="synopsis.html">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html">Getting Help from the Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html">All Available Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html">How to Run a Scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html"><cite>Basic</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html"><cite>Core</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html">Scancode Output Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-filters-and-control.html">Controlling Scancode Output and Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html">Pre-Scan Options</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Post-Scan Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#all-post-scan-options">All “Post-Scan” Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mark-source-option"><code class="docutils literal notranslate"><span class="pre">--mark-source</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#consolidate-option"><code class="docutils literal notranslate"><span class="pre">--consolidate</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filter-clues-option"><code class="docutils literal notranslate"><span class="pre">--filter-clues</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#is-license-text-option"><code class="docutils literal notranslate"><span class="pre">--is-license-text</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#license-clarity-score-option"><code class="docutils literal notranslate"><span class="pre">--license-clarity-score</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#license-policy-file-option"><code class="docutils literal notranslate"><span class="pre">--license-policy</span> <span class="pre">FILE</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary-option"><code class="docutils literal notranslate"><span class="pre">--summary</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary-by-facet-option"><code class="docutils literal notranslate"><span class="pre">--summary-by-facet</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary-key-files-option"><code class="docutils literal notranslate"><span class="pre">--summary-key-files</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary-with-details-option"><code class="docutils literal notranslate"><span class="pre">--summary-with-details</span></code> Option</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Command Line Interface Reference</strong></a> &raquo;</li>
+        
+      <li>Post-Scan Options</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/cli-reference/scan-options-post.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="post-scan-options">
+<span id="cli-post-scan"></span><h1>Post-Scan Options<a class="headerlink" href="#post-scan-options" title="Permalink to this headline">¶</a></h1>
+<p>Post-Scan options activate their respective post-scan plugins which execute the task.</p>
+<div class="section" id="all-post-scan-options">
+<h2>All “Post-Scan” Options<a class="headerlink" href="#all-post-scan-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd><span class="option">--mark-source</span></kbd></dt>
+<dd><p>Set the “is_source” flag to true for directories that
+contain over 90% of source files as direct children
+and descendants. Count the number of source files in a
+directory as a new “source_file_counts” attribute</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--url</span></code></p>
+</dd>
+<dt><kbd><span class="option">--consolidate</span></kbd></dt>
+<dd><p>Group resources by Packages or license and
+copyright holder and return those groupings
+as a list of consolidated packages and a list
+of consolidated components.</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--copyright</span></code>, <code class="docutils literal notranslate"><span class="pre">--license</span></code> and
+<code class="docutils literal notranslate"><span class="pre">--packages</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">--filter-clues</span></kbd></dt>
+<dd><p>Filter redundant duplicated clues already
+contained in detected licenses, copyright
+texts and notices.</p>
+</dd>
+<dt><kbd><span class="option">--is-license-text</span></kbd></dt>
+<dd><p>Set the “is_license_text” flag to true for
+files that contain mostly license texts and
+notices (e.g. over 90% of the content).</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--info</span></code> and <code class="docutils literal notranslate"><span class="pre">--license-text</span></code>.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">--is-license-text</span></code> is an experimental Option.</p>
+</div>
+<dl class="option-list">
+<dt><kbd><span class="option">--license-clarity-score</span></kbd></dt>
+<dd><p>Compute a summary license clarity score at
+the codebase level.</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--classify</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">--license-policy <var>FILE</var></span></kbd></dt>
+<dd><p>Load a License Policy file and apply it to
+the scan at the Resource level.</p>
+</dd>
+<dt><kbd><span class="option">--summary</span></kbd></dt>
+<dd><p>Summarize license, copyright and other scans
+at the codebase level.</p>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--summary-by-facet</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--summary-key-files</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--summary-with-details</span></code></p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">--summary-by-facet</span></kbd></dt>
+<dd><p>Summarize license, copyright and other scans
+and group the results by facet.</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--summary</span></code> and <code class="docutils literal notranslate"><span class="pre">--facet</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">--summary-key-files</span></kbd></dt>
+<dd><p>Summarize license, copyright and other scans
+for key, top-level files. Key files are top-
+level codebase files such as COPYING, README
+and package manifests as reported by the
+<code class="docutils literal notranslate"><span class="pre">--classify</span></code> option “is_legal”, “is_readme”,
+“is_manifest” and “is_top_level” flags.</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--classify</span></code> and <code class="docutils literal notranslate"><span class="pre">--summary</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">--summary-with-details</span></kbd></dt>
+<dd><p>Summarize license, copyright and other scans
+at the codebase level, keeping intermediate
+details at the file and directory level.</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that different for different install methods, scan commands vary.</p>
+<p>The basic command to perform a scan, in case of a download and configure installation
+(on Linux/MacOS) is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The basic usage, if Scancode is installed from <code class="docutils literal notranslate"><span class="pre">pip</span></code>, or in Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For more information on how the Scan Command varies for Various Installation
+Methods/Operating Systems, refer <a class="reference internal" href="../getting-started/install.html#commands-variation"><span class="std std-ref">Commands Variation</span></a>.</p>
+</div>
+<p>To see all plugins available via command line help, use <code class="docutils literal notranslate"><span class="pre">--plugins</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Plugins that are shown by using <code class="docutils literal notranslate"><span class="pre">--plugins</span></code> inlcude the following:</p>
+<ol class="arabic simple">
+<li><p>Post-Scan Plugins (and, the following)</p></li>
+<li><p>Pre-Scan Plugins</p></li>
+<li><p>Output Options</p></li>
+<li><p>Output Control</p></li>
+<li><p>Basic Scan Options</p></li>
+</ol>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="mark-source-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--mark-source</span></code> Option<a class="headerlink" href="#mark-source-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="admonition-dependency admonition">
+<p class="admonition-title">Dependency</p>
+<p>The option <code class="docutils literal notranslate"><span class="pre">--mark-source</span></code> is a sub-option of and <strong>requires</strong> the option <code class="docutils literal notranslate"><span class="pre">--info</span></code>.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">mark-source</span></code> option marks the “is_source” attribute of a directory to be “True”, if more
+than 90% of the files under that directory is source files, i.e. Their “is_source” attribute is
+“True”.</p>
+<p>When the following command is executed to scan the <code class="docutils literal notranslate"><span class="pre">samples</span></code> directory with this option enabled:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">mark</span><span class="o">-</span><span class="n">source</span>
+</pre></div>
+</div>
+<p>Then, the following directories are marked as “Source”, i.e. Their “is_source” attribute is changed
+from “false” to “True”.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">samples/JGroups/src</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samples/zlib/iostream2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samples/zlib/gcc_gvmat64</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samples/zlib/ada</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samples/zlib/infback9</span></code></p></li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="consolidate-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--consolidate</span></code> Option<a class="headerlink" href="#consolidate-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="admonition-dependency admonition">
+<p class="admonition-title">Dependency</p>
+<p>The option <code class="docutils literal notranslate"><span class="pre">--consolidate</span></code> is a sub-option of and <strong>requires</strong> the options <code class="docutils literal notranslate"><span class="pre">--license</span></code>
+, <code class="docutils literal notranslate"><span class="pre">--copyright</span></code> and <code class="docutils literal notranslate"><span class="pre">--package</span></code>.</p>
+</div>
+<p>The JSON file containing scan results after using the <code class="docutils literal notranslate"><span class="pre">--consolidate</span></code> Plugin is structured as
+follows: (note: “…” in the image contains more data)</p>
+<p>An example Scan:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">consolidate</span>
+</pre></div>
+</div>
+<p>The JSON output file is structured as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;consolidated_components&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="o">...</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;license-holders&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;dmitriy_anisimkov_1&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;consolidated_license_expression&quot;</span><span class="p">:</span> <span class="s2">&quot;gpl-2.0-plus WITH ada-linking-exception&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;consolidated_holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Dmitriy Anisimkov&quot;</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;consolidated_copyright&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) Dmitriy Anisimkov&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;core_license_expression&quot;</span><span class="p">:</span> <span class="s2">&quot;gpl-2.0-plus WITH ada-linking-exception&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;core_holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Dmitriy Anisimkov&quot;</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;other_license_expression&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;other_holders&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;files_count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="p">{</span><span class="o">...</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;consolidated_packages&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Each consolidated component has the following information:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;consolidated_components&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;license-holders&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;dmitriy_anisimkov_1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;consolidated_license_expression&quot;</span><span class="p">:</span> <span class="s2">&quot;gpl-2.0-plus WITH ada-linking-exception&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;consolidated_holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;Dmitriy Anisimkov&quot;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;consolidated_copyright&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) Dmitriy Anisimkov&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;core_license_expression&quot;</span><span class="p">:</span> <span class="s2">&quot;gpl-2.0-plus WITH ada-linking-exception&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;core_holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;Dmitriy Anisimkov&quot;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;other_license_expression&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">&quot;other_holders&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;files_count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+<p>In addition to this, in every file/directory where the consolidated part (i.e. License information)
+was present, a “consolidated_to” attribute is added pointing to the “identifier” of
+“consolidated_components”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;consolidated_to&quot;</span><span class="p">:</span> <span class="p">[</span>
+         <span class="s2">&quot;dmitriy_anisimkov_1&quot;</span>
+         <span class="p">],</span>
+</pre></div>
+</div>
+<p>Note that multiple files may have the same “consolidated_to” attribute.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="filter-clues-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--filter-clues</span></code> Option<a class="headerlink" href="#filter-clues-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">--filter-clues</span></code> Plugin filters redundant duplicated clues already contained in detected
+licenses, copyright texts and notices.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Running the following scan generates an error:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">scancode</span> <span class="o">-</span><span class="n">clp</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">sample_filter_clues</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="nb">filter</span><span class="o">-</span><span class="n">clues</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="is-license-text-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--is-license-text</span></code> Option<a class="headerlink" href="#is-license-text-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="admonition-dependency admonition">
+<p class="admonition-title">Dependency</p>
+<p>The option <code class="docutils literal notranslate"><span class="pre">--is-license-text</span></code> is a sub-option of and requires the options
+<code class="docutils literal notranslate"><span class="pre">--info</span></code> and <code class="docutils literal notranslate"><span class="pre">--license-text</span></code>.
+Also, the option <code class="docutils literal notranslate"><span class="pre">--license-text</span></code> is a sub-option of and requires the options
+<code class="docutils literal notranslate"><span class="pre">--license</span></code>.</p>
+</div>
+<p>If the <code class="docutils literal notranslate"><span class="pre">--is-license-text</span></code> is used, then the “is_license_text” flag is set to true for files that
+contain mostly license texts and notices. Here mostly means over 90% of the content of the file.</p>
+<p>An example Scan:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">text</span> <span class="o">--</span><span class="ow">is</span><span class="o">-</span><span class="n">license</span><span class="o">-</span><span class="n">text</span>
+</pre></div>
+</div>
+<p>If the samples directory is scanned with this plugin, the files containing mostly license texts
+will have the following attribute set to ‘true’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;is_license_text&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>The files in samples that will have the “is_license_text” to be true are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">samples</span><span class="o">/</span><span class="n">JGroups</span><span class="o">/</span><span class="n">EULA</span>
+<span class="n">samples</span><span class="o">/</span><span class="n">JGroups</span><span class="o">/</span><span class="n">LICENSE</span>
+<span class="n">samples</span><span class="o">/</span><span class="n">JGroups</span><span class="o">/</span><span class="n">licenses</span><span class="o">/</span><span class="n">apache</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">samples</span><span class="o">/</span><span class="n">JGroups</span><span class="o">/</span><span class="n">licenses</span><span class="o">/</span><span class="n">apache</span><span class="o">-</span><span class="mf">2.0</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">samples</span><span class="o">/</span><span class="n">JGroups</span><span class="o">/</span><span class="n">licenses</span><span class="o">/</span><span class="n">bouncycastle</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">samples</span><span class="o">/</span><span class="n">JGroups</span><span class="o">/</span><span class="n">licenses</span><span class="o">/</span><span class="n">cpl</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">samples</span><span class="o">/</span><span class="n">JGroups</span><span class="o">/</span><span class="n">licenses</span><span class="o">/</span><span class="n">lgpl</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">samples</span><span class="o">/</span><span class="n">zlib</span><span class="o">/</span><span class="n">dotzlib</span><span class="o">/</span><span class="n">LICENSE_1_0</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Note that the license objects for each detected license in the files already has “is_license_text”
+attributes by default, but not the file objects. They only have this attribute if the plugin is used.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">--is-license-text</span></code> is an experimental Option.</p>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="license-clarity-score-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--license-clarity-score</span></code> Option<a class="headerlink" href="#license-clarity-score-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="admonition-dependency admonition">
+<p class="admonition-title">Dependency</p>
+<p>The option <code class="docutils literal notranslate"><span class="pre">--license-clarity-score</span></code> is a sub-option of and requires the option
+<code class="docutils literal notranslate"><span class="pre">--classify</span></code>.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">--license-clarity-score</span></code> plugin when used in a scan, computes a summary license clarity
+score at the codebase level.</p>
+<p>An example Scan:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">classify</span> <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">clarity</span><span class="o">-</span><span class="n">score</span>
+</pre></div>
+</div>
+<p>The “license_clarity_score” will have the following attributes:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>“score”</p></li>
+<li><p>“declared”</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>“discovered”</p></li>
+<li><p>“consistency”</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>“spdx”</p></li>
+<li><p>“license_texts”</p></li>
+</ul>
+</td></tr></table>
+<p>It whole JSON file is structured as follows, when it has “license_clarity_score”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="o">...</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;license_clarity_score&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+    <span class="s2">&quot;declared&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">&quot;discovered&quot;</span><span class="p">:</span> <span class="mf">0.69</span><span class="p">,</span>
+    <span class="s2">&quot;consistency&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">&quot;spdx&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">&quot;license_texts&quot;</span><span class="p">:</span> <span class="n">false</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="o">...</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="license-policy-file-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--license-policy</span> <span class="pre">FILE</span></code> Option<a class="headerlink" href="#license-policy-file-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>The Policy file is a YAML (.yml) document with the following structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">license_policies</span><span class="p">:</span>
+<span class="o">-</span>   <span class="n">license_key</span><span class="p">:</span> <span class="n">mit</span>
+    <span class="n">label</span><span class="p">:</span> <span class="n">Approved</span> <span class="n">License</span>
+    <span class="n">color_code</span><span class="p">:</span> <span class="s1">&#39;#00800&#39;</span>
+    <span class="n">icon</span><span class="p">:</span> <span class="n">icon</span><span class="o">-</span><span class="n">ok</span><span class="o">-</span><span class="n">circle</span>
+<span class="o">-</span>   <span class="n">license_key</span><span class="p">:</span> <span class="n">agpl</span><span class="o">-</span><span class="mf">3.0</span>
+    <span class="n">label</span><span class="p">:</span> <span class="n">Approved</span> <span class="n">License</span>
+    <span class="n">color_code</span><span class="p">:</span> <span class="s1">&#39;#008000&#39;</span>
+    <span class="n">icon</span><span class="p">:</span> <span class="n">icon</span><span class="o">-</span><span class="n">ok</span><span class="o">-</span><span class="n">circle</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the policy file only the “license_key” is a required field.</p>
+</div>
+<p>Applying License Policies during a ScanCode scan, using the <code class="docutils literal notranslate"><span class="pre">--license-policy</span></code> Plugin:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clipeu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">policy</span> <span class="n">policy</span><span class="o">-</span><span class="n">file</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">--license-policy</span> <span class="pre">FILE</span></code> is a not a sub-option of <code class="docutils literal notranslate"><span class="pre">--license</span></code>. It works normally without
+<code class="docutils literal notranslate"><span class="pre">-l</span></code>.</p>
+</div>
+<p>This adds to every file/directory an object “license_policy”, having as further attributes under it
+the fields as specified in the .YAML file. Here according to our example .YAML file, the attributes
+will be:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>“license_key”</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>“label”</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>“color_code”</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>“icon”</p></li>
+</ul>
+</td></tr></table>
+<p>Here the <code class="docutils literal notranslate"><span class="pre">samples</span></code> directory is scanned, and the Scan Results for a sample file is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/JGroups/licenses/apache-2.0.txt&quot;</span><span class="p">,</span>
+  <span class="o">...</span>
+  <span class="o">...</span>
+  <span class="o">...</span>
+  <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="o">...</span>
+  <span class="o">...</span>
+  <span class="o">...</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;apache-2.0&quot;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;emails&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;license_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;license_key&quot;</span><span class="p">:</span> <span class="s2">&quot;apache-2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Approved License&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;color_code&quot;</span><span class="p">:</span> <span class="s2">&quot;#008000&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;icon-ok-circle&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;urls&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;files_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;dirs_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;size_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;scan_errors&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+<p>More information on the <a class="reference internal" href="../plugins/licence_policy_plugin.html#license-policy-plugin"><span class="std std-ref">License Policy Plugin</span></a> and usage.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="summary-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--summary</span></code> Option<a class="headerlink" href="#summary-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="admonition-sub-option admonition">
+<p class="admonition-title">Sub-Option</p>
+<p>The option <code class="docutils literal notranslate"><span class="pre">--summary-by-facet</span></code>, <code class="docutils literal notranslate"><span class="pre">--summary-key-files</span></code> and
+<code class="docutils literal notranslate"><span class="pre">--summary-with-details``are</span> <span class="pre">sub-options</span> <span class="pre">of</span> <span class="pre">``--summary</span></code>. These Sub-Options are all
+Post-Scan Options.</p>
+</div>
+<p>An example Scan:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">summary</span>
+</pre></div>
+</div>
+<p>The whole JSON file is structured as follows, when the <code class="docutils literal notranslate"><span class="pre">--summary</span></code> plugin is applied:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The Summary object has the following attributes.</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>“license_expressions”</p></li>
+<li><p>“copyrights”</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>“holders”</p></li>
+<li><p>“authors”</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>“programming_language”</p></li>
+<li><p>“packages”</p></li>
+</ul>
+</td></tr></table>
+<p>Each attribute has multiple entries each containing “value” and “count”, with their values having
+the summary information inside them.</p>
+<p>A sample summary object generated:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;zlib&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">13</span>
+  <span class="p">},</span>
+<span class="p">]</span>
+<span class="p">],</span>
+<span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) Mark Adler&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">4</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) Free Software Foundation, Inc.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) The Apache Software Foundation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright Red Hat, Inc. and individual contributors&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">}</span>
+<span class="p">],</span>
+<span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">10</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Mark Adler&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">4</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Red Hat, Inc. and individual contributors&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;The Apache Software Foundation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+<span class="p">],</span>
+<span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Bela Ban&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">4</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Brian Stansberry&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;the Apache Software Foundation (http://www.apache.org/)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">}</span>
+<span class="p">],</span>
+<span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;C++&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">13</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">7</span>
+  <span class="p">},</span>
+<span class="p">],</span>
+<span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="summary-by-facet-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--summary-by-facet</span></code> Option<a class="headerlink" href="#summary-by-facet-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="admonition-dependency admonition">
+<p class="admonition-title">Dependency</p>
+<p>The option <code class="docutils literal notranslate"><span class="pre">--summary-by-facet</span></code> is a sub-option of and requires the options <code class="docutils literal notranslate"><span class="pre">--facet</span></code>
+and <code class="docutils literal notranslate"><span class="pre">--summary</span></code>.</p>
+</div>
+<p>Running the scan with <code class="docutils literal notranslate"><span class="pre">--summary</span> <span class="pre">--summary-by-facet</span></code> Plugins creates individual summaries for
+all the facets with the same license, copyright and other scan information, at a codebase level
+(in addition to the codebase level general summary generated by <code class="docutils literal notranslate"><span class="pre">--summary</span></code> Plugin)</p>
+<p>An example scan using the <code class="docutils literal notranslate"><span class="pre">--summary-by-facet</span></code> Plugin:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">summary</span> <span class="o">--</span><span class="n">facet</span> <span class="n">dev</span><span class="o">=</span><span class="s2">&quot;*.java&quot;</span> <span class="o">--</span><span class="n">facet</span> <span class="n">dev</span><span class="o">=</span><span class="s2">&quot;*.c&quot;</span> <span class="o">--</span><span class="n">summary</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">facet</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All other files which are not <code class="docutils literal notranslate"><span class="pre">dev</span></code> are marked to be included in the facet <code class="docutils literal notranslate"><span class="pre">core</span></code>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Running the same scan with <code class="docutils literal notranslate"><span class="pre">./scancode</span> <span class="pre">-clpieu</span></code> i.e. with <code class="docutils literal notranslate"><span class="pre">-p</span></code> generates an error.
+Avoid this.</p>
+</div>
+<p>The JSON file containing scan results is structured as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;summary_by_facet&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;core&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;tests&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;docs&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;examples&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="o">...</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A sample “summary_by_facet” object generated by the previous scan (shortened):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;summary_by_facet&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;core&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;mit&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+        <span class="p">},</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) Free Software Foundation, Inc.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span>
+        <span class="p">},</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;The Apache Software Foundation&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+        <span class="p">},</span>
+      <span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Gilles Vollant&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+        <span class="p">},</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;C++&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">8</span>
+        <span class="p">},</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;zlib&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">5</span>
+        <span class="p">},</span>
+      <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright Red Hat Middleware LLC, and individual contributors&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+        <span class="p">},</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Mark Adler&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">3</span>
+        <span class="p">},</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Brian Stansberry&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+        <span class="p">},</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">7</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;C++&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">5</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+<span class="p">],</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Summaries for all the facets are generated by default, regardless of facets not having any
+files under them.</p>
+</div>
+<p>For users who want to know <a class="reference internal" href="scan-options-pre.html#what-is-a-facet"><span class="std std-ref">What is a Facet?</span></a>.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="summary-key-files-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--summary-key-files</span></code> Option<a class="headerlink" href="#summary-key-files-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="admonition-dependency admonition">
+<p class="admonition-title">Dependency</p>
+<p>The option <code class="docutils literal notranslate"><span class="pre">--summary-key-files</span></code> is a sub-option of and requires the options
+<code class="docutils literal notranslate"><span class="pre">--classify</span></code> and <code class="docutils literal notranslate"><span class="pre">--summary</span></code>.</p>
+</div>
+<p>An example Scan:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">classify</span> <span class="o">--</span><span class="n">summary</span> <span class="o">--</span><span class="n">summary</span><span class="o">-</span><span class="n">key</span><span class="o">-</span><span class="n">files</span>
+</pre></div>
+</div>
+<p>Running the scan with <code class="docutils literal notranslate"><span class="pre">--summary</span> <span class="pre">--summary-key-files</span></code> Plugins creates summaries for key files
+with the same license, copyright and other scan information, at a codebase level (in addition
+to the codebase level general summary generated by <code class="docutils literal notranslate"><span class="pre">--summary</span></code> Plugin)</p>
+<p>The resulting JSON file containing the scan results is structured as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;summary_of_key_files&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span>
+</pre></div>
+</div>
+<p>These following flags for each file/directory is also present (generated by <code class="docutils literal notranslate"><span class="pre">--classify</span></code>)</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>“is_legal”</p></li>
+<li><p>“is_manifest”</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>“is_readme”</p></li>
+<li><p>“is_top_level”</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>“is_key_file”</p></li>
+</ul>
+</td></tr></table>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="summary-with-details-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--summary-with-details</span></code> Option<a class="headerlink" href="#summary-with-details-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">--summary</span></code> plugin summarizes license, copyright and other scan information at the
+codebase level. Now running the scan with the <code class="docutils literal notranslate"><span class="pre">--summary-with-details</span></code> plugin instead creates
+summaries at individual file/directories with the same license, copyright and other scan
+information, but at a file/directory level (in addition to the the codebase level summary).</p>
+<p>An example Scan:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">summary</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">details</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">--summary</span></code> is redundant in a scan when <code class="docutils literal notranslate"><span class="pre">--summary-with-details</span></code> is already selected.</p>
+</div>
+<p>A sample file object in the scan results (a directory level summary of <code class="docutils literal notranslate"><span class="pre">samples/arch</span></code>) is
+structured as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/arch&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;directory&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;arch&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;base_name&quot;</span><span class="p">:</span> <span class="s2">&quot;arch&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">&quot;md5&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">&quot;mime_type&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">&quot;file_type&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">&quot;is_binary&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_text&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_archive&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_media&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_source&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_script&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;emails&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;urls&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;is_legal&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_manifest&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_readme&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_top_level&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="s2">&quot;is_key_file&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;zlib&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) Jean-loup Gailly&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) Jean-loup Gailly and Mark Adler&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) Mark Adler&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Jean-loup Gailly&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Jean-loup Gailly and Mark Adler&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Mark Adler&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">4</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;C++&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;files_count&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="s2">&quot;dirs_count&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="s2">&quot;size_count&quot;</span><span class="p">:</span> <span class="mi">127720</span><span class="p">,</span>
+  <span class="s2">&quot;scan_errors&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+<p>These following flags for each file/directory is also present (generated by <code class="docutils literal notranslate"><span class="pre">--classify</span></code>)</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>“is_legal”</p></li>
+<li><p>“is_manifest”</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>“is_readme”</p></li>
+<li><p>“is_top_level”</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>“is_key_file”</p></li>
+</ul>
+</td></tr></table>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../tutorials/index.html" class="btn btn-neutral float-right" title="Basic Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="scan-options-pre.html" class="btn btn-neutral float-left" title="Pre-Scan Options" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

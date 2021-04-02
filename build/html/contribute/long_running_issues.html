@@ -1,0 +1,438 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Long Running Issues - Help Needed &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plugins" href="../plugins/index.html" />
+    <link rel="prev" title="Google Summer of Code 2019 - Final report" href="gsoc19_final_report.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli-reference/index.html"><strong>Command Line Interface Reference</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Contribute</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="contrib_dev.html">Contributing to Code Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cut_new_release.html">How to cut a new release:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contrib_doc.html">Contributing to the Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc17_final_report.html">Google Summer of Code 2017 - Final report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc19_final_report.html">Google Summer of Code 2019 - Final report</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Long Running Issues - Help Needed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#long-running-issues-scancode-toolkit">Long Running Issues - Scancode Toolkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roadmaps">Roadmaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#good-first-issue">Good First Issue</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#important-links">Important Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-you-should-understand-before-solving-a-good-first-issue">What you should understand before Solving a Good First Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-by-step-workflow-contributor-s-tasks">Step by Step Workflow : Contributor’s Tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#first-timers-only">First Timers Only</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id10">Important Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-you-should-understand-before-solving-a-first-timers-only-issue">What you should understand before Solving a First Timers Only Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">Step by Step Workflow : Contributor’s Tasks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Contribute</strong></a> &raquo;</li>
+        
+      <li>Long Running Issues - Help Needed</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/contribute/long_running_issues.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="long-running-issues-help-needed">
+<h1>Long Running Issues - Help Needed<a class="headerlink" href="#long-running-issues-help-needed" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="long-running-issues-scancode-toolkit">
+<h2>Long Running Issues - Scancode Toolkit<a class="headerlink" href="#long-running-issues-scancode-toolkit" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1825">Good First Issues List</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1826">First Timers Only Issues List</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1146">Add improved documentation for V3.0</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1824">Documentation Roadmap</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1813">Documentation Inconsistencies Tracker</a></p></li>
+</ul>
+</div>
+<div class="section" id="roadmaps">
+<h2>Roadmaps<a class="headerlink" href="#roadmaps" title="Permalink to this headline">¶</a></h2>
+<p>This section provides a overview of ScanCode developement roadmap, in the sense what maintainers
+are considering, what the long-term goals are.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="roadmap.html#roadmap"><span class="std std-ref">Roadmap</span></a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/milestones">Milestones</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/milestone/11">v3.1</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/milestone/12">v3.2</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1824">Documentation Roadmap</a></p></li>
+</ul>
+</div>
+<div class="section" id="good-first-issue">
+<span id="id2"></span><h2>Good First Issue<a class="headerlink" href="#good-first-issue" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference external" href="https://github.com/nexB/scancode-toolkit/labels/good%20first%20issue">good first issue</a>
+means it’s recommended for people who haven’t contributed to our codebase before.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">Solving</span> <span class="pre">Good</span> <span class="pre">First</span> <span class="pre">Issue</span></code> is basically an issue based guide for new contributors to
+solve a <code class="docutils literal notranslate"><span class="pre">Good</span> <span class="pre">First</span> <span class="pre">Issue</span></code>.</p>
+<p>Manitainers of ScanCode Toolkit label small bugs as good first issues for new contributors.</p>
+<div class="section" id="important-links">
+<span id="good-1st-issue-links"></span><h3>Important Links<a class="headerlink" href="#important-links" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Issues labeled <a class="reference external" href="https://github.com/nexB/scancode-toolkit/labels/good%20first%20issue">good first issue</a></p></li>
+<li><p>The status <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1825">list of good first issue</a></p></li>
+<li><p>opening a <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/new?assignees=&amp;labels=first+issue+solving&amp;template=--good-first-issue.md&amp;title=">Solving Good First Issue</a></p></li>
+</ul>
+</div>
+<div class="section" id="what-you-should-understand-before-solving-a-good-first-issue">
+<span id="good-1st-issue-understand-b4-solving"></span><h3>What you should understand before Solving a Good First Issue<a class="headerlink" href="#what-you-should-understand-before-solving-a-good-first-issue" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>ScanCode Toolkit tracks different kinds of <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/">issues using GitHub</a>.</p></li>
+<li><p>Some of these issues are labeled <code class="docutils literal notranslate"><span class="pre">Good</span> <span class="pre">First</span> <span class="pre">Issue</span></code> by the Maintainers, as in they
+recommend them.</p></li>
+<li><p>A list of <code class="docutils literal notranslate"><span class="pre">Good</span> <span class="pre">First</span> <span class="pre">Issue</span></code> is also maintained <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1825">here</a>.</p></li>
+<li><p>The list of <code class="docutils literal notranslate"><span class="pre">Good</span> <span class="pre">First</span> <span class="pre">Issue</span></code> contains a list of Issues, people assigned to them
+(or waiting to be assigned) and their status (active/completed).</p></li>
+<li><p>Issues here are marked Solved using a <a class="reference external" href="https://help.github.com/en/github/managing-your-work-on-github/about-task-lists">Task List</a>.</p></li>
+<li><p>Contributors come at this issue (and not at individual issues) and ask the maintainers to
+be assigned.</p></li>
+<li><p>After being assigned, contributors open another Issue labeled <code class="docutils literal notranslate"><span class="pre">Solving</span> <span class="pre">Good</span> <span class="pre">First</span> <span class="pre">Issue</span></code>
+so maintainers can Track their Progress on that Issue.</p></li>
+<li><p>The task list in the new issue opened (labeled <code class="docutils literal notranslate"><span class="pre">Solving</span> <span class="pre">Good</span> <span class="pre">First</span> <span class="pre">Issue</span></code>) has to be updated by
+the Contributor.</p></li>
+</ul>
+</div>
+<div class="section" id="step-by-step-workflow-contributor-s-tasks">
+<span id="good-1st-issue-workflow"></span><h3>Step by Step Workflow : Contributor’s Tasks<a class="headerlink" href="#step-by-step-workflow-contributor-s-tasks" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>Look at the Issues in <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1825">Good First Issues List</a>
+These are basically all the <a class="reference external" href="https://github.com/nexB/scancode-toolkit/labels/good%20first%20issue">issues labeled Good First Issue</a>
+with information on people assigned to the issues, and their status.</p></li>
+<li><p>Select a <code class="docutils literal notranslate"><span class="pre">Good</span> <span class="pre">First</span> <span class="pre">Issue</span></code> which isn’t assigned and comment in the <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1825">Good First Issues List</a>
+asking the maintainers to assign you.</p></li>
+<li><p>After you are assigned to that Issue by a maintainer, make sure you are assigned to the one you
+requested. It’ll look like <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span> <span class="pre">#1724</span> <span class="pre">&#64;AyanSinhaMahapatra</span></code> where <code class="docutils literal notranslate"><span class="pre">#1724</span></code> is the Issue number
+and <code class="docutils literal notranslate"><span class="pre">AyanSinhaMahapatra</span></code> is your GitHub user ID.</p></li>
+<li><p>Open an Issue labeled <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/new?assignees=&amp;labels=first+issue+solving&amp;template=--good-first-issue.md&amp;title=">Solving Good First Issue here</a> .</p></li>
+<li><p>In this issue you opened, reference the following:
+(include <code class="docutils literal notranslate"><span class="pre">#[number]</span></code> in comments, like <code class="docutils literal notranslate"><span class="pre">#1724</span></code>)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The Original issue labeled <code class="docutils literal notranslate"><span class="pre">Good</span> <span class="pre">First</span> <span class="pre">Issue</span></code> that you are solving.</p></li>
+<li><p>The Pull Request you open later.</p></li>
+<li><p>The <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1825">Good First Issues List</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Follow the Instruction on that Issue (It’s a Template you’ll just have to mark the Task List
+as you complete tasks)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Claim this issue</strong></p></li>
+<li><p><strong>Reproduce</strong></p></li>
+<li><p><strong>Create a Unit test</strong></p></li>
+<li><p><strong>Come up with a Solution</strong></p></li>
+<li><p><strong>Code your Solution</strong></p></li>
+<li><p><strong>Run the tests locally</strong></p></li>
+<li><p><strong>Commit and Push</strong></p></li>
+<li><p><strong>Start a Pull Request</strong></p></li>
+<li><p><strong>Make Sure all the Tests Pass</strong></p></li>
+<li><p><strong>Done</strong> Ask in comments for a review :)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Remind maintainers to close both Issues, after your Pull Request is Merged.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The Original issue labeled <code class="docutils literal notranslate"><span class="pre">Good</span> <span class="pre">First</span> <span class="pre">Issue</span></code></p></li>
+<li><p>The issue opened by you labeled <code class="docutils literal notranslate"><span class="pre">Solving</span> <span class="pre">Good</span> <span class="pre">First</span> <span class="pre">Issue</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="first-timers-only">
+<span id="id8"></span><h2>First Timers Only<a class="headerlink" href="#first-timers-only" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference external" href="https://github.com/nexB/scancode-toolkit/labels/%20first%20timers%20only">first timers only</a>.
+issue means we’ve worked to make it more legible to folks who either <strong>haven’t contributed to our
+codebase before, or even folks who haven’t contributed to open source before</strong>.</p>
+<p>Small documenation inconsistencies are first timers only issues for new contributors.</p>
+<div class="section" id="id10">
+<h3>Important Links<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Issues labeled <a class="reference external" href="https://github.com/nexB/scancode-toolkit/labels/%20first%20timers%20only">first timers only</a></p></li>
+<li><p>The status list of <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1826">all first timers only</a> Issues</p></li>
+<li><p>All <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1813">Documentation Inconsistencies Issue</a>.</p></li>
+<li><p>opening a <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/new?assignees=&amp;labels=first+timers+only&amp;template=--first-timers-only.md&amp;title=">First Timers Only Issue</a></p></li>
+</ul>
+</div>
+<div class="section" id="what-you-should-understand-before-solving-a-first-timers-only-issue">
+<h3>What you should understand before Solving a First Timers Only Issue<a class="headerlink" href="#what-you-should-understand-before-solving-a-first-timers-only-issue" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>ScanCode Toolkit tracks different kinds of <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/">issues using GitHub</a>.</p></li>
+<li><p>Some of these issues are documentation inconsistencies <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1813">listed here</a>.</p></li>
+<li><p>A list of <code class="docutils literal notranslate"><span class="pre">First</span> <span class="pre">Timers</span> <span class="pre">Only</span></code> Issues is also <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1826">maintained here</a>.</p></li>
+<li><p>The list of <code class="docutils literal notranslate"><span class="pre">First</span> <span class="pre">Timers</span> <span class="pre">Only</span></code> contains a list of Issues, people assigned to them
+(or waiting to be assigned) and their status (active/completed).</p></li>
+<li><p>Issues here are marked Solved using a <a class="reference external" href="https://help.github.com/en/github/managing-your-work-on-github/about-task-lists">Task List</a>.</p></li>
+<li><p>Contributors come at this issue and ask the maintainers to be assigned.</p></li>
+<li><p>After being assigned, contributors open another Issue labeled <code class="docutils literal notranslate"><span class="pre">First</span> <span class="pre">Timers</span> <span class="pre">Only</span></code>
+so maintainers can Track their Progress.</p></li>
+<li><p>The task list has to be updated by the Contributor.</p></li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h3>Step by Step Workflow : Contributor’s Tasks<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>Look at the Issues in <code class="docutils literal notranslate"><span class="pre">First</span> <span class="pre">Timers</span> <span class="pre">Only</span></code> <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1825">List</a>
+These are basically all the <a class="reference external" href="https://github.com/nexB/scancode-toolkit/labels/%20first%20timers%20only">issues</a>
+labeled <code class="docutils literal notranslate"><span class="pre">First</span> <span class="pre">Timers</span> <span class="pre">Only</span></code> issues, with information on people assigned to the issues,
+and their status.</p></li>
+<li><p>Select a <code class="docutils literal notranslate"><span class="pre">First</span> <span class="pre">Timers</span> <span class="pre">Only</span></code> issue which isn’t assigned to anyone yet, and comment on the
+<a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1825">List</a> asking the maintainers to assign
+you.</p></li>
+<li><p>After you are assigned to that Issue by a maintainer, make sure you are assigned to the one you
+requested. It’ll look like <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span> <span class="pre">#1724</span> <span class="pre">&#64;AyanSinhaMahapatra</span></code> where <code class="docutils literal notranslate"><span class="pre">#1724</span></code> is the Issue number
+and <code class="docutils literal notranslate"><span class="pre">AyanSinhaMahapatra</span></code> is your GitHub user ID.</p></li>
+<li><p>Open an Issue labeled <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/new?assignees=&amp;labels=first+timers+only&amp;template=--first-timers-only.md&amp;title=">First Timers Only here</a> .</p></li>
+<li><p>In this issue you opened, reference the following:
+(include <code class="docutils literal notranslate"><span class="pre">#[number]</span></code> in comments, like <code class="docutils literal notranslate"><span class="pre">#1724</span></code>)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The Original issue labeled <code class="docutils literal notranslate"><span class="pre">Good</span> <span class="pre">First</span> <span class="pre">Issue</span></code> that you are solving.</p></li>
+<li><p>The Pull Request you open later.</p></li>
+<li><p>The <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/1825">Good First Issues List</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Follow the Instruction on that Issue (It’s a Template you’ll just have to mark the Task List
+as you complete tasks)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Issue Claimed</strong></p></li>
+<li><p><strong>Review Guidelines</strong></p></li>
+<li><p><strong>Refer Documentation</strong></p></li>
+<li><p><strong>Build Docs Locally</strong></p></li>
+<li><p><strong>Update</strong></p></li>
+<li><p><strong>Commit and Push</strong></p></li>
+<li><p><strong>Start a Pull Request</strong></p></li>
+<li><p><strong>Make Sure all the Tests Pass</strong></p></li>
+<li><p><strong>Done</strong> Ask in comments for a review :)</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../plugins/index.html" class="btn btn-neutral float-right" title="Plugins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="gsoc19_final_report.html" class="btn btn-neutral float-left" title="Google Summer of Code 2019 - Final report" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

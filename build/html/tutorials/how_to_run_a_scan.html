@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>How to Run a Scan &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How to Visualize Scan results" href="how_to_visualize_scan_results.html" />
+    <link rel="prev" title="Basic Tutorials" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli-reference/index.html"><strong>Command Line Interface Reference</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Basic Tutorials</strong></a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How to Run a Scan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-a-virtual-environment">Setting up a Virtual Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-scancode-toolkit">Setting up Scancode Toolkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#looking-into-files">Looking into Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performing-extraction">Performing Extraction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deciding-scan-options">Deciding Scan Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-scan">Running The Scan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-important-documentation">Other Important Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_visualize_scan_results.html">How to Visualize Scan results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_extract_archives.html">How To Extract Archives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_format_scan_output.html">How to specify Scancode Output Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_set_what_will_be_detected_in_a_scan.html">How to set what will be detected in Scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_add_a_post_scan_plugin.html">Add A Post-Scan Plugin</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Basic Tutorials</strong></a> &raquo;</li>
+        
+      <li>How to Run a Scan</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tutorials/how_to_run_a_scan.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-run-a-scan">
+<h1>How to Run a Scan<a class="headerlink" href="#how-to-run-a-scan" title="Permalink to this headline">¶</a></h1>
+<p>In this simple tutorial example, we perform a basic scan on the <code class="docutils literal notranslate"><span class="pre">samples</span></code> directory distributed
+by default with Scancode.</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Refer <a class="reference internal" href="../getting-started/install.html#install-prerequisites"><span class="std std-ref">Prerequisites</span></a> to make sure the correct Python Interpreters and other
+prerequisites are satisfied.</p>
+</div>
+<div class="section" id="setting-up-a-virtual-environment">
+<h2>Setting up a Virtual Environment<a class="headerlink" href="#setting-up-a-virtual-environment" title="Permalink to this headline">¶</a></h2>
+<p>ScanCode Toolkit supports Python 3 in 3.2.x and later versions, so if you are using 3.2.x or later
+versions, you should create a <a class="reference external" href="https://docs.python-guide.org/dev/virtualenvs/">virtual environment</a>
+using the <code class="docutils literal notranslate"><span class="pre">Virtualenv</span></code> tool with a python 3.6 interpreter.</p>
+<p>The following commands set up and activate the Virtual Environment <code class="docutils literal notranslate"><span class="pre">venv-scancode-py3</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">virtualenv</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span> <span class="n">venv</span><span class="o">-</span><span class="n">scancode</span><span class="o">-</span><span class="n">py3</span>
+<span class="n">source</span> <span class="n">venv</span><span class="o">-</span><span class="n">scancode</span><span class="o">-</span><span class="n">py3</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+<p>If you are using Scancode Toolkit 3.1.0 and earlier versions, they are not compatible with
+Python 3.x so you should create the virtual environment with a python 2.7 interpreter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">virtualenv</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python2</span><span class="o">.</span><span class="mi">7</span> <span class="n">venv</span><span class="o">-</span><span class="n">scancode</span><span class="o">-</span><span class="n">py2</span>
+<span class="n">source</span> <span class="n">venv</span><span class="o">-</span><span class="n">scancode</span><span class="o">-</span><span class="n">py2</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="setting-up-scancode-toolkit">
+<h2>Setting up Scancode Toolkit<a class="headerlink" href="#setting-up-scancode-toolkit" title="Permalink to this headline">¶</a></h2>
+<p>Get ScanCode Toolkit from <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span><span class="p">[</span><span class="n">full</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can install a specific version of Scancode Toolkit like <code class="docutils literal notranslate"><span class="pre">scancode-toolkit==3.1.1</span></code>.</p>
+</div>
+</div>
+<div class="section" id="looking-into-files">
+<h2>Looking into Files<a class="headerlink" href="#looking-into-files" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned previously, we are going to perform the scan on the <code class="docutils literal notranslate"><span class="pre">samples</span></code> directory distributed
+by default with Scancode Toolkit. Here’s the directory structure and respective files:</p>
+<img alt="../_images/files_sample.png" src="../_images/files_sample.png" />
+<p>We notice here that the sample files contain a package <code class="docutils literal notranslate"><span class="pre">zlib.tar.gz</span></code>. So we have to extract the
+archive before running the scan, to also scan the files inside this package.</p>
+</div>
+<div class="section" id="performing-extraction">
+<h2>Performing Extraction<a class="headerlink" href="#performing-extraction" title="Permalink to this headline">¶</a></h2>
+<p>To extract the packages inside <code class="docutils literal notranslate"><span class="pre">samples</span></code> directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extractcode</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<p>This extracts the zlib.tar.gz package:</p>
+<img alt="../_images/extractcode.png" src="../_images/extractcode.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">--shallow</span></code> option can be used to recursively extract packages.</p>
+</div>
+</div>
+<div class="section" id="deciding-scan-options">
+<h2>Deciding Scan Options<a class="headerlink" href="#deciding-scan-options" title="Permalink to this headline">¶</a></h2>
+<p>These are some common scan options you should consider using before you start the actual scan,
+according to your requirements.</p>
+<ol class="arabic simple">
+<li><p>The Basic Scan options, i.e. <code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">-l</span></code>, <code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">-e</span></code>, <code class="docutils literal notranslate"><span class="pre">-u</span></code>, and <code class="docutils literal notranslate"><span class="pre">-i</span></code> are to be
+decided, according to your requirements. If you do not need one specific type of information
+(say, licenses), consider removing it, because the more things you scan for, longer it will take
+for the scan to complete.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You have to select these options explicitly, as they are not default anymore from
+versions 3.x, unlike earlier versions having <code class="docutils literal notranslate"><span class="pre">-clp</span></code> as default.</p>
+</div>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--license-score</span> <span class="pre">INTEGER</span></code> is to be set if license matching accuracy is desired (Default is 0,
+and increasing this means a more accurate match). Also, using <code class="docutils literal notranslate"><span class="pre">--license-text</span></code> includes the
+matched text to the result.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">INTEGER</span></code> option can be used to speed up the scan using multiple parallel processes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--timeout</span> <span class="pre">FLOAT</span></code> option can be used to skip a file taking a lot of time to scan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--ignore</span> <span class="pre">&lt;pattern&gt;</span></code> can be used to skip certain group of files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;OUTPUT</span> <span class="pre">FORMAT</span> <span class="pre">OPTION(s)&gt;</span></code> is also a very important decision when you want to use the output
+for specific tasks/have requirements. Here we are using <code class="docutils literal notranslate"><span class="pre">json</span></code> as ScanCode Workbench imports
+<code class="docutils literal notranslate"><span class="pre">json</span></code> files only.</p></li>
+</ol>
+<p>For the complete list of options, refer <a class="reference internal" href="../cli-reference/list-options.html#cli-list-options"><span class="std std-ref">All Available Options</span></a>.</p>
+</div>
+<div class="section" id="running-the-scan">
+<h2>Running The Scan<a class="headerlink" href="#running-the-scan" title="Permalink to this headline">¶</a></h2>
+<p>Now, run the scan with the options decided:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpeui</span> <span class="o">-</span><span class="n">n</span> <span class="mi">2</span> <span class="o">--</span><span class="n">ignore</span> <span class="s2">&quot;*.java&quot;</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">sample</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<p>A Progress report is shown:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Setup</span> <span class="n">plugins</span><span class="o">...</span>
+<span class="n">Collect</span> <span class="n">file</span> <span class="n">inventory</span><span class="o">...</span>
+<span class="n">Scan</span> <span class="n">files</span> <span class="k">for</span><span class="p">:</span> <span class="n">info</span><span class="p">,</span> <span class="n">licenses</span><span class="p">,</span> <span class="n">copyrights</span><span class="p">,</span> <span class="n">packages</span><span class="p">,</span> <span class="n">emails</span><span class="p">,</span> <span class="n">urls</span> <span class="k">with</span> <span class="mi">2</span> <span class="n">process</span><span class="p">(</span><span class="n">es</span><span class="p">)</span><span class="o">...</span>
+<span class="p">[</span><span class="c1">####################] 29</span>
+<span class="n">Scanning</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Summary</span><span class="p">:</span>        <span class="n">info</span><span class="p">,</span> <span class="n">licenses</span><span class="p">,</span> <span class="n">copyrights</span><span class="p">,</span> <span class="n">packages</span><span class="p">,</span> <span class="n">emails</span><span class="p">,</span> <span class="n">urls</span> <span class="k">with</span> <span class="mi">2</span> <span class="n">process</span><span class="p">(</span><span class="n">es</span><span class="p">)</span>
+<span class="n">Errors</span> <span class="n">count</span><span class="p">:</span>   <span class="mi">0</span>
+<span class="n">Scan</span> <span class="n">Speed</span><span class="p">:</span>     <span class="mf">1.09</span> <span class="n">files</span><span class="o">/</span><span class="n">sec</span><span class="o">.</span> <span class="mf">40.67</span> <span class="n">KB</span><span class="o">/</span><span class="n">sec</span><span class="o">.</span>
+<span class="n">Initial</span> <span class="n">counts</span><span class="p">:</span> <span class="mi">49</span> <span class="n">resource</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="mi">36</span> <span class="n">file</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="ow">and</span> <span class="mi">13</span> <span class="n">directorie</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Final</span> <span class="n">counts</span><span class="p">:</span>   <span class="mi">42</span> <span class="n">resource</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="mi">29</span> <span class="n">file</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="ow">and</span> <span class="mi">13</span> <span class="n">directorie</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="mf">1.06</span> <span class="n">MB</span>
+<span class="n">Timings</span><span class="p">:</span>
+  <span class="n">scan_start</span><span class="p">:</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">24</span><span class="n">T203514</span><span class="o">.</span><span class="mi">573671</span>
+  <span class="n">scan_end</span><span class="p">:</span>   <span class="mi">2019</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">24</span><span class="n">T203545</span><span class="o">.</span><span class="mi">649805</span>
+  <span class="n">setup_scan</span><span class="p">:</span><span class="n">licenses</span><span class="p">:</span> <span class="mf">4.30</span><span class="n">s</span>
+  <span class="n">setup</span><span class="p">:</span> <span class="mf">4.30</span><span class="n">s</span>
+  <span class="n">scan</span><span class="p">:</span> <span class="mf">26.62</span><span class="n">s</span>
+  <span class="n">total</span><span class="p">:</span> <span class="mf">31.14</span><span class="n">s</span>
+<span class="n">Removing</span> <span class="n">temporary</span> <span class="n">files</span><span class="o">...</span><span class="n">done</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="other-important-documentation">
+<h2>Other Important Documentation<a class="headerlink" href="#other-important-documentation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="../cli-reference/synopsis.html#scancode-cli-options"><span class="std std-ref">Type of Options</span></a></p></li>
+<li><p><a class="reference internal" href="../cli-reference/simple-examples.html#how-to-run-a-scan"><span class="std std-ref">How to Run a Scan</span></a></p></li>
+<li><p><a class="reference internal" href="index.html#tutorials"><span class="std std-ref">Basic Tutorials</span></a></p></li>
+<li><p><a class="reference internal" href="../how-to-guides/index.html#how-to-guides"><span class="std std-ref">How-To Guides</span></a></p></li>
+<li><p><a class="reference internal" href="../explanations/index.html#how-it-works"><span class="std std-ref">How it all Works</span></a></p></li>
+<li><p><a class="reference internal" href="../contribute/contrib_dev.html#contrib-code-dev"><span class="std std-ref">Contributing to Code Development</span></a></p></li>
+<li><p><a class="reference internal" href="../contribute/contrib_doc.html#contrib-doc-dev"><span class="std std-ref">Contributing to the Documentation</span></a></p></li>
+<li><p><a class="reference internal" href="../plugins/plugin_arch.html#plugin-arch"><span class="std std-ref">Plugin Architecture</span></a></p></li>
+<li><p><a class="reference internal" href="../misc/faq.html#faq"><span class="std std-ref">FAQ</span></a></p></li>
+<li><p><a class="reference internal" href="../misc/support.html#support"><span class="std std-ref">Support</span></a></p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="how_to_visualize_scan_results.html" class="btn btn-neutral float-right" title="How to Visualize Scan results" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Basic Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1084 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Getting Help from the Command Line &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="All Available Options" href="list-options.html" />
+    <link rel="prev" title="Synopsis" href="synopsis.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Command Line Interface Reference</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="synopsis.html">Synopsis</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Getting Help from the Command Line</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#all-documentation-help-options">All Documentation/Help Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#help-text">Help text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-examples-text">Command Examples Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plugins-help-text">Plugins Help Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#list-packages-option"><code class="docutils literal notranslate"><span class="pre">--list-packages</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#print-options-option"><code class="docutils literal notranslate"><span class="pre">--print-options</span></code> Option</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html">All Available Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html">How to Run a Scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html"><cite>Basic</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html"><cite>Core</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html">Scancode Output Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-filters-and-control.html">Controlling Scancode Output and Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html">Pre-Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html">Post-Scan Options</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Command Line Interface Reference</strong></a> &raquo;</li>
+        
+      <li>Getting Help from the Command Line</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/cli-reference/help-text-options.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-help-from-the-command-line">
+<h1>Getting Help from the Command Line<a class="headerlink" href="#getting-help-from-the-command-line" title="Permalink to this headline">¶</a></h1>
+<p>ScanCode-Toolkit Command Line Interface can help you to search for specific options or use cases
+from the command line itself. These are two options are <code class="docutils literal notranslate"><span class="pre">--help</span></code> and <code class="docutils literal notranslate"><span class="pre">--examples</span></code>, and are
+very helpful if you need a quick glance of the options or use cases. Or it can be useful when you
+can’t access, the more elaborate online documentation.</p>
+<div class="section" id="all-documentation-help-options">
+<h2>All Documentation/Help Options<a class="headerlink" href="#all-documentation-help-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></dt>
+<dd><p>Show the <a class="reference internal" href="#cli-help-text"><span class="std std-ref">Help text</span></a> and exit.</p>
+</dd>
+<dt><kbd><span class="option">--examples</span></kbd></dt>
+<dd><p>Show the <a class="reference internal" href="#cli-examples-text"><span class="std std-ref">Command Examples Text</span></a> and exit.</p>
+</dd>
+<dt><kbd><span class="option">--about</span></kbd></dt>
+<dd><p>Show information about ScanCode and licensing
+and exit.</p>
+</dd>
+<dt><kbd><span class="option">--version</span></kbd></dt>
+<dd><p>Show the version and exit.</p>
+</dd>
+<dt><kbd><span class="option">--list-packages</span></kbd></dt>
+<dd><p>Show the list of supported package types and exit.</p>
+</dd>
+<dt><kbd><span class="option">--plugins</span></kbd></dt>
+<dd><p>Show the list of available ScanCode plugins and exit.</p>
+</dd>
+<dt><kbd><span class="option">--print-options</span></kbd></dt>
+<dd><p>Show the list of selected options and exit.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="help-text">
+<span id="cli-help-text"></span><h2>Help text<a class="headerlink" href="#help-text" title="Permalink to this headline">¶</a></h2>
+<p>The Scancode-Toolkit Command Line Interface has a Help option displaying all the options. It also
+displays basic usage, and some simple examples. The command line option for this is <code class="docutils literal notranslate"><span class="pre">--help</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also use the shorter <code class="docutils literal notranslate"><span class="pre">-h</span></code> option, which does the same.</p>
+</div>
+<p>To see the help text from the Terminal, execute the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scancode --help
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that different for different install methods, scan commands vary.</p>
+<p>The basic command to perform a scan, in case of a download and configure installation
+(on Linux/MacOS) is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The basic usage, if Scancode is installed from <code class="docutils literal notranslate"><span class="pre">pip</span></code>, or in Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For more information on how the Scan Command varies for Various Installation
+Methods/Operating Systems, refer <a class="reference internal" href="../getting-started/install.html#commands-variation"><span class="std std-ref">Commands Variation</span></a>.</p>
+</div>
+<p>The Following Help Text is displayed, i.e. This is the help text for Scancode Version 3.1.1</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span> <span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;...</span>
+
+<span class="n">scan</span> <span class="n">the</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span> <span class="k">for</span> <span class="n">license</span><span class="p">,</span> <span class="n">origin</span> <span class="ow">and</span> <span class="n">packages</span>
+<span class="ow">and</span> <span class="n">save</span> <span class="n">results</span> <span class="n">to</span> <span class="n">FILE</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">using</span> <span class="n">one</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">output</span> <span class="nb">format</span> <span class="n">option</span><span class="o">.</span>
+
+<span class="n">Error</span> <span class="ow">and</span> <span class="n">progress</span> <span class="n">are</span> <span class="n">printed</span> <span class="n">to</span> <span class="n">stderr</span><span class="o">.</span>
+
+<span class="n">Options</span><span class="p">:</span>
+
+<span class="n">primary</span> <span class="n">scans</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">l</span><span class="p">,</span> <span class="o">--</span><span class="n">license</span>    <span class="n">Scan</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">licenses</span><span class="o">.</span>
+  <span class="o">-</span><span class="n">p</span><span class="p">,</span> <span class="o">--</span><span class="n">package</span>    <span class="n">Scan</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">package</span> <span class="n">manifests</span> <span class="ow">and</span> <span class="n">packages</span><span class="o">.</span>
+  <span class="o">-</span><span class="n">c</span><span class="p">,</span> <span class="o">--</span><span class="n">copyright</span>  <span class="n">Scan</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">copyrights</span><span class="o">.</span>
+
+<span class="n">other</span> <span class="n">scans</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">i</span><span class="p">,</span> <span class="o">--</span><span class="n">info</span>   <span class="n">Scan</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">file</span> <span class="n">information</span> <span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">checksums</span><span class="p">,</span> <span class="n">etc</span><span class="p">)</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">generated</span>  <span class="n">Classify</span> <span class="n">automatically</span> <span class="n">generated</span> <span class="n">code</span> <span class="n">files</span> <span class="k">with</span> <span class="n">a</span> <span class="n">flag</span><span class="o">.</span>
+  <span class="o">-</span><span class="n">e</span><span class="p">,</span> <span class="o">--</span><span class="n">email</span>  <span class="n">Scan</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">emails</span><span class="o">.</span>
+  <span class="o">-</span><span class="n">u</span><span class="p">,</span> <span class="o">--</span><span class="n">url</span>    <span class="n">Scan</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">urls</span><span class="o">.</span>
+
+<span class="n">scan</span> <span class="n">options</span><span class="p">:</span>
+  <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">score</span> <span class="n">INTEGER</span>      <span class="n">Do</span> <span class="ow">not</span> <span class="k">return</span> <span class="n">license</span> <span class="n">matches</span> <span class="k">with</span> <span class="n">a</span>
+                               <span class="n">score</span> <span class="n">lower</span> <span class="n">than</span> <span class="n">this</span> <span class="n">score</span><span class="o">.</span> <span class="n">A</span> <span class="n">number</span>
+                               <span class="n">between</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mf">100.</span>  <span class="p">[</span><span class="n">default</span><span class="p">:</span> <span class="mi">0</span><span class="p">]</span>
+  <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">text</span>               <span class="n">Include</span> <span class="n">the</span> <span class="n">detected</span> <span class="n">licenses</span> <span class="n">matched</span>
+                               <span class="n">text</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">text</span><span class="o">-</span><span class="n">diagnostics</span>   <span class="n">In</span> <span class="n">the</span> <span class="n">matched</span> <span class="n">license</span> <span class="n">text</span><span class="p">,</span> <span class="n">include</span>
+                               <span class="n">diagnostic</span> <span class="n">highlights</span> <span class="n">surrounding</span> <span class="k">with</span>
+                               <span class="n">square</span> <span class="n">brackets</span> <span class="p">[]</span> <span class="n">words</span> <span class="n">that</span> <span class="n">are</span> <span class="ow">not</span>
+                               <span class="n">matched</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">url</span><span class="o">-</span><span class="n">template</span> <span class="n">TEXT</span>  <span class="n">Set</span> <span class="n">the</span> <span class="n">template</span> <span class="n">URL</span> <span class="n">used</span> <span class="k">for</span> <span class="n">the</span> <span class="n">license</span>
+                               <span class="n">reference</span> <span class="n">URLs</span><span class="o">.</span> <span class="n">Curly</span> <span class="n">braces</span> <span class="p">({})</span> <span class="n">are</span>
+                               <span class="n">replaced</span> <span class="n">by</span> <span class="n">the</span> <span class="n">license</span> <span class="n">key</span><span class="o">.</span>  <span class="p">[</span><span class="n">default</span><span class="p">:</span> <span class="n">h</span>
+                               <span class="n">ttps</span><span class="p">:</span><span class="o">//</span><span class="n">enterprise</span><span class="o">.</span><span class="n">dejacode</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">urn</span><span class="o">/</span><span class="n">urn</span><span class="p">:</span><span class="n">dj</span>
+                               <span class="n">e</span><span class="p">:</span><span class="n">license</span><span class="p">:{}]</span>
+  <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">email</span> <span class="n">INT</span>              <span class="n">Report</span> <span class="n">only</span> <span class="n">up</span> <span class="n">to</span> <span class="n">INT</span> <span class="n">emails</span> <span class="n">found</span> <span class="ow">in</span> <span class="n">a</span>
+                               <span class="n">file</span><span class="o">.</span> <span class="n">Use</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">no</span> <span class="n">limit</span><span class="o">.</span>  <span class="p">[</span><span class="n">default</span><span class="p">:</span> <span class="mi">50</span><span class="p">]</span>
+  <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">url</span> <span class="n">INT</span>                <span class="n">Report</span> <span class="n">only</span> <span class="n">up</span> <span class="n">to</span> <span class="n">INT</span> <span class="n">urls</span> <span class="n">found</span> <span class="ow">in</span> <span class="n">a</span>
+                               <span class="n">file</span><span class="o">.</span> <span class="n">Use</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">no</span> <span class="n">limit</span><span class="o">.</span>  <span class="p">[</span><span class="n">default</span><span class="p">:</span> <span class="mi">50</span><span class="p">]</span>
+
+<span class="n">output</span> <span class="n">formats</span><span class="p">:</span>
+  <span class="o">--</span><span class="n">json</span> <span class="n">FILE</span>             <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">compact</span> <span class="n">JSON</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">FILE</span>          <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">pretty</span><span class="o">-</span><span class="n">printed</span> <span class="n">JSON</span> <span class="n">to</span>
+                          <span class="n">FILE</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">lines</span> <span class="n">FILE</span>       <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">JSON</span> <span class="n">Lines</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">csv</span> <span class="n">FILE</span>              <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">CSV</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">html</span> <span class="n">FILE</span>             <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">HTML</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">custom</span><span class="o">-</span><span class="n">output</span> <span class="n">FILE</span>    <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="n">to</span> <span class="n">FILE</span> <span class="n">formatted</span> <span class="k">with</span> <span class="n">the</span>
+                          <span class="n">custom</span> <span class="n">Jinja</span> <span class="n">template</span> <span class="n">file</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">custom</span><span class="o">-</span><span class="n">template</span> <span class="n">FILE</span>  <span class="n">Use</span> <span class="n">this</span> <span class="n">Jinja</span> <span class="n">template</span> <span class="n">FILE</span> <span class="k">as</span> <span class="n">a</span> <span class="n">custom</span>
+                          <span class="n">template</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">spdx</span><span class="o">-</span><span class="n">rdf</span> <span class="n">FILE</span>         <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">SPDX</span> <span class="n">RDF</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">spdx</span><span class="o">-</span><span class="n">tv</span> <span class="n">FILE</span>          <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">SPDX</span> <span class="n">Tag</span><span class="o">/</span><span class="n">Value</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">html</span><span class="o">-</span><span class="n">app</span> <span class="n">FILE</span>         <span class="p">(</span><span class="n">DEPRECATED</span><span class="p">:</span> <span class="n">use</span> <span class="n">the</span> <span class="n">ScanCode</span> <span class="n">Workbench</span> <span class="n">app</span>
+                          <span class="n">instead</span> <span class="p">)</span> <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">a</span> <span class="n">mini</span> <span class="n">HTML</span>
+                          <span class="n">application</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+
+<span class="n">output</span> <span class="n">filters</span><span class="p">:</span>
+  <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">author</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;</span>       <span class="n">Ignore</span> <span class="n">a</span> <span class="n">file</span> <span class="p">(</span><span class="ow">and</span> <span class="nb">all</span> <span class="n">its</span> <span class="n">findings</span><span class="p">)</span>
+                                  <span class="k">if</span> <span class="n">an</span> <span class="n">author</span> <span class="n">contains</span> <span class="n">a</span> <span class="n">match</span> <span class="n">to</span> <span class="n">the</span>
+                                  <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;</span> <span class="n">regular</span> <span class="n">expression</span><span class="o">.</span> <span class="n">Note</span>
+                                  <span class="n">that</span> <span class="n">this</span> <span class="n">will</span> <span class="n">ignore</span> <span class="n">a</span> <span class="n">file</span> <span class="n">even</span> <span class="k">if</span>
+                                  <span class="n">it</span> <span class="n">has</span> <span class="n">other</span> <span class="n">findings</span> <span class="n">such</span> <span class="k">as</span> <span class="n">a</span>
+                                  <span class="n">license</span> <span class="ow">or</span> <span class="n">errors</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">copyright</span><span class="o">-</span><span class="n">holder</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;</span>
+                                  <span class="n">Ignore</span> <span class="n">a</span> <span class="n">file</span> <span class="p">(</span><span class="ow">and</span> <span class="nb">all</span> <span class="n">its</span> <span class="n">findings</span><span class="p">)</span>
+                                  <span class="k">if</span> <span class="n">a</span> <span class="n">copyright</span> <span class="n">holder</span> <span class="n">contains</span> <span class="n">a</span> <span class="n">match</span>
+                                  <span class="n">to</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;</span> <span class="n">regular</span> <span class="n">expression</span><span class="o">.</span>
+                                  <span class="n">Note</span> <span class="n">that</span> <span class="n">this</span> <span class="n">will</span> <span class="n">ignore</span> <span class="n">a</span> <span class="n">file</span> <span class="n">even</span>
+                                  <span class="k">if</span> <span class="n">it</span> <span class="n">has</span> <span class="n">other</span> <span class="n">scanned</span> <span class="n">data</span> <span class="n">such</span> <span class="k">as</span> <span class="n">a</span>
+                                  <span class="n">license</span> <span class="ow">or</span> <span class="n">errors</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">only</span><span class="o">-</span><span class="n">findings</span>                 <span class="n">Only</span> <span class="k">return</span> <span class="n">files</span> <span class="ow">or</span> <span class="n">directories</span> <span class="k">with</span>
+                                  <span class="n">findings</span> <span class="k">for</span> <span class="n">the</span> <span class="n">requested</span> <span class="n">scans</span><span class="o">.</span>
+                                  <span class="n">Files</span> <span class="ow">and</span> <span class="n">directories</span> <span class="n">without</span> <span class="n">findings</span>
+                                  <span class="n">are</span> <span class="n">omitted</span> <span class="p">(</span><span class="n">file</span> <span class="n">information</span> <span class="ow">is</span> <span class="ow">not</span>
+                                  <span class="n">treated</span> <span class="k">as</span> <span class="n">findings</span><span class="p">)</span><span class="o">.</span>
+
+<span class="n">output</span> <span class="n">control</span><span class="p">:</span>
+  <span class="o">--</span><span class="n">full</span><span class="o">-</span><span class="n">root</span>   <span class="n">Report</span> <span class="n">full</span><span class="p">,</span> <span class="n">absolute</span> <span class="n">paths</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">strip</span><span class="o">-</span><span class="n">root</span>  <span class="n">Strip</span> <span class="n">the</span> <span class="n">root</span> <span class="n">directory</span> <span class="n">segment</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">paths</span><span class="o">.</span> <span class="n">The</span>
+                <span class="n">default</span> <span class="ow">is</span> <span class="n">to</span> <span class="n">always</span> <span class="n">include</span> <span class="n">the</span> <span class="n">last</span> <span class="n">directory</span> <span class="n">segment</span>
+                <span class="n">of</span> <span class="n">the</span> <span class="n">scanned</span> <span class="n">path</span> <span class="n">such</span> <span class="n">that</span> <span class="nb">all</span> <span class="n">paths</span> <span class="n">have</span> <span class="n">a</span> <span class="n">common</span>
+                <span class="n">root</span> <span class="n">directory</span><span class="o">.</span>
+
+<span class="n">pre</span><span class="o">-</span><span class="n">scan</span><span class="p">:</span>
+  <span class="o">--</span><span class="n">ignore</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;</span>         <span class="n">Ignore</span> <span class="n">files</span> <span class="n">matching</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;.</span>
+  <span class="o">--</span><span class="n">include</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;</span>        <span class="n">Include</span> <span class="n">files</span> <span class="n">matching</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;.</span>
+  <span class="o">--</span><span class="n">classify</span>                 <span class="n">Classify</span> <span class="n">files</span> <span class="k">with</span> <span class="n">flags</span> <span class="n">telling</span> <span class="k">if</span> <span class="n">the</span>
+                             <span class="n">file</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">legal</span><span class="p">,</span> <span class="ow">or</span> <span class="n">readme</span> <span class="ow">or</span> <span class="n">test</span> <span class="n">file</span><span class="p">,</span>
+                             <span class="n">etc</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">facet</span> <span class="o">&lt;</span><span class="n">facet</span><span class="o">&gt;=&lt;</span><span class="n">pattern</span><span class="o">&gt;</span>  <span class="n">Add</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">facet</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">files</span> <span class="k">with</span> <span class="n">a</span> <span class="n">path</span>
+                             <span class="n">matching</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;.</span>
+
+<span class="n">post</span><span class="o">-</span><span class="n">scan</span><span class="p">:</span>
+  <span class="o">--</span><span class="n">consolidate</span>            <span class="n">Group</span> <span class="n">resources</span> <span class="n">by</span> <span class="n">Packages</span> <span class="ow">or</span> <span class="n">license</span> <span class="ow">and</span>
+                           <span class="n">copyright</span> <span class="n">holder</span> <span class="ow">and</span> <span class="k">return</span> <span class="n">those</span> <span class="n">groupings</span>
+                           <span class="k">as</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">consolidated</span> <span class="n">packages</span> <span class="ow">and</span> <span class="n">a</span> <span class="nb">list</span>
+                           <span class="n">of</span> <span class="n">consolidated</span> <span class="n">components</span><span class="o">.</span> <span class="n">This</span> <span class="n">requires</span> <span class="n">the</span>
+                           <span class="n">scan</span> <span class="n">to</span> <span class="n">have</span><span class="o">/</span><span class="n">be</span> <span class="n">run</span> <span class="k">with</span> <span class="n">the</span> <span class="n">copyright</span><span class="p">,</span>
+                           <span class="n">license</span><span class="p">,</span> <span class="ow">and</span> <span class="n">package</span> <span class="n">options</span> <span class="n">active</span>
+  <span class="o">--</span><span class="nb">filter</span><span class="o">-</span><span class="n">clues</span>           <span class="n">Filter</span> <span class="n">redundant</span> <span class="n">duplicated</span> <span class="n">clues</span> <span class="n">already</span>
+                           <span class="n">contained</span> <span class="ow">in</span> <span class="n">detected</span> <span class="n">license</span> <span class="ow">and</span> <span class="n">copyright</span>
+                           <span class="n">texts</span> <span class="ow">and</span> <span class="n">notices</span><span class="o">.</span>
+  <span class="o">--</span><span class="ow">is</span><span class="o">-</span><span class="n">license</span><span class="o">-</span><span class="n">text</span>        <span class="n">Set</span> <span class="n">the</span> <span class="s2">&quot;is_license_text&quot;</span> <span class="n">flag</span> <span class="n">to</span> <span class="n">true</span> <span class="k">for</span>
+                           <span class="n">files</span> <span class="n">that</span> <span class="n">contain</span> <span class="n">mostly</span> <span class="n">license</span> <span class="n">texts</span> <span class="ow">and</span>
+                           <span class="n">notices</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span> <span class="n">over</span> <span class="mi">90</span><span class="o">%</span> <span class="n">of</span> <span class="n">the</span> <span class="n">content</span><span class="p">)</span><span class="o">.</span>
+                           <span class="p">[</span><span class="n">EXPERIMENTAL</span><span class="p">]</span>
+  <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">clarity</span><span class="o">-</span><span class="n">score</span>  <span class="n">Compute</span> <span class="n">a</span> <span class="n">summary</span> <span class="n">license</span> <span class="n">clarity</span> <span class="n">score</span> <span class="n">at</span>
+                           <span class="n">the</span> <span class="n">codebase</span> <span class="n">level</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">policy</span> <span class="n">FILE</span>    <span class="n">Load</span> <span class="n">a</span> <span class="n">License</span> <span class="n">Policy</span> <span class="n">file</span> <span class="ow">and</span> <span class="n">apply</span> <span class="n">it</span> <span class="n">to</span>
+                           <span class="n">the</span> <span class="n">scan</span> <span class="n">at</span> <span class="n">the</span> <span class="n">Resource</span> <span class="n">level</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">mark</span><span class="o">-</span><span class="n">source</span>            <span class="n">Set</span> <span class="n">the</span> <span class="s2">&quot;is_source&quot;</span> <span class="n">to</span> <span class="n">true</span> <span class="k">for</span> <span class="n">directories</span>
+                           <span class="n">that</span> <span class="n">contain</span> <span class="n">over</span> <span class="mi">90</span><span class="o">%</span> <span class="n">of</span> <span class="n">source</span> <span class="n">files</span> <span class="k">as</span>
+                           <span class="n">children</span> <span class="ow">and</span> <span class="n">descendants</span><span class="o">.</span> <span class="n">Count</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span>
+                           <span class="n">source</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">directory</span> <span class="k">as</span> <span class="n">a</span> <span class="n">new</span>
+                           <span class="n">source_file_counts</span> <span class="n">attribute</span>
+  <span class="o">--</span><span class="n">summary</span>                <span class="n">Summarize</span> <span class="n">license</span><span class="p">,</span> <span class="n">copyright</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">scans</span>
+                           <span class="n">at</span> <span class="n">the</span> <span class="n">codebase</span> <span class="n">level</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">summary</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">facet</span>       <span class="n">Summarize</span> <span class="n">license</span><span class="p">,</span> <span class="n">copyright</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">scans</span>
+                           <span class="ow">and</span> <span class="n">group</span> <span class="n">the</span> <span class="n">results</span> <span class="n">by</span> <span class="n">facet</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">summary</span><span class="o">-</span><span class="n">key</span><span class="o">-</span><span class="n">files</span>      <span class="n">Summarize</span> <span class="n">license</span><span class="p">,</span> <span class="n">copyright</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">scans</span>
+                           <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">files</span><span class="o">.</span> <span class="n">Key</span> <span class="n">files</span> <span class="n">are</span> <span class="n">top</span><span class="o">-</span>
+                           <span class="n">level</span> <span class="n">codebase</span> <span class="n">files</span> <span class="n">such</span> <span class="k">as</span> <span class="n">COPYING</span><span class="p">,</span> <span class="n">README</span>
+                           <span class="ow">and</span> <span class="n">package</span> <span class="n">manifests</span> <span class="k">as</span> <span class="n">reported</span> <span class="n">by</span> <span class="n">the</span>
+                           <span class="o">--</span><span class="n">classify</span> <span class="n">option</span> <span class="s2">&quot;is_legal&quot;</span><span class="p">,</span> <span class="s2">&quot;is_readme&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;is_manifest&quot;</span> <span class="ow">and</span> <span class="s2">&quot;is_top_level&quot;</span> <span class="n">flags</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">summary</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">details</span>   <span class="n">Summarize</span> <span class="n">license</span><span class="p">,</span> <span class="n">copyright</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">scans</span>
+                           <span class="n">at</span> <span class="n">the</span> <span class="n">codebase</span> <span class="n">level</span><span class="p">,</span> <span class="n">keeping</span> <span class="n">intermediate</span>
+                           <span class="n">details</span> <span class="n">at</span> <span class="n">the</span> <span class="n">file</span> <span class="ow">and</span> <span class="n">directory</span> <span class="n">level</span><span class="o">.</span>
+
+<span class="n">core</span><span class="p">:</span>
+  <span class="o">--</span><span class="n">timeout</span> <span class="o">&lt;</span><span class="n">secs</span><span class="o">&gt;</span>         <span class="n">Stop</span> <span class="n">an</span> <span class="n">unfinished</span> <span class="n">file</span> <span class="n">scan</span> <span class="n">after</span> <span class="n">a</span> <span class="n">timeout</span>
+                           <span class="ow">in</span> <span class="n">seconds</span><span class="o">.</span>  <span class="p">[</span><span class="n">default</span><span class="p">:</span> <span class="mi">120</span> <span class="n">seconds</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">n</span><span class="p">,</span> <span class="o">--</span><span class="n">processes</span> <span class="n">INT</span>      <span class="n">Set</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">parallel</span> <span class="n">processes</span> <span class="n">to</span> <span class="n">use</span><span class="o">.</span>
+                           <span class="n">Disable</span> <span class="n">parallel</span> <span class="n">processing</span> <span class="k">if</span> <span class="mf">0.</span> <span class="n">Also</span>
+                           <span class="n">disable</span> <span class="n">threading</span> <span class="k">if</span> <span class="o">-</span><span class="mf">1.</span> <span class="p">[</span><span class="n">default</span><span class="p">:</span> <span class="mi">1</span><span class="p">]</span>
+  <span class="o">--</span><span class="n">quiet</span>                  <span class="n">Do</span> <span class="ow">not</span> <span class="nb">print</span> <span class="n">summary</span> <span class="ow">or</span> <span class="n">progress</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">verbose</span>                <span class="n">Print</span> <span class="n">progress</span> <span class="k">as</span> <span class="n">file</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">file</span> <span class="n">path</span> <span class="n">instead</span>
+                           <span class="n">of</span> <span class="n">a</span> <span class="n">progress</span> <span class="n">bar</span><span class="o">.</span> <span class="n">Print</span> <span class="n">verbose</span> <span class="n">scan</span>
+                           <span class="n">counters</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">from</span><span class="o">-</span><span class="n">json</span>              <span class="n">Load</span> <span class="n">codebase</span> <span class="kn">from</span> <span class="nn">an</span> <span class="n">existing</span> <span class="n">JSON</span> <span class="n">scan</span>
+  <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="ow">in</span><span class="o">-</span><span class="n">memory</span> <span class="n">INTEGER</span>  <span class="n">Maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">files</span> <span class="ow">and</span> <span class="n">directories</span> <span class="n">scan</span>
+                           <span class="n">details</span> <span class="n">kept</span> <span class="ow">in</span> <span class="n">memory</span> <span class="n">during</span> <span class="n">a</span> <span class="n">scan</span><span class="o">.</span>
+                           <span class="n">Additional</span> <span class="n">files</span> <span class="ow">and</span> <span class="n">directories</span> <span class="n">scan</span> <span class="n">details</span>
+                           <span class="n">above</span> <span class="n">this</span> <span class="n">number</span> <span class="n">are</span> <span class="n">cached</span> <span class="n">on</span><span class="o">-</span><span class="n">disk</span> <span class="n">rather</span>
+                           <span class="n">than</span> <span class="ow">in</span> <span class="n">memory</span><span class="o">.</span> <span class="n">Use</span> <span class="mi">0</span> <span class="n">to</span> <span class="n">use</span> <span class="n">unlimited</span> <span class="n">memory</span>
+                           <span class="ow">and</span> <span class="n">disable</span> <span class="n">on</span><span class="o">-</span><span class="n">disk</span> <span class="n">caching</span><span class="o">.</span> <span class="n">Use</span> <span class="o">-</span><span class="mi">1</span> <span class="n">to</span> <span class="n">use</span>
+                           <span class="n">only</span> <span class="n">on</span><span class="o">-</span><span class="n">disk</span> <span class="n">caching</span><span class="o">.</span>  <span class="p">[</span><span class="n">default</span><span class="p">:</span> <span class="mi">10000</span><span class="p">]</span>
+
+<span class="n">miscellaneous</span><span class="p">:</span>
+  <span class="o">--</span><span class="n">reindex</span><span class="o">-</span><span class="n">licenses</span>  <span class="n">Check</span> <span class="n">the</span> <span class="n">license</span> <span class="n">index</span> <span class="n">cache</span> <span class="ow">and</span> <span class="n">reindex</span> <span class="k">if</span>
+                      <span class="n">needed</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+
+<span class="n">documentation</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>       <span class="n">Show</span> <span class="n">this</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">about</span>          <span class="n">Show</span> <span class="n">information</span> <span class="n">about</span> <span class="n">ScanCode</span> <span class="ow">and</span> <span class="n">licensing</span> <span class="ow">and</span>
+                   <span class="n">exit</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">version</span>        <span class="n">Show</span> <span class="n">the</span> <span class="n">version</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">examples</span>       <span class="n">Show</span> <span class="n">command</span> <span class="n">examples</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+  <span class="o">--</span><span class="nb">list</span><span class="o">-</span><span class="n">packages</span>  <span class="n">Show</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">supported</span> <span class="n">package</span> <span class="n">types</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">plugins</span>        <span class="n">Show</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">available</span> <span class="n">ScanCode</span> <span class="n">plugins</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+  <span class="o">--</span><span class="nb">print</span><span class="o">-</span><span class="n">options</span>  <span class="n">Show</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">selected</span> <span class="n">options</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+
+<span class="n">Examples</span> <span class="p">(</span><span class="n">use</span> <span class="o">--</span><span class="n">examples</span> <span class="k">for</span> <span class="n">more</span><span class="p">):</span>
+
+<span class="n">Scan</span> <span class="n">the</span> <span class="s1">&#39;samples&#39;</span> <span class="n">directory</span> <span class="k">for</span> <span class="n">licenses</span> <span class="ow">and</span> <span class="n">copyrights</span><span class="o">.</span>
+<span class="n">Save</span> <span class="n">scan</span> <span class="n">results</span> <span class="n">to</span> <span class="n">the</span> <span class="s1">&#39;scancode_result.json&#39;</span> <span class="n">JSON</span> <span class="n">file</span><span class="p">:</span>
+
+    <span class="n">scancode</span> <span class="o">--</span><span class="n">license</span> <span class="o">--</span><span class="n">copyright</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">scancode_result</span><span class="o">.</span><span class="n">json</span>
+    <span class="n">samples</span>
+
+<span class="n">Scan</span> <span class="n">the</span> <span class="s1">&#39;samples&#39;</span> <span class="n">directory</span> <span class="k">for</span> <span class="n">licenses</span> <span class="ow">and</span> <span class="n">package</span> <span class="n">manifests</span><span class="o">.</span> <span class="n">Print</span> <span class="n">scan</span>
+<span class="n">results</span> <span class="n">on</span> <span class="n">screen</span> <span class="k">as</span> <span class="n">pretty</span><span class="o">-</span><span class="n">formatted</span> <span class="n">JSON</span> <span class="p">(</span><span class="n">using</span> <span class="n">the</span> <span class="n">special</span> <span class="s1">&#39;-&#39;</span> <span class="n">FILE</span> <span class="n">to</span> <span class="nb">print</span>
+<span class="n">to</span> <span class="n">on</span> <span class="n">screen</span><span class="o">/</span><span class="n">to</span> <span class="n">stdout</span><span class="p">):</span>
+
+    <span class="n">scancode</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="o">-</span> <span class="o">--</span><span class="n">license</span> <span class="o">--</span><span class="n">package</span>  <span class="n">samples</span>
+
+<span class="n">Note</span><span class="p">:</span> <span class="n">when</span> <span class="n">you</span> <span class="n">run</span> <span class="n">scancode</span><span class="p">,</span> <span class="n">a</span> <span class="n">progress</span> <span class="n">bar</span> <span class="ow">is</span> <span class="n">displayed</span> <span class="k">with</span> <span class="n">a</span>
+<span class="n">counter</span> <span class="n">of</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">files</span> <span class="n">processed</span><span class="o">.</span> <span class="n">Use</span> <span class="o">--</span><span class="n">verbose</span> <span class="n">to</span> <span class="n">display</span>
+<span class="n">file</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">file</span> <span class="n">progress</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="command-examples-text">
+<span id="cli-examples-text"></span><h2>Command Examples Text<a class="headerlink" href="#command-examples-text" title="Permalink to this headline">¶</a></h2>
+<p>The Scancode-Toolkit Command Line Interface has an <code class="docutils literal notranslate"><span class="pre">--examples</span></code> option which displays some basic
+examples (more than the basic synopsis in <code class="docutils literal notranslate"><span class="pre">--help</span></code>). These examples include the following aspects
+of code scanning:</p>
+<ul class="simple">
+<li><p>Scanning Single File/Directory</p></li>
+<li><p>Output Scan results to stdout (as JSON) or HTML/JSON file</p></li>
+<li><p>Scanning for only Copyrights/Licenses</p></li>
+<li><p>Ignoring Files</p></li>
+<li><p>Using GLOB Patterns to Scan Multiple Files</p></li>
+<li><p>Using Verbose Mode</p></li>
+</ul>
+<p>The command line option for displaying these basic examples is <code class="docutils literal notranslate"><span class="pre">--examples</span></code>.</p>
+<p>To see the help text from the Terminal, execute the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scancode --examples
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that different for different install methods, scan commands vary.</p>
+<p>The basic command to perform a scan, in case of a download and configure installation
+(on Linux/MacOS) is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The basic usage, if Scancode is installed from <code class="docutils literal notranslate"><span class="pre">pip</span></code>, or in Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For more information on how the Scan Command varies for Various Installation
+Methods/Operating Systems, refer <a class="reference internal" href="../getting-started/install.html#commands-variation"><span class="std std-ref">Commands Variation</span></a>.</p>
+</div>
+<p>The Following Text is displayed, i.e. This is the examples for Scancode Version 3.1.1</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Scancode command lines examples:
+
+(Note for Windows: use &#39;\&#39; back slash instead of &#39;/&#39; forward slash for paths.)
+
+Scan a single file for copyrights. Print scan results to stdout as pretty JSON:
+
+    scancode --copyright samples/zlib/zlib.h --json-pp -
+
+Scan a single file for licenses, print verbose progress to stderr as each
+file is scanned. Save scan to a JSON file:
+
+    scancode --license --verbose samples/zlib/zlib.h --json licenses.json
+
+Scan a directory explicitly for licenses and copyrights. Redirect JSON scan
+results to a file:
+
+    scancode --license --copyright samples/zlib/ --json - &gt; scan.json
+
+Scan a directory while ignoring a single file. Scan for license, copyright and
+package manifests. Use four parallel processes.
+Print scan results to stdout as pretty formatted JSON.
+
+    scancode -lc --package --ignore README --processes 4 --json-pp - samples/
+
+Scan a directory while ignoring all files with .txt extension.
+Print scan results to stdout as pretty formatted JSON.
+It is recommended to use quotes around glob patterns to prevent pattern
+expansion by the shell:
+
+    scancode --json-pp - --ignore &quot;*.txt&quot; samples/
+
+Special characters supported in GLOB pattern:
+- *       matches everything
+- ?       matches any single character
+- [seq]   matches any character in seq
+- [!seq]  matches any character not in seq
+
+For a literal match, wrap the meta-characters in brackets.
+For example, &#39;[?]&#39; matches the character &#39;?&#39;.
+For details on GLOB patterns see https://en.wikipedia.org/wiki/Glob_(programming).
+
+Note: Glob patterns cannot be applied to path as strings.
+For example, this will not ignore &quot;samples/JGroups/licenses&quot;.
+
+    scancode --json - --ignore &quot;samples*licenses&quot; samples/
+
+
+Scan a directory while ignoring multiple files (or glob patterns).
+Print the scan results to stdout as JSON:
+
+    scancode --json - --ignore README --ignore &quot;*.txt&quot; samples/
+
+Scan a directory for licenses and copyrights. Save scan results to an
+HTML file:
+
+    scancode --license --copyright --html scancode_result.html samples/zlib
+
+To extract archives, see the &#39;extractcode&#39; command instead.
+</pre></div>
+</div>
+</div>
+<div class="section" id="plugins-help-text">
+<h2>Plugins Help Text<a class="headerlink" href="#plugins-help-text" title="Permalink to this headline">¶</a></h2>
+<p>The command line option for displaying all the plugins is:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--plugins</span></code></p></li>
+</ul>
+<p>To see the help text from the Terminal, execute the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scancode --plugins
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that different for different install methods, scan commands vary.</p>
+<p>The basic command to perform a scan, in case of a download and configure installation
+(on Linux/MacOS) is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The basic usage, if Scancode is installed from <code class="docutils literal notranslate"><span class="pre">pip</span></code>, or in Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For more information on how the Scan Command varies for Various Installation
+Methods/Operating Systems, refer <a class="reference internal" href="../getting-started/install.html#commands-variation"><span class="std std-ref">Commands Variation</span></a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Plugins that are shown by using <code class="docutils literal notranslate"><span class="pre">--plugins</span></code> include the following:</p>
+<ol class="arabic simple">
+<li><p>Post-Scan Plugins</p></li>
+<li><p>Pre-Scan Plugins</p></li>
+<li><p>Output Options</p></li>
+<li><p>Output Control</p></li>
+<li><p>Basic Scan Options</p></li>
+</ol>
+</div>
+<p>The Following Text is displayed, i.e. This is the available plugins for Scancode Version 3.1.1</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_output</span><span class="p">:</span><span class="n">csv</span>  <span class="n">class</span><span class="p">:</span> <span class="n">formattedcode</span><span class="o">.</span><span class="n">output_csv</span><span class="p">:</span><span class="n">CsvOutput</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">formats</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">csv</span><span class="p">:</span> <span class="o">--</span><span class="n">csv</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">CSV</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span> <span class="kc">None</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_output</span><span class="p">:</span><span class="n">html</span>  <span class="n">class</span><span class="p">:</span> <span class="n">formattedcode</span><span class="o">.</span><span class="n">output_html</span><span class="p">:</span><span class="n">HtmlOutput</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">formats</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">html</span><span class="p">:</span> <span class="o">--</span><span class="n">html</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">HTML</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span> <span class="kc">None</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_output</span><span class="p">:</span><span class="n">html</span><span class="o">-</span><span class="n">app</span>  <span class="n">class</span><span class="p">:</span> <span class="n">formattedcode</span><span class="o">.</span><span class="n">output_html</span><span class="p">:</span><span class="n">HtmlAppOutput</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">formats</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">html_app</span><span class="p">:</span> <span class="o">--</span><span class="n">html</span><span class="o">-</span><span class="n">app</span>
+      <span class="n">help</span><span class="p">:</span> <span class="p">(</span><span class="n">DEPRECATED</span><span class="p">:</span> <span class="n">use</span> <span class="n">the</span> <span class="n">ScanCode</span> <span class="n">Workbench</span> <span class="n">app</span> <span class="n">instead</span> <span class="p">)</span> <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">a</span> <span class="n">mini</span> <span class="n">HTML</span> <span class="n">application</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">a</span> <span class="n">mini</span> <span class="n">HTML</span> <span class="n">application</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_output</span><span class="p">:</span><span class="n">json</span>  <span class="n">class</span><span class="p">:</span> <span class="n">formattedcode</span><span class="o">.</span><span class="n">output_json</span><span class="p">:</span><span class="n">JsonCompactOutput</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">formats</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">output_json</span><span class="p">:</span> <span class="o">--</span><span class="n">json</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">compact</span> <span class="n">JSON</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span> <span class="kc">None</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_output</span><span class="p">:</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span>  <span class="n">class</span><span class="p">:</span> <span class="n">formattedcode</span><span class="o">.</span><span class="n">output_json</span><span class="p">:</span><span class="n">JsonPrettyOutput</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">formats</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">output_json_pp</span><span class="p">:</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">pretty</span><span class="o">-</span><span class="n">printed</span> <span class="n">JSON</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span> <span class="kc">None</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_output</span><span class="p">:</span><span class="n">jsonlines</span>  <span class="n">class</span><span class="p">:</span> <span class="n">formattedcode</span><span class="o">.</span><span class="n">output_jsonlines</span><span class="p">:</span><span class="n">JsonLinesOutput</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">formats</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">output_json_lines</span><span class="p">:</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">lines</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">JSON</span> <span class="n">Lines</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span> <span class="kc">None</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_output</span><span class="p">:</span><span class="n">spdx</span><span class="o">-</span><span class="n">rdf</span>  <span class="n">class</span><span class="p">:</span> <span class="n">formattedcode</span><span class="o">.</span><span class="n">output_spdx</span><span class="p">:</span><span class="n">SpdxRdfOutput</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">formats</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">spdx_rdf</span><span class="p">:</span> <span class="o">--</span><span class="n">spdx</span><span class="o">-</span><span class="n">rdf</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">SPDX</span> <span class="n">RDF</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span> <span class="kc">None</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_output</span><span class="p">:</span><span class="n">spdx</span><span class="o">-</span><span class="n">tv</span>  <span class="n">class</span><span class="p">:</span> <span class="n">formattedcode</span><span class="o">.</span><span class="n">output_spdx</span><span class="p">:</span><span class="n">SpdxTvOutput</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">formats</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">spdx_tv</span><span class="p">:</span> <span class="o">--</span><span class="n">spdx</span><span class="o">-</span><span class="n">tv</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="k">as</span> <span class="n">SPDX</span> <span class="n">Tag</span><span class="o">/</span><span class="n">Value</span> <span class="n">to</span> <span class="n">FILE</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span> <span class="kc">None</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_output</span><span class="p">:</span><span class="n">template</span>  <span class="n">class</span><span class="p">:</span> <span class="n">formattedcode</span><span class="o">.</span><span class="n">output_html</span><span class="p">:</span><span class="n">CustomTemplateOutput</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">formats</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">custom_output</span><span class="p">:</span> <span class="o">--</span><span class="n">custom</span><span class="o">-</span><span class="n">output</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Write</span> <span class="n">scan</span> <span class="n">output</span> <span class="n">to</span> <span class="n">FILE</span> <span class="n">formatted</span> <span class="k">with</span> <span class="n">the</span> <span class="n">custom</span> <span class="n">Jinja</span> <span class="n">template</span> <span class="n">file</span><span class="o">.</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">formats</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">custom_template</span><span class="p">:</span> <span class="o">--</span><span class="n">custom</span><span class="o">-</span><span class="n">template</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Use</span> <span class="n">this</span> <span class="n">Jinja</span> <span class="n">template</span> <span class="n">FILE</span> <span class="k">as</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">template</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span> <span class="kc">None</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_output_filter</span><span class="p">:</span><span class="n">ignore</span><span class="o">-</span><span class="n">copyrights</span>  <span class="n">class</span><span class="p">:</span> <span class="n">cluecode</span><span class="o">.</span><span class="n">plugin_ignore_copyrights</span><span class="p">:</span><span class="n">IgnoreCopyrights</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">filters</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">ignore_copyright_holder</span><span class="p">:</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">copyright</span><span class="o">-</span><span class="n">holder</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Ignore</span> <span class="n">a</span> <span class="n">file</span> <span class="p">(</span><span class="ow">and</span> <span class="nb">all</span> <span class="n">its</span> <span class="n">findings</span><span class="p">)</span> <span class="k">if</span> <span class="n">a</span> <span class="n">copyright</span> <span class="n">holder</span> <span class="n">contains</span> <span class="n">a</span> <span class="n">match</span> <span class="n">to</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;</span> <span class="n">regular</span> <span class="n">expression</span><span class="o">.</span> <span class="n">Note</span> <span class="n">that</span> <span class="n">this</span> <span class="n">will</span> <span class="n">ignore</span> <span class="n">a</span> <span class="n">file</span> <span class="n">even</span> <span class="k">if</span> <span class="n">it</span> <span class="n">has</span> <span class="n">other</span> <span class="n">scanned</span> <span class="n">data</span> <span class="n">such</span> <span class="k">as</span> <span class="n">a</span> <span class="n">license</span> <span class="ow">or</span> <span class="n">errors</span><span class="o">.</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">filters</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">ignore_author</span><span class="p">:</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">author</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Ignore</span> <span class="n">a</span> <span class="n">file</span> <span class="p">(</span><span class="ow">and</span> <span class="nb">all</span> <span class="n">its</span> <span class="n">findings</span><span class="p">)</span> <span class="k">if</span> <span class="n">an</span> <span class="n">author</span> <span class="n">contains</span> <span class="n">a</span> <span class="n">match</span> <span class="n">to</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;</span> <span class="n">regular</span> <span class="n">expression</span><span class="o">.</span> <span class="n">Note</span> <span class="n">that</span> <span class="n">this</span> <span class="n">will</span> <span class="n">ignore</span> <span class="n">a</span> <span class="n">file</span> <span class="n">even</span> <span class="k">if</span> <span class="n">it</span> <span class="n">has</span> <span class="n">other</span> <span class="n">findings</span> <span class="n">such</span> <span class="k">as</span> <span class="n">a</span> <span class="n">license</span> <span class="ow">or</span> <span class="n">errors</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Filter</span> <span class="n">findings</span> <span class="n">that</span> <span class="n">match</span> <span class="n">given</span> <span class="n">copyright</span> <span class="n">holder</span> <span class="ow">or</span> <span class="n">author</span> <span class="n">patterns</span><span class="o">.</span>
+    <span class="n">Has</span> <span class="n">no</span> <span class="n">effect</span> <span class="n">unless</span> <span class="n">the</span> <span class="o">--</span><span class="n">copyright</span> <span class="n">scan</span> <span class="ow">is</span> <span class="n">requested</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_output_filter</span><span class="p">:</span><span class="n">only</span><span class="o">-</span><span class="n">findings</span>  <span class="n">class</span><span class="p">:</span> <span class="n">scancode</span><span class="o">.</span><span class="n">plugin_only_findings</span><span class="p">:</span><span class="n">OnlyFindings</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">output</span> <span class="n">filters</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">only_findings</span><span class="p">:</span> <span class="o">--</span><span class="n">only</span><span class="o">-</span><span class="n">findings</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Only</span> <span class="k">return</span> <span class="n">files</span> <span class="ow">or</span> <span class="n">directories</span> <span class="k">with</span> <span class="n">findings</span> <span class="k">for</span> <span class="n">the</span> <span class="n">requested</span> <span class="n">scans</span><span class="o">.</span> <span class="n">Files</span> <span class="ow">and</span> <span class="n">directories</span> <span class="n">without</span> <span class="n">findings</span> <span class="n">are</span> <span class="n">omitted</span> <span class="p">(</span><span class="n">file</span> <span class="n">information</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">treated</span> <span class="k">as</span> <span class="n">findings</span><span class="p">)</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Filter</span> <span class="n">files</span> <span class="ow">or</span> <span class="n">directories</span> <span class="n">without</span> <span class="n">scan</span> <span class="n">findings</span> <span class="k">for</span> <span class="n">the</span> <span class="n">requested</span> <span class="n">scans</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_post_scan</span><span class="p">:</span><span class="n">classify</span><span class="o">-</span><span class="n">package</span>  <span class="n">class</span><span class="p">:</span> <span class="n">summarycode</span><span class="o">.</span><span class="n">classify</span><span class="p">:</span><span class="n">PackageTopAndKeyFilesTagger</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Tag</span> <span class="n">resources</span> <span class="k">as</span> <span class="n">key</span> <span class="ow">or</span> <span class="n">top</span> <span class="n">level</span> <span class="n">based</span> <span class="n">on</span> <span class="n">Package</span><span class="o">-</span><span class="nb">type</span> <span class="n">specific</span> <span class="n">settings</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_post_scan</span><span class="p">:</span><span class="n">consolidate</span>  <span class="n">class</span><span class="p">:</span> <span class="n">scancode</span><span class="o">.</span><span class="n">plugin_consolidate</span><span class="p">:</span><span class="n">Consolidator</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span> <span class="n">consolidated_components</span><span class="p">,</span> <span class="n">consolidated_packages</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">consolidated_to</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">8</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">post</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">consolidate</span><span class="p">:</span> <span class="o">--</span><span class="n">consolidate</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Group</span> <span class="n">resources</span> <span class="n">by</span> <span class="n">Packages</span> <span class="ow">or</span> <span class="n">license</span> <span class="ow">and</span> <span class="n">copyright</span> <span class="n">holder</span> <span class="ow">and</span> <span class="k">return</span> <span class="n">those</span> <span class="n">groupings</span> <span class="k">as</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">consolidated</span> <span class="n">packages</span> <span class="ow">and</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">consolidated</span> <span class="n">components</span><span class="o">.</span> <span class="n">This</span> <span class="n">requires</span> <span class="n">the</span> <span class="n">scan</span> <span class="n">to</span> <span class="n">have</span><span class="o">/</span><span class="n">be</span> <span class="n">run</span> <span class="k">with</span> <span class="n">the</span> <span class="n">copyright</span><span class="p">,</span> <span class="n">license</span><span class="p">,</span> <span class="ow">and</span> <span class="n">package</span> <span class="n">options</span> <span class="n">active</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">A</span> <span class="n">ScanCode</span> <span class="n">post</span><span class="o">-</span><span class="n">scan</span> <span class="n">plugin</span> <span class="n">to</span> <span class="k">return</span> <span class="n">consolidated</span> <span class="n">components</span> <span class="ow">and</span> <span class="n">consolidated</span>
+    <span class="n">packages</span> <span class="k">for</span> <span class="n">different</span> <span class="n">types</span> <span class="n">of</span> <span class="n">codebase</span> <span class="n">summarization</span><span class="o">.</span>
+
+    <span class="n">A</span> <span class="n">consolidated</span> <span class="n">component</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">group</span> <span class="n">of</span> <span class="n">Resources</span> <span class="n">that</span> <span class="n">have</span> <span class="n">the</span> <span class="n">same</span> <span class="n">origin</span><span class="o">.</span>
+    <span class="n">Currently</span><span class="p">,</span> <span class="n">consolidated</span> <span class="n">components</span> <span class="n">are</span> <span class="n">created</span> <span class="n">by</span> <span class="n">grouping</span> <span class="n">Resources</span> <span class="n">that</span> <span class="n">have</span>
+    <span class="n">the</span> <span class="n">same</span> <span class="n">license</span> <span class="n">expression</span> <span class="ow">and</span> <span class="n">copyright</span> <span class="n">holders</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">files</span> <span class="n">that</span> <span class="n">contain</span>
+    <span class="n">this</span> <span class="n">license</span> <span class="n">expression</span> <span class="ow">and</span> <span class="n">copyright</span> <span class="n">holders</span> <span class="n">combination</span> <span class="n">make</span> <span class="n">up</span> <span class="mi">75</span><span class="o">%</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">of</span>
+    <span class="n">the</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">directory</span> <span class="n">where</span> <span class="n">they</span> <span class="n">are</span> <span class="n">found</span><span class="o">.</span>
+
+    <span class="n">A</span> <span class="n">consolidated</span> <span class="n">package</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">detected</span> <span class="n">package</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">scanned</span> <span class="n">codebase</span> <span class="n">that</span> <span class="n">has</span>
+    <span class="n">been</span> <span class="n">enhanced</span> <span class="k">with</span> <span class="n">data</span> <span class="n">about</span> <span class="n">other</span> <span class="n">licenses</span> <span class="ow">and</span> <span class="n">holders</span> <span class="n">found</span> <span class="n">within</span> <span class="n">it</span><span class="o">.</span>
+
+    <span class="n">If</span> <span class="n">a</span> <span class="n">Resource</span> <span class="ow">is</span> <span class="n">part</span> <span class="n">of</span> <span class="n">a</span> <span class="n">consolidated</span> <span class="n">component</span> <span class="ow">or</span> <span class="n">consolidated</span> <span class="n">package</span><span class="p">,</span> <span class="n">then</span>
+    <span class="n">the</span> <span class="n">identifier</span> <span class="n">of</span> <span class="n">the</span> <span class="n">consolidated</span> <span class="n">component</span> <span class="ow">or</span> <span class="n">consolidated</span> <span class="n">package</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">part</span>
+    <span class="n">of</span> <span class="ow">is</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Resource</span><span class="s1">&#39;s ``consolidated_to`` field.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_post_scan</span><span class="p">:</span><span class="nb">filter</span><span class="o">-</span><span class="n">clues</span>  <span class="n">class</span><span class="p">:</span> <span class="n">cluecode</span><span class="o">.</span><span class="n">plugin_filter_clues</span><span class="p">:</span><span class="n">RedundantCluesFilter</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">post</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">filter_clues</span><span class="p">:</span> <span class="o">--</span><span class="nb">filter</span><span class="o">-</span><span class="n">clues</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Filter</span> <span class="n">redundant</span> <span class="n">duplicated</span> <span class="n">clues</span> <span class="n">already</span> <span class="n">contained</span> <span class="ow">in</span> <span class="n">detected</span> <span class="n">license</span> <span class="ow">and</span> <span class="n">copyright</span> <span class="n">texts</span> <span class="ow">and</span> <span class="n">notices</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Filter</span> <span class="n">redundant</span> <span class="n">clues</span> <span class="p">(</span><span class="n">copyrights</span><span class="p">,</span> <span class="n">authors</span><span class="p">,</span> <span class="n">emails</span><span class="p">,</span> <span class="ow">and</span> <span class="n">urls</span><span class="p">)</span> <span class="n">that</span> <span class="n">are</span> <span class="n">already</span>
+    <span class="n">contained</span> <span class="ow">in</span> <span class="n">another</span> <span class="n">more</span> <span class="n">important</span> <span class="n">scan</span> <span class="n">result</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_post_scan</span><span class="p">:</span><span class="ow">is</span><span class="o">-</span><span class="n">license</span><span class="o">-</span><span class="n">text</span>  <span class="n">class</span><span class="p">:</span> <span class="n">licensedcode</span><span class="o">.</span><span class="n">plugin_license_text</span><span class="p">:</span><span class="n">IsLicenseText</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">is_license_text</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">80</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">post</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">is_license_text</span><span class="p">:</span> <span class="o">--</span><span class="ow">is</span><span class="o">-</span><span class="n">license</span><span class="o">-</span><span class="n">text</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Set</span> <span class="n">the</span> <span class="s2">&quot;is_license_text&quot;</span> <span class="n">flag</span> <span class="n">to</span> <span class="n">true</span> <span class="k">for</span> <span class="n">files</span> <span class="n">that</span> <span class="n">contain</span> <span class="n">mostly</span> <span class="n">license</span> <span class="n">texts</span> <span class="ow">and</span> <span class="n">notices</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span> <span class="n">over</span> <span class="mi">90</span><span class="o">%</span> <span class="n">of</span> <span class="n">the</span> <span class="n">content</span><span class="p">)</span><span class="o">.</span> <span class="p">[</span><span class="n">EXPERIMENTAL</span><span class="p">]</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Set</span> <span class="n">the</span> <span class="s2">&quot;is_license_text&quot;</span> <span class="n">flag</span> <span class="n">to</span> <span class="n">true</span> <span class="k">for</span> <span class="n">at</span> <span class="n">the</span> <span class="n">file</span> <span class="n">level</span> <span class="k">for</span> <span class="n">text</span> <span class="n">files</span>
+    <span class="n">that</span> <span class="n">contain</span> <span class="n">mostly</span> <span class="p">(</span><span class="k">as</span> <span class="mi">90</span><span class="o">%</span> <span class="n">of</span> <span class="n">their</span> <span class="n">size</span><span class="p">)</span> <span class="n">license</span> <span class="n">texts</span> <span class="ow">or</span> <span class="n">notices</span><span class="o">.</span>
+    <span class="n">Has</span> <span class="n">no</span> <span class="n">effect</span> <span class="n">unless</span> <span class="o">--</span><span class="n">license</span><span class="p">,</span> <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">text</span> <span class="ow">and</span> <span class="o">--</span><span class="n">info</span> <span class="n">scan</span> <span class="n">data</span>
+    <span class="n">are</span> <span class="n">available</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_post_scan</span><span class="p">:</span><span class="n">license</span><span class="o">-</span><span class="n">clarity</span><span class="o">-</span><span class="n">score</span>  <span class="n">class</span><span class="p">:</span> <span class="n">summarycode</span><span class="o">.</span><span class="n">score</span><span class="p">:</span><span class="n">LicenseClarityScore</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span> <span class="n">license_clarity_score</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">110</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">post</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">license_clarity_score</span><span class="p">:</span> <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">clarity</span><span class="o">-</span><span class="n">score</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Compute</span> <span class="n">a</span> <span class="n">summary</span> <span class="n">license</span> <span class="n">clarity</span> <span class="n">score</span> <span class="n">at</span> <span class="n">the</span> <span class="n">codebase</span> <span class="n">level</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Compute</span> <span class="n">a</span> <span class="n">License</span> <span class="n">clarity</span> <span class="n">score</span> <span class="n">at</span> <span class="n">the</span> <span class="n">codebase</span> <span class="n">level</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_post_scan</span><span class="p">:</span><span class="n">license</span><span class="o">-</span><span class="n">policy</span>  <span class="n">class</span><span class="p">:</span> <span class="n">licensedcode</span><span class="o">.</span><span class="n">plugin_license_policy</span><span class="p">:</span><span class="n">LicensePolicy</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">license_policy</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">9</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">post</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">license_policy</span><span class="p">:</span> <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">policy</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Load</span> <span class="n">a</span> <span class="n">License</span> <span class="n">Policy</span> <span class="n">file</span> <span class="ow">and</span> <span class="n">apply</span> <span class="n">it</span> <span class="n">to</span> <span class="n">the</span> <span class="n">scan</span> <span class="n">at</span> <span class="n">the</span> <span class="n">Resource</span> <span class="n">level</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Add</span> <span class="n">the</span> <span class="s2">&quot;license_policy&quot;</span> <span class="n">attribute</span> <span class="n">to</span> <span class="n">a</span> <span class="n">resouce</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">a</span>
+    <span class="n">detected</span> <span class="n">license</span> <span class="n">key</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">found</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">license_policy</span><span class="o">.</span><span class="n">yml</span> <span class="n">file</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_post_scan</span><span class="p">:</span><span class="n">mark</span><span class="o">-</span><span class="n">source</span>  <span class="n">class</span><span class="p">:</span> <span class="n">scancode</span><span class="o">.</span><span class="n">plugin_mark_source</span><span class="p">:</span><span class="n">MarkSource</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">source_count</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">8</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">post</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">mark_source</span><span class="p">:</span> <span class="o">--</span><span class="n">mark</span><span class="o">-</span><span class="n">source</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Set</span> <span class="n">the</span> <span class="s2">&quot;is_source&quot;</span> <span class="n">to</span> <span class="n">true</span> <span class="k">for</span> <span class="n">directories</span> <span class="n">that</span> <span class="n">contain</span> <span class="n">over</span> <span class="mi">90</span><span class="o">%</span> <span class="n">of</span> <span class="n">source</span> <span class="n">files</span> <span class="k">as</span> <span class="n">children</span> <span class="ow">and</span> <span class="n">descendants</span><span class="o">.</span> <span class="n">Count</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">source</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">directory</span> <span class="k">as</span> <span class="n">a</span> <span class="n">new</span> <span class="n">source_file_counts</span> <span class="n">attribute</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Set</span> <span class="n">the</span> <span class="s2">&quot;is_source&quot;</span> <span class="n">flag</span> <span class="n">to</span> <span class="n">true</span> <span class="k">for</span> <span class="n">directories</span> <span class="n">that</span> <span class="n">contain</span>
+    <span class="n">over</span> <span class="mi">90</span><span class="o">%</span> <span class="n">of</span> <span class="n">source</span> <span class="n">files</span> <span class="k">as</span> <span class="n">direct</span> <span class="n">children</span><span class="o">.</span>
+    <span class="n">Has</span> <span class="n">no</span> <span class="n">effect</span> <span class="n">unless</span> <span class="n">the</span> <span class="o">--</span><span class="n">info</span> <span class="n">scan</span> <span class="ow">is</span> <span class="n">requested</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_post_scan</span><span class="p">:</span><span class="n">summary</span>  <span class="n">class</span><span class="p">:</span> <span class="n">summarycode</span><span class="o">.</span><span class="n">summarizer</span><span class="p">:</span><span class="n">ScanSummary</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span> <span class="n">summary</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">10</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">post</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">summary</span><span class="p">:</span> <span class="o">--</span><span class="n">summary</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Summarize</span> <span class="n">license</span><span class="p">,</span> <span class="n">copyright</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">scans</span> <span class="n">at</span> <span class="n">the</span> <span class="n">codebase</span> <span class="n">level</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Summarize</span> <span class="n">a</span> <span class="n">scan</span> <span class="n">at</span> <span class="n">the</span> <span class="n">codebase</span> <span class="n">level</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_post_scan</span><span class="p">:</span><span class="n">summary</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">facet</span>  <span class="n">class</span><span class="p">:</span> <span class="n">summarycode</span><span class="o">.</span><span class="n">summarizer</span><span class="p">:</span><span class="n">ScanByFacetSummary</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span> <span class="n">summary_by_facet</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">200</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">post</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">summary_by_facet</span><span class="p">:</span> <span class="o">--</span><span class="n">summary</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">facet</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Summarize</span> <span class="n">license</span><span class="p">,</span> <span class="n">copyright</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">scans</span> <span class="ow">and</span> <span class="n">group</span> <span class="n">the</span> <span class="n">results</span> <span class="n">by</span> <span class="n">facet</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Summarize</span> <span class="n">a</span> <span class="n">scan</span> <span class="n">at</span> <span class="n">the</span> <span class="n">codebase</span> <span class="n">level</span> <span class="n">groupping</span> <span class="n">by</span> <span class="n">facets</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_post_scan</span><span class="p">:</span><span class="n">summary</span><span class="o">-</span><span class="n">keeping</span><span class="o">-</span><span class="n">details</span>  <span class="n">class</span><span class="p">:</span> <span class="n">summarycode</span><span class="o">.</span><span class="n">summarizer</span><span class="p">:</span><span class="n">ScanSummaryWithDetails</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span> <span class="n">summary</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">summary</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">post</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">summary_with_details</span><span class="p">:</span> <span class="o">--</span><span class="n">summary</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">details</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Summarize</span> <span class="n">license</span><span class="p">,</span> <span class="n">copyright</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">scans</span> <span class="n">at</span> <span class="n">the</span> <span class="n">codebase</span> <span class="n">level</span><span class="p">,</span> <span class="n">keeping</span> <span class="n">intermediate</span> <span class="n">details</span> <span class="n">at</span> <span class="n">the</span> <span class="n">file</span> <span class="ow">and</span> <span class="n">directory</span> <span class="n">level</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Summarize</span> <span class="n">a</span> <span class="n">scan</span> <span class="n">at</span> <span class="n">the</span> <span class="n">codebase</span> <span class="n">level</span> <span class="ow">and</span> <span class="n">keep</span> <span class="n">file</span> <span class="ow">and</span> <span class="n">directory</span> <span class="n">details</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_post_scan</span><span class="p">:</span><span class="n">summary</span><span class="o">-</span><span class="n">key</span><span class="o">-</span><span class="n">files</span>  <span class="n">class</span><span class="p">:</span> <span class="n">summarycode</span><span class="o">.</span><span class="n">summarizer</span><span class="p">:</span><span class="n">ScanKeyFilesSummary</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span> <span class="n">summary_of_key_files</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">150</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">post</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">summary_key_files</span><span class="p">:</span> <span class="o">--</span><span class="n">summary</span><span class="o">-</span><span class="n">key</span><span class="o">-</span><span class="n">files</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Summarize</span> <span class="n">license</span><span class="p">,</span> <span class="n">copyright</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">scans</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">files</span><span class="o">.</span> <span class="n">Key</span> <span class="n">files</span> <span class="n">are</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">codebase</span> <span class="n">files</span> <span class="n">such</span> <span class="k">as</span> <span class="n">COPYING</span><span class="p">,</span> <span class="n">README</span> <span class="ow">and</span> <span class="n">package</span> <span class="n">manifests</span> <span class="k">as</span> <span class="n">reported</span> <span class="n">by</span> <span class="n">the</span> <span class="o">--</span><span class="n">classify</span> <span class="n">option</span> <span class="s2">&quot;is_legal&quot;</span><span class="p">,</span> <span class="s2">&quot;is_readme&quot;</span><span class="p">,</span> <span class="s2">&quot;is_manifest&quot;</span> <span class="ow">and</span> <span class="s2">&quot;is_top_level&quot;</span> <span class="n">flags</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Summarize</span> <span class="n">a</span> <span class="n">scan</span> <span class="n">at</span> <span class="n">the</span> <span class="n">codebase</span> <span class="n">level</span> <span class="k">for</span> <span class="n">only</span> <span class="n">key</span> <span class="n">files</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_pre_scan</span><span class="p">:</span><span class="n">classify</span>  <span class="n">class</span><span class="p">:</span> <span class="n">summarycode</span><span class="o">.</span><span class="n">classify</span><span class="p">:</span><span class="n">FileClassifier</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">is_legal</span><span class="p">,</span> <span class="n">is_manifest</span><span class="p">,</span> <span class="n">is_readme</span><span class="p">,</span> <span class="n">is_top_level</span><span class="p">,</span> <span class="n">is_key_file</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">50</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">pre</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">classify</span><span class="p">:</span> <span class="o">--</span><span class="n">classify</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Classify</span> <span class="n">files</span> <span class="k">with</span> <span class="n">flags</span> <span class="n">telling</span> <span class="k">if</span> <span class="n">the</span> <span class="n">file</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">legal</span><span class="p">,</span> <span class="ow">or</span> <span class="n">readme</span> <span class="ow">or</span> <span class="n">test</span> <span class="n">file</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Classify</span> <span class="n">a</span> <span class="n">file</span> <span class="n">such</span> <span class="k">as</span> <span class="n">a</span> <span class="n">COPYING</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">package</span> <span class="n">manifest</span> <span class="k">with</span> <span class="n">a</span> <span class="n">flag</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_pre_scan</span><span class="p">:</span><span class="n">facet</span>  <span class="n">class</span><span class="p">:</span> <span class="n">summarycode</span><span class="o">.</span><span class="n">facet</span><span class="p">:</span><span class="n">AddFacet</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">facets</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">20</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">pre</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">facet</span><span class="p">:</span> <span class="o">--</span><span class="n">facet</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Add</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">facet</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">files</span> <span class="k">with</span> <span class="n">a</span> <span class="n">path</span> <span class="n">matching</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Assign</span> <span class="n">one</span> <span class="ow">or</span> <span class="n">more</span> <span class="s2">&quot;facet&quot;</span> <span class="n">to</span> <span class="n">each</span> <span class="n">file</span> <span class="p">(</span><span class="ow">and</span> <span class="n">NOT</span> <span class="n">to</span> <span class="n">directories</span><span class="p">)</span><span class="o">.</span> <span class="n">Facets</span> <span class="n">are</span>
+    <span class="n">a</span> <span class="n">way</span> <span class="n">to</span> <span class="n">qualify</span> <span class="n">that</span> <span class="n">some</span> <span class="n">part</span> <span class="n">of</span> <span class="n">the</span> <span class="n">scanned</span> <span class="n">code</span> <span class="n">may</span> <span class="n">be</span> <span class="n">core</span> <span class="n">code</span> <span class="n">vs</span><span class="o">.</span>
+    <span class="n">test</span> <span class="n">vs</span><span class="o">.</span> <span class="n">data</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_pre_scan</span><span class="p">:</span><span class="n">ignore</span>  <span class="n">class</span><span class="p">:</span> <span class="n">scancode</span><span class="o">.</span><span class="n">plugin_ignore</span><span class="p">:</span><span class="n">ProcessIgnore</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">100</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">pre</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">ignore</span><span class="p">:</span> <span class="o">--</span><span class="n">ignore</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Ignore</span> <span class="n">files</span> <span class="n">matching</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;.</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">pre</span><span class="o">-</span><span class="n">scan</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">include</span><span class="p">:</span> <span class="o">--</span><span class="n">include</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Include</span> <span class="n">files</span> <span class="n">matching</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Include</span> <span class="ow">or</span> <span class="n">ignore</span> <span class="n">files</span> <span class="n">matching</span> <span class="n">patterns</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_scan</span><span class="p">:</span><span class="n">copyrights</span>  <span class="n">class</span><span class="p">:</span> <span class="n">cluecode</span><span class="o">.</span><span class="n">plugin_copyright</span><span class="p">:</span><span class="n">CopyrightScanner</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">copyrights</span><span class="p">,</span> <span class="n">holders</span><span class="p">,</span> <span class="n">authors</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">4</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">primary</span> <span class="n">scans</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">copyright</span><span class="p">:</span> <span class="o">-</span><span class="n">c</span><span class="p">,</span> <span class="o">--</span><span class="n">copyright</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Scan</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">copyrights</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Scan</span> <span class="n">a</span> <span class="n">Resource</span> <span class="k">for</span> <span class="n">copyrights</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_scan</span><span class="p">:</span><span class="n">emails</span>  <span class="n">class</span><span class="p">:</span> <span class="n">cluecode</span><span class="o">.</span><span class="n">plugin_email</span><span class="p">:</span><span class="n">EmailScanner</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">emails</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">8</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">other</span> <span class="n">scans</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">email</span><span class="p">:</span> <span class="o">-</span><span class="n">e</span><span class="p">,</span> <span class="o">--</span><span class="n">email</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Scan</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">emails</span><span class="o">.</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">scan</span> <span class="n">options</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">max_email</span><span class="p">:</span> <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">email</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Report</span> <span class="n">only</span> <span class="n">up</span> <span class="n">to</span> <span class="n">INT</span> <span class="n">emails</span> <span class="n">found</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">file</span><span class="o">.</span> <span class="n">Use</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">no</span> <span class="n">limit</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Scan</span> <span class="n">a</span> <span class="n">Resource</span> <span class="k">for</span> <span class="n">emails</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_scan</span><span class="p">:</span><span class="n">generated</span>  <span class="n">class</span><span class="p">:</span> <span class="n">summarycode</span><span class="o">.</span><span class="n">generated</span><span class="p">:</span><span class="n">GeneratedCodeDetector</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">is_generated</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">50</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">other</span> <span class="n">scans</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">generated</span><span class="p">:</span> <span class="o">--</span><span class="n">generated</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Classify</span> <span class="n">automatically</span> <span class="n">generated</span> <span class="n">code</span> <span class="n">files</span> <span class="k">with</span> <span class="n">a</span> <span class="n">flag</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Tag</span> <span class="n">a</span> <span class="n">file</span> <span class="k">as</span> <span class="n">generated</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_scan</span><span class="p">:</span><span class="n">info</span>  <span class="n">class</span><span class="p">:</span> <span class="n">scancode</span><span class="o">.</span><span class="n">plugin_info</span><span class="p">:</span><span class="n">InfoScanner</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">date</span><span class="p">,</span> <span class="n">sha1</span><span class="p">,</span> <span class="n">md5</span><span class="p">,</span> <span class="n">mime_type</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">programming_language</span><span class="p">,</span> <span class="n">is_binary</span><span class="p">,</span> <span class="n">is_text</span><span class="p">,</span> <span class="n">is_archive</span><span class="p">,</span> <span class="n">is_media</span><span class="p">,</span> <span class="n">is_source</span><span class="p">,</span> <span class="n">is_script</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">other</span> <span class="n">scans</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">info</span><span class="p">:</span> <span class="o">-</span><span class="n">i</span><span class="p">,</span> <span class="o">--</span><span class="n">info</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Scan</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">file</span> <span class="n">information</span> <span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">checksums</span><span class="p">,</span> <span class="n">etc</span><span class="p">)</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Scan</span> <span class="n">a</span> <span class="n">file</span> <span class="n">Resource</span> <span class="k">for</span> <span class="n">miscellaneous</span> <span class="n">information</span> <span class="n">such</span> <span class="k">as</span> <span class="n">mime</span><span class="o">/</span><span class="n">filetype</span> <span class="ow">and</span>
+    <span class="n">basic</span> <span class="n">checksums</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_scan</span><span class="p">:</span><span class="n">licenses</span>  <span class="n">class</span><span class="p">:</span> <span class="n">licensedcode</span><span class="o">.</span><span class="n">plugin_license</span><span class="p">:</span><span class="n">LicenseScanner</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">licenses</span><span class="p">,</span> <span class="n">license_expressions</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">primary</span> <span class="n">scans</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">license</span><span class="p">:</span> <span class="o">-</span><span class="n">l</span><span class="p">,</span> <span class="o">--</span><span class="n">license</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Scan</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">licenses</span><span class="o">.</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">scan</span> <span class="n">options</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">license_score</span><span class="p">:</span> <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">score</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Do</span> <span class="ow">not</span> <span class="k">return</span> <span class="n">license</span> <span class="n">matches</span> <span class="k">with</span> <span class="n">a</span> <span class="n">score</span> <span class="n">lower</span> <span class="n">than</span> <span class="n">this</span> <span class="n">score</span><span class="o">.</span> <span class="n">A</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mf">100.</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">scan</span> <span class="n">options</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">license_text</span><span class="p">:</span> <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">text</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Include</span> <span class="n">the</span> <span class="n">detected</span> <span class="n">licenses</span> <span class="n">matched</span> <span class="n">text</span><span class="o">.</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">scan</span> <span class="n">options</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">license_text_diagnostics</span><span class="p">:</span> <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">text</span><span class="o">-</span><span class="n">diagnostics</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">In</span> <span class="n">the</span> <span class="n">matched</span> <span class="n">license</span> <span class="n">text</span><span class="p">,</span> <span class="n">include</span> <span class="n">diagnostic</span> <span class="n">highlights</span> <span class="n">surrounding</span> <span class="k">with</span> <span class="n">square</span> <span class="n">brackets</span> <span class="p">[]</span> <span class="n">words</span> <span class="n">that</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">matched</span><span class="o">.</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">scan</span> <span class="n">options</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">license_url_template</span><span class="p">:</span> <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">url</span><span class="o">-</span><span class="n">template</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Set</span> <span class="n">the</span> <span class="n">template</span> <span class="n">URL</span> <span class="n">used</span> <span class="k">for</span> <span class="n">the</span> <span class="n">license</span> <span class="n">reference</span> <span class="n">URLs</span><span class="o">.</span> <span class="n">Curly</span> <span class="n">braces</span> <span class="p">({})</span> <span class="n">are</span> <span class="n">replaced</span> <span class="n">by</span> <span class="n">the</span> <span class="n">license</span> <span class="n">key</span><span class="o">.</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">scan</span> <span class="n">options</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">license_diag</span><span class="p">:</span> <span class="o">--</span><span class="n">license</span><span class="o">-</span><span class="n">diag</span>
+      <span class="n">help</span><span class="p">:</span> <span class="p">(</span><span class="n">DEPRECATED</span><span class="p">:</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">always</span> <span class="n">included</span> <span class="n">by</span> <span class="n">default</span> <span class="n">now</span><span class="p">)</span><span class="o">.</span> <span class="n">Include</span> <span class="n">diagnostic</span> <span class="n">information</span> <span class="ow">in</span> <span class="n">license</span> <span class="n">scan</span> <span class="n">results</span><span class="o">.</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">miscellaneous</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">reindex_licenses</span><span class="p">:</span> <span class="o">--</span><span class="n">reindex</span><span class="o">-</span><span class="n">licenses</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Check</span> <span class="n">the</span> <span class="n">license</span> <span class="n">index</span> <span class="n">cache</span> <span class="ow">and</span> <span class="n">reindex</span> <span class="k">if</span> <span class="n">needed</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Scan</span> <span class="n">a</span> <span class="n">Resource</span> <span class="k">for</span> <span class="n">licenses</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_scan</span><span class="p">:</span><span class="n">packages</span>  <span class="n">class</span><span class="p">:</span> <span class="n">packagedcode</span><span class="o">.</span><span class="n">plugin_package</span><span class="p">:</span><span class="n">PackageScanner</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">packages</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">6</span>
+  <span class="n">required_plugins</span><span class="p">:</span> <span class="n">scan</span><span class="p">:</span><span class="n">licenses</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">primary</span> <span class="n">scans</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">package</span><span class="p">:</span> <span class="o">-</span><span class="n">p</span><span class="p">,</span> <span class="o">--</span><span class="n">package</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Scan</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">package</span> <span class="n">manifests</span> <span class="ow">and</span> <span class="n">packages</span><span class="o">.</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">documentation</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">list_packages</span><span class="p">:</span> <span class="o">--</span><span class="nb">list</span><span class="o">-</span><span class="n">packages</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Show</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">supported</span> <span class="n">package</span> <span class="n">types</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Scan</span> <span class="n">a</span> <span class="n">Resource</span> <span class="k">for</span> <span class="n">Package</span> <span class="n">manifests</span> <span class="ow">and</span> <span class="n">report</span> <span class="n">these</span> <span class="k">as</span> <span class="s2">&quot;packages&quot;</span> <span class="n">at</span> <span class="n">the</span>
+    <span class="n">right</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span> <span class="n">level</span><span class="o">.</span>
+
+<span class="o">--------------------------------------------</span>
+<span class="n">Plugin</span><span class="p">:</span> <span class="n">scancode_scan</span><span class="p">:</span><span class="n">urls</span>  <span class="n">class</span><span class="p">:</span> <span class="n">cluecode</span><span class="o">.</span><span class="n">plugin_url</span><span class="p">:</span><span class="n">UrlScanner</span>
+  <span class="n">codebase_attributes</span><span class="p">:</span>
+  <span class="n">resource_attributes</span><span class="p">:</span> <span class="n">urls</span>
+  <span class="n">sort_order</span><span class="p">:</span> <span class="mi">10</span>
+  <span class="n">required_plugins</span><span class="p">:</span>
+  <span class="n">options</span><span class="p">:</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">other</span> <span class="n">scans</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">url</span><span class="p">:</span> <span class="o">-</span><span class="n">u</span><span class="p">,</span> <span class="o">--</span><span class="n">url</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Scan</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">urls</span><span class="o">.</span>
+    <span class="n">help_group</span><span class="p">:</span> <span class="n">scan</span> <span class="n">options</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">max_url</span><span class="p">:</span> <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">url</span>
+      <span class="n">help</span><span class="p">:</span> <span class="n">Report</span> <span class="n">only</span> <span class="n">up</span> <span class="n">to</span> <span class="n">INT</span> <span class="n">urls</span> <span class="n">found</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">file</span><span class="o">.</span> <span class="n">Use</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">no</span> <span class="n">limit</span><span class="o">.</span>
+  <span class="n">doc</span><span class="p">:</span>
+    <span class="n">Scan</span> <span class="n">a</span> <span class="n">Resource</span> <span class="k">for</span> <span class="n">URLs</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="list-packages-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--list-packages</span></code> Option<a class="headerlink" href="#list-packages-option" title="Permalink to this headline">¶</a></h2>
+<p>This shows all the types of packages that can be scanned using Scancode.
+These are located in packagedcode i.e. Code used to parse various package formats.</p>
+</div>
+<div class="section" id="print-options-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--print-options</span></code> Option<a class="headerlink" href="#print-options-option" title="Permalink to this headline">¶</a></h2>
+<p>This option prints the options selected for one specific scan command.</p>
+<p>If we run this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">sample</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">classify</span> <span class="o">--</span><span class="n">summary</span> <span class="o">--</span><span class="n">summary</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">details</span> <span class="o">--</span><span class="nb">print</span><span class="o">-</span><span class="n">options</span>
+</pre></div>
+</div>
+<p>The output will be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Options</span><span class="p">:</span>
+  <span class="n">classify</span><span class="p">:</span> <span class="kc">True</span>
+  <span class="n">copyright</span><span class="p">:</span> <span class="kc">True</span>
+  <span class="n">email</span><span class="p">:</span> <span class="kc">True</span>
+  <span class="n">info</span><span class="p">:</span> <span class="kc">True</span>
+  <span class="n">license</span><span class="p">:</span> <span class="kc">True</span>
+  <span class="n">list_packages</span><span class="p">:</span> <span class="kc">None</span>
+  <span class="n">output_json_pp</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">unopened</span> <span class="n">file</span> <span class="s1">&#39;sample.json&#39;</span> <span class="n">wb</span><span class="o">&gt;</span>
+  <span class="n">package</span><span class="p">:</span> <span class="kc">True</span>
+  <span class="n">reindex_licenses</span><span class="p">:</span> <span class="kc">None</span>
+  <span class="n">summary</span><span class="p">:</span> <span class="kc">True</span>
+  <span class="n">summary_with_details</span><span class="p">:</span> <span class="kc">True</span>
+  <span class="n">url</span><span class="p">:</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="list-options.html" class="btn btn-neutral float-right" title="All Available Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="synopsis.html" class="btn btn-neutral float-left" title="Synopsis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

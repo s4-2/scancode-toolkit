@@ -1,0 +1,977 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Scancode Output Formats &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Controlling Scancode Output and Filters" href="output-filters-and-control.html" />
+    <link rel="prev" title="Core Options" href="core-options.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Command Line Interface Reference</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="synopsis.html">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html">Getting Help from the Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html">All Available Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html">How to Run a Scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html"><cite>Basic</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html"><cite>Core</cite> Options</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Scancode Output Formats</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#all-scan-output-options">All Scan Output Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#print-to-stdout-terminal">Print to <code class="docutils literal notranslate"><span class="pre">stdout</span></code> (Terminal)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#json-file"><code class="docutils literal notranslate"><span class="pre">--json</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#json-pp-file"><code class="docutils literal notranslate"><span class="pre">--json-pp</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#json-lines-file"><code class="docutils literal notranslate"><span class="pre">--json-lines</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comparing-different-json-output-formats">Comparing Different <code class="docutils literal notranslate"><span class="pre">json</span></code> Output Formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spdx-rdf-file"><code class="docutils literal notranslate"><span class="pre">--spdx-rdf</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spdx-tv-file"><code class="docutils literal notranslate"><span class="pre">--spdx-tv</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#html-file"><code class="docutils literal notranslate"><span class="pre">--html</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#html-app-file"><code class="docutils literal notranslate"><span class="pre">--html-app</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csv-file"><code class="docutils literal notranslate"><span class="pre">--csv</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-output-format">Custom Output Format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="output-filters-and-control.html">Controlling Scancode Output and Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html">Pre-Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html">Post-Scan Options</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Command Line Interface Reference</strong></a> &raquo;</li>
+        
+      <li>Scancode Output Formats</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/cli-reference/output-format.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scancode-output-formats">
+<span id="cli-output-format"></span><h1>Scancode Output Formats<a class="headerlink" href="#scancode-output-formats" title="Permalink to this headline">¶</a></h1>
+<p>Scan results generated by Scancode are available in different formats, to be specified by the
+following options.</p>
+<div class="section" id="all-scan-output-options">
+<h2>All Scan Output Options<a class="headerlink" href="#all-scan-output-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd><span class="option">--json <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as compact JSON to FILE.</p>
+</dd>
+<dt><kbd><span class="option">--json-pp <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as pretty-printed JSON to
+FILE.</p>
+</dd>
+<dt><kbd><span class="option">--json-lines <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as JSON Lines to FILE.</p>
+</dd>
+<dt><kbd><span class="option">--csv <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as CSV to FILE.</p>
+</dd>
+<dt><kbd><span class="option">--html <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as HTML to FILE.</p>
+</dd>
+<dt><kbd><span class="option">--custom-output</span></kbd></dt>
+<dd><p>Write scan output to FILE formatted with the
+custom Jinja template file.</p>
+<p>Mandatory Sub-option:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--custom-template</span> <span class="pre">FILE</span></code></p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">--custom-template <var>FILE</var></span></kbd></dt>
+<dd><p>Use this Jinja template FILE as a custom
+template.</p>
+<p>Sub-Option of: <code class="docutils literal notranslate"><span class="pre">--custom-output</span></code></p>
+</dd>
+<dt><kbd><span class="option">--spdx-rdf <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as SPDX RDF to FILE.</p>
+</dd>
+<dt><kbd><span class="option">--spdx-tv <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as SPDX Tag/Value to FILE.</p>
+</dd>
+<dt><kbd><span class="option">--html-app <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as a mini HTML
+application to FILE.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The html-app feature has been deprecated and you should use Scancode Workbench instead
+to visualize scan results. The official Repository <a class="reference external" href="https://github.com/nexB/scancode-workbench">link</a>.
+Also refer <a class="reference internal" href="../tutorials/how_to_visualize_scan_results.html#how-to-visualize-scan-results"><span class="std std-ref">How to Visualize Scan results</span></a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can Output Scan Results in two different file formats simultaniously in one Scan. An
+example - <code class="docutils literal notranslate"><span class="pre">scancode</span> <span class="pre">-clpieu</span> <span class="pre">--json-pp</span> <span class="pre">output.json</span> <span class="pre">--html</span> <span class="pre">output.html</span> <span class="pre">samples</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All the examples and snippets that follows heas been generated by scanning the <code class="docutils literal notranslate"><span class="pre">samples</span></code>
+folder distributed with scancode-toolkit.</p>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that different for different install methods, scan commands vary.</p>
+<p>The basic command to perform a scan, in case of a download and configure installation
+(on Linux/MacOS) is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The basic usage, if Scancode is installed from <code class="docutils literal notranslate"><span class="pre">pip</span></code>, or in Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For more information on how the Scan Command varies for Various Installation
+Methods/Operating Systems, refer <a class="reference internal" href="../getting-started/install.html#commands-variation"><span class="std std-ref">Commands Variation</span></a>.</p>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="print-to-stdout-terminal">
+<span id="output-to-stdout"></span><h2>Print to <code class="docutils literal notranslate"><span class="pre">stdout</span></code> (Terminal)<a class="headerlink" href="#print-to-stdout-terminal" title="Permalink to this headline">¶</a></h2>
+<p>If you want to format the output in JSON and print it at stdout, you can replace the JSON filename
+with a “-“, like <code class="docutils literal notranslate"><span class="pre">--json-pp</span> <span class="pre">-</span></code> instead of <code class="docutils literal notranslate"><span class="pre">--json-pp</span> <span class="pre">output.json</span></code>.</p>
+<p>The following command will output the scan results in JSON format to <code class="docutils literal notranslate"><span class="pre">stdout</span></code> (In the Terminal):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="o">-</span> <span class="n">samples</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="json-file">
+<h2><code class="docutils literal notranslate"><span class="pre">--json</span> <span class="pre">FILE</span></code><a class="headerlink" href="#json-file" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Among the ScanCode Output Formats, <code class="docutils literal notranslate"><span class="pre">json</span></code> is the most important one, and is recommended over
+others. Scancode Workbench and other applications that use Scancode Result data as input accept
+only the <code class="docutils literal notranslate"><span class="pre">json</span></code> format.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There isn’t any default output option in Scancode Versions 3.x, unlike 2.x versions (which had
+<code class="docutils literal notranslate"><span class="pre">json</span></code> as default).</p>
+</div>
+<p>The following code performs a scan on the samples directory, and publishes the results in
+<code class="docutils literal notranslate"><span class="pre">json</span></code> format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default <code class="docutils literal notranslate"><span class="pre">json</span></code> format prints the whole report without line breaks/spaces/indentations,
+which can be ugly to look at.</p>
+</div>
+<div class="figure align-default">
+<img alt="../_images/json_ugly.png" src="../_images/json_ugly.png" />
+</div>
+<p>The entire JSON file is structured in the following manner:</p>
+<p>At first some general information on the scan, what options were used, the number of files etc.
+And then all the files follow.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;tool_name&quot;</span><span class="p">:</span> <span class="s2">&quot;scancode-toolkit&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;tool_version&quot;</span><span class="p">:</span> <span class="s2">&quot;3.1.1&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;options&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;samples/&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;--copyright&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;--email&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;--info&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;--json-pp&quot;</span><span class="p">:</span> <span class="s2">&quot;output.json&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--license&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;--package&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;--url&quot;</span><span class="p">:</span> <span class="n">true</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;notice&quot;</span><span class="p">:</span> <span class="s2">&quot;Generated with ScanCode and provided on an </span><span class="se">\&quot;</span><span class="s2">AS IS</span><span class="se">\&quot;</span><span class="s2"> BASIS, WITHOUT WARRANTIES</span><span class="se">\n</span><span class="s2">OR CONDITIONS OF ANY KIND, either express or implied. No content created from</span><span class="se">\n</span><span class="s2">ScanCode should be considered or used as legal advice. Consult an Attorney</span><span class="se">\n</span><span class="s2">for any legal advice.</span><span class="se">\n</span><span class="s2">ScanCode is a free software code scanning tool from nexB Inc. and others.</span><span class="se">\n</span><span class="s2">Visit https://github.com/nexB/scancode-toolkit/ for support and download.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-10-19T191117.292858&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;end_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-10-19T191219.743133&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;extra_data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;files_count&quot;</span><span class="p">:</span> <span class="mi">36</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;directory&quot;</span><span class="p">,</span>
+      <span class="o">...</span>
+      <span class="o">...</span>
+      <span class="o">...</span>
+      <span class="s2">&quot;scan_errors&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/README&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;README&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;base_name&quot;</span><span class="p">:</span> <span class="s2">&quot;README&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">236</span><span class="p">,</span>
+      <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-12&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;2e07e32c52d607204fad196052d70e3d18fb8636&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;md5&quot;</span><span class="p">:</span> <span class="s2">&quot;effc6856ef85a9250fb1a470792b3f38&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;mime_type&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;file_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ASCII text&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;is_binary&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;is_text&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s2">&quot;is_archive&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;is_media&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;is_source&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;is_script&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;emails&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;urls&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;files_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;dirs_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;size_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;scan_errors&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">},</span>
+    <span class="o">...</span>
+    <span class="o">...</span>
+    <span class="o">...</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/zlib/iostream2/zstream_test.cpp&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;zstream_test.cpp&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;base_name&quot;</span><span class="p">:</span> <span class="s2">&quot;zstream_test&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;.cpp&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">711</span><span class="p">,</span>
+      <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-12&quot;</span><span class="p">,</span>
+      <span class="o">...</span>
+      <span class="o">...</span>
+      <span class="o">...</span>
+      <span class="s2">&quot;scan_errors&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="json-pp-file">
+<h2><code class="docutils literal notranslate"><span class="pre">--json-pp</span> <span class="pre">FILE</span></code><a class="headerlink" href="#json-pp-file" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">json-pp</span></code> stands for JSON Pretty-Print format. In the previous format, i.e. Simple <code class="docutils literal notranslate"><span class="pre">json</span></code>,
+the whole output is printed in one line, which isn’t well suited for getting information if
+you’re looking at the file itself (or printing at stdout). So this option formats the output
+results in json but in a properly spaced and indented manner, and is easy to look at.</p>
+<p>The following code performs a scan on the samples directory, and publishes the results in
+<code class="docutils literal notranslate"><span class="pre">json-pp</span></code> format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<p>A sample JSON output for an individual file will look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/zlib/iostream2/zstream.h&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;zstream.h&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;base_name&quot;</span><span class="p">:</span> <span class="s2">&quot;zstream&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;.h&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">9283</span><span class="p">,</span>
+  <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-12&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;sha1&quot;</span><span class="p">:</span> <span class="s2">&quot;fca4540d490fff36bb90fd801cf9cd8fc695bb17&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;md5&quot;</span><span class="p">:</span> <span class="s2">&quot;a980b61c1e8be68d5cdb1236ba6b43e7&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;mime_type&quot;</span><span class="p">:</span> <span class="s2">&quot;text/x-c++&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;file_type&quot;</span><span class="p">:</span> <span class="s2">&quot;C++ source, ASCII text&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;programming_language&quot;</span><span class="p">:</span> <span class="s2">&quot;C++&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;is_binary&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_text&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="s2">&quot;is_archive&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_media&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;is_source&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="s2">&quot;is_script&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;mit-old-style&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MIT Old Style&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;MIT Old Style&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Permissive&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_exception&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;MIT&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;homepage_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://fedoraproject.org/wiki/Licensing:MIT#Old_Style&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;text_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://fedoraproject.org/wiki/Licensing:MIT#Old_Style&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;reference_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://enterprise.dejacode.com/urn/urn:dje:license:mit-old-style&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;spdx_license_key&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;spdx_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+      <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+      <span class="s2">&quot;matched_rule&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;mit-old-style_cmr-no_1.RULE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;license_expression&quot;</span><span class="p">:</span> <span class="s2">&quot;mit-old-style&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;mit-old-style&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;is_license_text&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_license_notice&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;is_license_reference&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;is_license_tag&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;matcher&quot;</span><span class="p">:</span> <span class="s2">&quot;2-aho&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rule_length&quot;</span><span class="p">:</span> <span class="mi">71</span><span class="p">,</span>
+        <span class="s2">&quot;matched_length&quot;</span><span class="p">:</span> <span class="mi">71</span><span class="p">,</span>
+        <span class="s2">&quot;match_coverage&quot;</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span>
+        <span class="s2">&quot;rule_relevance&quot;</span><span class="p">:</span> <span class="mi">100</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;license_expressions&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;mit-old-style&quot;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;copyrights&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Copyright (c) 1997 Christian Michelsen Research AS Advanced Computing&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">5</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;holders&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Christian Michelsen Research AS Advanced Computing&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">5</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;emails&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">&quot;urls&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.cmr.no/&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_line&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+      <span class="s2">&quot;end_line&quot;</span><span class="p">:</span> <span class="mi">7</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;files_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;dirs_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;size_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;scan_errors&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+<p>This is the recommended Output option for Scancode Toolkit.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="json-lines-file">
+<h2><code class="docutils literal notranslate"><span class="pre">--json-lines</span> <span class="pre">FILE</span></code><a class="headerlink" href="#json-lines-file" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>ScanCode also has a <code class="docutils literal notranslate"><span class="pre">--json-lines</span></code> format option, where each report of a file scanned is
+formatted in one line.</p>
+<p>The following code performs a scan on the samples directory, and publishes the results in
+<code class="docutils literal notranslate"><span class="pre">json-lines</span></code> format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">lines</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<p>Here is a sample line from a report generated by the <code class="docutils literal notranslate"><span class="pre">jsonlines</span></code> format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/ada&quot;</span><span class="p">,</span><span class="n">licenses</span><span class="s2">&quot;:[],&quot;</span><span class="n">copyrights</span><span class="s2">&quot;:[],&quot;</span><span class="n">packages</span><span class="s2">&quot;:[]}]}</span>
+</pre></div>
+</div>
+<p>The header information is also formatted in one line (i.e. The First Line of the file).</p>
+<p>The whole Output file looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;headers&quot;</span><span class="p">:[{</span><span class="s2">&quot;tool_name&quot;</span><span class="p">:</span><span class="s2">&quot;scancode-toolkit&quot;</span><span class="p">,</span><span class="s2">&quot;tool_version&quot;</span><span class="p">:</span><span class="s2">&quot;3.1.1&quot;</span><span class="p">,</span><span class="s2">&quot;options&quot;</span><span class="p">:{</span><span class="s2">&quot;input&quot;</span><span class="p">:[</span><span class="s2">&quot;samples/&quot;</span><span class="p">],</span><span class="s2">&quot;--copyright&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;--email&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;--info&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;--json-lines&quot;</span><span class="p">:</span><span class="s2">&quot;output.json&quot;</span><span class="p">,</span><span class="s2">&quot;--license&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;--package&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;--url&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">},</span><span class="s2">&quot;notice&quot;</span><span class="p">:</span><span class="s2">&quot;Generated with ScanCode and provided on an </span><span class="se">\&quot;</span><span class="s2">AS IS</span><span class="se">\&quot;</span><span class="s2"> BASIS, WITHOUT WARRANTIES</span><span class="se">\n</span><span class="s2">OR CONDITIONS OF ANY KIND, either express or implied. No content created from</span><span class="se">\n</span><span class="s2">ScanCode should be considered or used as legal advice. Consult an Attorney</span><span class="se">\n</span><span class="s2">for any legal advice.</span><span class="se">\n</span><span class="s2">ScanCode is a free software code scanning tool from nexB Inc. and others.</span><span class="se">\n</span><span class="s2">Visit https://github.com/nexB/scancode-toolkit/ for support and download.&quot;</span><span class="p">,</span><span class="s2">&quot;start_timestamp&quot;</span><span class="p">:</span><span class="s2">&quot;2019-10-19T210920.143831&quot;</span><span class="p">,</span><span class="s2">&quot;end_timestamp&quot;</span><span class="p">:</span><span class="s2">&quot;2019-10-19T211052.048182&quot;</span><span class="p">,</span><span class="s2">&quot;message&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span><span class="s2">&quot;errors&quot;</span><span class="p">:[],</span><span class="s2">&quot;extra_data&quot;</span><span class="p">:{</span><span class="s2">&quot;files_count&quot;</span><span class="p">:</span><span class="mi">36</span><span class="p">}}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples&quot;</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/README&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/screenshot.png&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/arch&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/arch/zlib.tar.gz&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/arch/zlib.tar.gz-extract&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/arch/zlib.tar.gz-extract/zlib-1.2.8&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/arch/zlib.tar.gz-extract/zlib-1.2.8/adler32.c&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/arch/zlib.tar.gz-extract/zlib-1.2.8/zlib.h&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/arch/zlib.tar.gz-extract/zlib-1.2.8/zutil.h&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/EULA&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/LICENSE&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/licenses&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/licenses/apache-1.1.txt&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/licenses/apache-2.0.txt&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/licenses/bouncycastle.txt&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/licenses/cpl-1.0.txt&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/licenses/lgpl.txt&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/src&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/src/FixedMembershipToken.java&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/src/GuardedBy.java&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/src/ImmutableReference.java&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/src/RATE_LIMITER.java&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/src/RouterStub.java&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/src/RouterStubManager.java&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/src/S3_PING.java&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/adler32.c&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/deflate.c&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/deflate.h&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/zlib.h&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/zutil.c&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/zutil.h&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/ada&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/ada/zlib.ads&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/dotzlib&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/dotzlib/AssemblyInfo.cs&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/dotzlib/ChecksumImpl.cs&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/dotzlib/LICENSE_1_0.txt&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/dotzlib/readme.txt&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/gcc_gvmat64&quot;</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/gcc_gvmat64/gvmat64.S&quot;</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/infback9&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/infback9/infback9.c&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/infback9/infback9.h&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/iostream2&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/iostream2/zstream.h&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+<span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:[{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;samples/zlib/iostream2/zstream_test.cpp&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="s2">&quot;scan_errors&quot;</span><span class="p">:[]}]}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This <code class="docutils literal notranslate"><span class="pre">jsonlines</span></code> format also omits other file information like type, name, date,
+extension, sha1 and md5 hashes, programming language etc.</p>
+</div>
+</div></blockquote>
+<hr class="docutils" />
+</div>
+<div class="section" id="comparing-different-json-output-formats">
+<span id="comparing-json"></span><h2>Comparing Different <code class="docutils literal notranslate"><span class="pre">json</span></code> Output Formats<a class="headerlink" href="#comparing-different-json-output-formats" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Default <code class="docutils literal notranslate"><span class="pre">--json</span></code> Output:</p>
+<div class="figure align-default">
+<img alt="../_images/output_json.png" src="../_images/output_json.png" />
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">--json-pp</span></code> Output:</p>
+<div class="figure align-default">
+<img alt="../_images/output_jsonpp.png" src="../_images/output_jsonpp.png" />
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">--json-lines</span></code> Output:</p>
+<div class="figure align-default">
+<img alt="../_images/output_jsonlines.png" src="../_images/output_jsonlines.png" />
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="spdx-rdf-file">
+<h2><code class="docutils literal notranslate"><span class="pre">--spdx-rdf</span> <span class="pre">FILE</span></code><a class="headerlink" href="#spdx-rdf-file" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="https://spdx.org/">SPDX</a> stands for “Software Package and Data Exchange” and is an open standard
+for communicating software bill of material information (including components, licenses,
+copyrights, and security references).</p>
+<p>The following code performs a scan on the samples directory, and publishes the results in
+<code class="docutils literal notranslate"><span class="pre">spdx-rdf</span></code> format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">spdx</span><span class="o">-</span><span class="n">rdf</span> <span class="n">output</span><span class="o">.</span><span class="n">spdx</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<p>Learn more about SPDX specifications <a class="reference external" href="https://spdx.org/specifications">here</a> and in this GitHub
+<a class="reference external" href="https://github.com/spdx/spdx-spec">repository</a>.</p>
+<p>Here the file is structured as a dictionary of named properties and classes using W3C’s
+<a class="reference external" href="https://www.w3.org/RDF/">RDF Technology</a>.</p>
+<p>… figure:: data/output_spdx_rdf1.png</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="spdx-tv-file">
+<h2><code class="docutils literal notranslate"><span class="pre">--spdx-tv</span> <span class="pre">FILE</span></code><a class="headerlink" href="#spdx-tv-file" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>This format is another SPDX variant, with the output file being structured in the following
+manner:</p>
+<p>The following code performs a scan on the samples directory, and publishes the results in
+<code class="docutils literal notranslate"><span class="pre">spdx-tv</span></code> format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">spdx</span><span class="o">-</span><span class="n">tv</span> <span class="n">output</span><span class="o">.</span><span class="n">spdx</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<p>A SPDX-TV file starts with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Document Information</span>
+
+<span class="n">SPDXVersion</span><span class="p">:</span> <span class="n">SPDX</span><span class="o">-</span><span class="mf">2.1</span>
+<span class="n">DataLicense</span><span class="p">:</span> <span class="n">CC0</span><span class="o">-</span><span class="mf">1.0</span>
+<span class="n">DocumentComment</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">text</span><span class="o">&gt;</span><span class="n">Generated</span> <span class="k">with</span> <span class="n">ScanCode</span> <span class="ow">and</span> <span class="n">provided</span> <span class="n">on</span> <span class="n">an</span> <span class="s2">&quot;AS IS&quot;</span> <span class="n">BASIS</span><span class="p">,</span> <span class="n">WITHOUT</span> <span class="n">WARRANTIES</span>
+<span class="n">OR</span> <span class="n">CONDITIONS</span> <span class="n">OF</span> <span class="n">ANY</span> <span class="n">KIND</span><span class="p">,</span> <span class="n">either</span> <span class="n">express</span> <span class="ow">or</span> <span class="n">implied</span><span class="o">.</span> <span class="n">No</span> <span class="n">content</span> <span class="n">created</span> <span class="kn">from</span>
+<span class="nn">ScanCode</span> <span class="n">should</span> <span class="n">be</span> <span class="n">considered</span> <span class="ow">or</span> <span class="n">used</span> <span class="k">as</span> <span class="n">legal</span> <span class="n">advice</span><span class="o">.</span> <span class="n">Consult</span> <span class="n">an</span> <span class="n">Attorney</span>
+<span class="k">for</span> <span class="nb">any</span> <span class="n">legal</span> <span class="n">advice</span><span class="o">.</span>
+<span class="n">ScanCode</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">free</span> <span class="n">software</span> <span class="n">code</span> <span class="n">scanning</span> <span class="n">tool</span> <span class="kn">from</span> <span class="nn">nexB</span> <span class="n">Inc</span><span class="o">.</span> <span class="ow">and</span> <span class="n">others</span><span class="o">.</span>
+<span class="n">Visit</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nexB</span><span class="o">/</span><span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span><span class="o">/</span> <span class="k">for</span> <span class="n">support</span> <span class="ow">and</span> <span class="n">download</span><span class="o">.&lt;/</span><span class="n">text</span><span class="o">&gt;</span>
+
+
+<span class="c1"># Creation Info</span>
+
+<span class="n">Creator</span><span class="p">:</span> <span class="n">Tool</span><span class="p">:</span> <span class="n">ScanCode</span> <span class="mf">2.2</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">Created</span><span class="p">:</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">22</span><span class="n">T21</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">04</span><span class="n">Z</span>
+</pre></div>
+</div>
+<p>After a section titled <code class="docutils literal notranslate"><span class="pre">#Packages</span></code>, a list follows.</p>
+<div class="figure align-default">
+<img alt="../_images/output_spdx_tv_package.png" src="../_images/output_spdx_tv_package.png" />
+</div>
+<p>Each File information is listed under a <code class="docutils literal notranslate"><span class="pre">#File</span></code> title, for each of the files.</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>FileName</p></li>
+<li><p>FileChecksum</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>LicenseConcluded</p></li>
+<li><p>LicenseInfoInFile</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>FileCopyrightText</p></li>
+</ul>
+</td></tr></table>
+<p>An example goes as follows:</p>
+<div class="figure align-default">
+<img alt="../_images/output_spdx_tv_file.png" src="../_images/output_spdx_tv_file.png" />
+</div>
+<p>After the files section, there’s a section for licenses under a <code class="docutils literal notranslate"><span class="pre">#Licences</span></code> title, with the
+following information for each license:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>LicenseID</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>LicenseComment</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>ExtractedText</p></li>
+</ul>
+</td></tr></table>
+<p>Here’s an example:</p>
+<div class="figure align-default">
+<img alt="../_images/output_spdx_tv_licenses.png" src="../_images/output_spdx_tv_licenses.png" />
+</div>
+</div></blockquote>
+<hr class="docutils" />
+</div>
+<div class="section" id="html-file">
+<span id="output-html"></span><h2><code class="docutils literal notranslate"><span class="pre">--html</span> <span class="pre">FILE</span></code><a class="headerlink" href="#html-file" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>ScanCode supports formatting the Output result is a simple <code class="docutils literal notranslate"><span class="pre">html</span></code> format, to open with your
+favorite browser. This helps quick visualization of the detected license/copyright and other
+main information in the form of tables.</p>
+<p>The following code performs a scan on the samples directory, and publishes the results in
+HTML format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">html</span> <span class="n">output</span><span class="o">.</span><span class="n">html</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<p>The HTML page generated has these following Tables:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>Copyright and Licenses Information</p></li>
+<li><p>File Information</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>Package Information</p></li>
+<li><p>Licenses (Links to Dejacode/License Homepage)</p></li>
+</ul>
+</td></tr></table>
+<div class="figure align-default">
+<img alt="../_images/output_html1.png" src="../_images/output_html1.png" />
+</div>
+<div class="figure align-default">
+<img alt="../_images/output_html2.png" src="../_images/output_html2.png" />
+</div>
+<div class="figure align-default">
+<img alt="../_images/output_html3.png" src="../_images/output_html3.png" />
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="html-app-file">
+<h2><code class="docutils literal notranslate"><span class="pre">--html-app</span> <span class="pre">FILE</span></code><a class="headerlink" href="#html-app-file" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>ScanCode also supports formatting the output in a HTML visualization tool, which is more
+helpful than the standard HTML format.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The html-app feature has been deprecated and you should use Scancode Workbench instead
+to visualize scan results. The official Repository <a class="reference external" href="https://github.com/nexB/scancode-workbench">link</a>.
+Also refer <a class="reference internal" href="../tutorials/how_to_visualize_scan_results.html#how-to-visualize-scan-results"><span class="std std-ref">How to Visualize Scan results</span></a>.</p>
+</div>
+<p>The following code performs a scan on the samples directory, and publishes the results in
+<code class="docutils literal notranslate"><span class="pre">html-app</span></code> format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">csv</span> <span class="n">output</span><span class="o">.</span><span class="n">html</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<p>The Files scanned are shown in the left sidebar, and the section on the right contains separate
+tabs for the following:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>License Summary</p></li>
+<li><p>Copyright Summary</p></li>
+<li><p>Clues</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>File Details</p></li>
+<li><p>Packages</p></li>
+</ul>
+</td></tr></table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The HTML app also contains a Search option to easily find what you are looking for.</p>
+</div>
+<div class="figure align-default">
+<img alt="../_images/output_html_app1.png" src="../_images/output_html_app1.png" />
+</div>
+<div class="figure align-default">
+<img alt="../_images/output_html_app2.png" src="../_images/output_html_app2.png" />
+</div>
+<div class="figure align-default">
+<img alt="../_images/output_html_app3.png" src="../_images/output_html_app3.png" />
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="csv-file">
+<h2><code class="docutils literal notranslate"><span class="pre">--csv</span> <span class="pre">FILE</span></code><a class="headerlink" href="#csv-file" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>ScanCode can publish results in the useful <code class="docutils literal notranslate"><span class="pre">.csv</span></code> format.</p>
+<p>The following code performs a scan on the samples directory, and publishes the results in
+<code class="docutils literal notranslate"><span class="pre">csv</span></code> format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">lpceiu</span> <span class="o">--</span><span class="n">csv</span> <span class="n">sample</span><span class="o">.</span><span class="n">csv</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<p>The first line of the csv file contains the headings, and they are:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>Resource,</p></li>
+<li><p>type,</p></li>
+<li><p>name,</p></li>
+<li><p>base_name,</p></li>
+<li><p>extension,</p></li>
+<li><p>date,</p></li>
+<li><p>size,</p></li>
+<li><p>sha1,</p></li>
+<li><p>md5,</p></li>
+<li><p>files_count,</p></li>
+<li><p>mime_type,</p></li>
+<li><p>file_type,</p></li>
+<li><p>programming_language,</p></li>
+<li><p>is_binary,</p></li>
+<li><p>is_text,</p></li>
+<li><p>is_archive,</p></li>
+<li><p>is_media,</p></li>
+<li><p>is_source,</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>is_script,</p></li>
+<li><p>scan_errors,</p></li>
+<li><p>license__key,</p></li>
+<li><p>license__score,</p></li>
+<li><p>license__short_name,</p></li>
+<li><p>license__category,</p></li>
+<li><p>license__owner,</p></li>
+<li><p>license__homepage_url,</p></li>
+<li><p>license__text_url,</p></li>
+<li><p>license__reference_url,</p></li>
+<li><p>license__spdx_license_key,</p></li>
+<li><p>license__spdx_url,</p></li>
+<li><p>matched_rule__identifier,</p></li>
+<li><p>matched_rule__license_choice,</p></li>
+<li><p>matched_rule__licenses,</p></li>
+<li><p>copyright,</p></li>
+<li><p>copyright_holder,</p></li>
+<li><p>author,</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>email,</p></li>
+<li><p>start_line,</p></li>
+<li><p>end_line,</p></li>
+<li><p>url,</p></li>
+<li><p>package__type,</p></li>
+<li><p>package__name,</p></li>
+<li><p>package__version,</p></li>
+<li><p>package__primary_language,</p></li>
+<li><p>package__summary,</p></li>
+<li><p>package__description,</p></li>
+<li><p>package__size,</p></li>
+<li><p>package__release_date,</p></li>
+<li><p>package__homepage_url,</p></li>
+<li><p>package__notes,</p></li>
+<li><p>package__bug_tracking_url,</p></li>
+<li><p>package__vcs_repository,</p></li>
+<li><p>package__copyright_top_level</p></li>
+</ul>
+</td></tr></table>
+<p>Each subsequent line represents one element, i.e. can be any of the following:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>license</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>copyright</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>package</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>email</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>url</p></li>
+</ul>
+</td></tr></table>
+<p>So if there’s multiple elements in a file, they are each given an entry with the details mentioned
+earlier.</p>
+<div class="figure align-default">
+<img alt="../_images/output_csv.png" src="../_images/output_csv.png" />
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="custom-output-format">
+<h2>Custom Output Format<a class="headerlink" href="#custom-output-format" title="Permalink to this headline">¶</a></h2>
+<p>While the three built-in output formats are convenient for a verity of use-cases, one may wish to
+create their own output template, using the following arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``--custom-output FILE --custom-template TEMP_FILE``
+</pre></div>
+</div>
+<p>ScanCode makes this very easy, as it uses the popular Jinja2 template engine. Simply pass the path
+to the custom template to the <code class="docutils literal notranslate"><span class="pre">--custom-template</span></code> argument, or drop it in a folder to
+<code class="docutils literal notranslate"><span class="pre">src/scancode/templates</span></code> directory.</p>
+<p>For example, if I wanted a simple CLI output I would create a <code class="docutils literal notranslate"><span class="pre">template2.html</span></code> with the
+particular data I wish to see. In this case, I am only interested in the license and copyright
+data for this particular scan.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## template.html:</span>
+<span class="p">[</span>
+    <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">files</span><span class="o">.</span><span class="n">license_copyright</span> <span class="o">%</span><span class="p">}</span>
+        <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">location</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">files</span><span class="o">.</span><span class="n">license_copyright</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="o">%</span><span class="p">}</span>
+            <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span> <span class="o">%</span><span class="p">}</span>
+  <span class="n">location</span><span class="p">:</span><span class="s2">&quot;{{ location }}&quot;</span><span class="p">,</span>
+  <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">row</span><span class="o">.</span><span class="n">what</span> <span class="o">==</span> <span class="s1">&#39;copyright&#39;</span> <span class="o">%</span><span class="p">}</span><span class="n">copyright</span><span class="p">:</span><span class="s2">&quot;{{ row.value|escape }}&quot;</span><span class="p">,{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+             <span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
+         <span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="o">..</span> <span class="n">note</span><span class="p">::</span>
+
+    <span class="n">File</span> <span class="n">name</span> <span class="ow">and</span> <span class="n">extension</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">matter</span> <span class="k">for</span> <span class="n">the</span> <span class="n">template</span> <span class="n">file</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Now I can run ScanCode using my newly created template:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scancode -clpeui --custom-output output.json --custom-template template.html samples
+Scanning files...
+  [####################################]  46
+Scanning done.
+</pre></div>
+</div>
+<p>Now are results are saved in <code class="docutils literal notranslate"><span class="pre">output.json</span></code> and we can easily view them with <code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">output.json</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="n">location</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/LICENSE&quot;</span><span class="p">,</span>
+  <span class="n">copyright</span><span class="p">:</span><span class="s2">&quot;Copyright (c) 1991, 1999 Free Software Foundation, Inc.&quot;</span><span class="p">,</span>
+
+  <span class="n">location</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/LICENSE&quot;</span><span class="p">,</span>
+  <span class="n">copyright</span><span class="p">:</span><span class="s2">&quot;copyrighted by the Free Software Foundation&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>For a more elaborate template, refer this <a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/src/formattedcode/templates/html/template.html">default template</a>
+given with Scancode, to generate HTML output with the <code class="docutils literal notranslate"><span class="pre">--html</span></code> output format option.</p>
+<p>Documentation on <a class="reference external" href="https://jinja.palletsprojects.com/en/2.10.x/">Jinja templates</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="output-filters-and-control.html" class="btn btn-neutral float-right" title="Controlling Scancode Output and Filters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="core-options.html" class="btn btn-neutral float-left" title="Core Options" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

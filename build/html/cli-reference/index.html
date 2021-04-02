@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Command Line Interface Reference &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Synopsis" href="synopsis.html" />
+    <link rel="prev" title="What’s New in This Release?" href="../getting-started/whats-new.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Command Line Interface Reference</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="synopsis.html">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html">Getting Help from the Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html">All Available Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html">How to Run a Scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html"><cite>Basic</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html"><cite>Core</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html">Scancode Output Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-filters-and-control.html">Controlling Scancode Output and Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html">Pre-Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html">Post-Scan Options</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><strong>Command Line Interface Reference</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/cli-reference/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-line-interface-reference">
+<h1><strong>Command Line Interface Reference</strong><a class="headerlink" href="#command-line-interface-reference" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="synopsis.html">Synopsis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="synopsis.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="synopsis.html#quickstart">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="synopsis.html#type-of-options">Type of Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="synopsis.html#output-formats">Output Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="synopsis.html#other-important-documentation">Other Important Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help-text-options.html">Getting Help from the Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html#all-documentation-help-options">All Documentation/Help Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html#help-text">Help text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html#command-examples-text">Command Examples Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html#plugins-help-text">Plugins Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html#list-packages-option"><code class="docutils literal notranslate"><span class="pre">--list-packages</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html#print-options-option"><code class="docutils literal notranslate"><span class="pre">--print-options</span></code> Option</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="list-options.html">All Available Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html#all-basic-scan-options">All “Basic” Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html#all-extractcode-options">All Extractcode Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html#all-core-scan-options">All “Core” Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html#all-scan-output-options">All Scan Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html#all-output-control-scan-options">All “Output Control” Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html#all-pre-scan-options">All “Pre-Scan” Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html#all-post-scan-options">All “Post-Scan” Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simple-examples.html">How to Run a Scan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html#setting-up-a-virtual-environment">Setting up a Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html#setting-up-scancode-toolkit">Setting up Scancode Toolkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html#looking-into-files">Looking into Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html#performing-extraction">Performing Extraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html#deciding-scan-options">Deciding Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html#running-the-scan">Running The Scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html#other-important-documentation">Other Important Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic-options.html"><cite>Basic</cite> Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html#all-basic-scan-options">All “Basic” Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html#generated-options"><code class="docutils literal notranslate"><span class="pre">--generated</span></code> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html#max-email-options"><code class="docutils literal notranslate"><span class="pre">--max-email</span></code> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html#max-url-options"><code class="docutils literal notranslate"><span class="pre">--max-url</span></code> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html#license-score-options"><code class="docutils literal notranslate"><span class="pre">--license-score</span></code> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html#license-text-options"><code class="docutils literal notranslate"><span class="pre">--license-text</span></code> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html#license-url-template-options"><code class="docutils literal notranslate"><span class="pre">--license-url-template</span></code> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html#license-text-diagnostics-options"><code class="docutils literal notranslate"><span class="pre">--license-text-diagnostics</span></code> Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="core-options.html"><cite>Core</cite> Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html#all-core-scan-options">All “Core” Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html#comparing-progress-message-options">Comparing Progress Message Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html#timeout-option"><code class="docutils literal notranslate"><span class="pre">--timeout</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html#reindex-licenses-option"><code class="docutils literal notranslate"><span class="pre">--reindex-licenses</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html#from-json-option"><code class="docutils literal notranslate"><span class="pre">--from-json</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html#max-in-memory-option"><code class="docutils literal notranslate"><span class="pre">--max-in-memory</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html#max-depth-option"><code class="docutils literal notranslate"><span class="pre">--max_depth</span></code> Option</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="output-format.html">Scancode Output Formats</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html#all-scan-output-options">All Scan Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html#print-to-stdout-terminal">Print to <code class="docutils literal notranslate"><span class="pre">stdout</span></code> (Terminal)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html#json-file"><code class="docutils literal notranslate"><span class="pre">--json</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html#json-pp-file"><code class="docutils literal notranslate"><span class="pre">--json-pp</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html#json-lines-file"><code class="docutils literal notranslate"><span class="pre">--json-lines</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html#comparing-different-json-output-formats">Comparing Different <code class="docutils literal notranslate"><span class="pre">json</span></code> Output Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html#spdx-rdf-file"><code class="docutils literal notranslate"><span class="pre">--spdx-rdf</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html#spdx-tv-file"><code class="docutils literal notranslate"><span class="pre">--spdx-tv</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html#html-file"><code class="docutils literal notranslate"><span class="pre">--html</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html#html-app-file"><code class="docutils literal notranslate"><span class="pre">--html-app</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html#csv-file"><code class="docutils literal notranslate"><span class="pre">--csv</span> <span class="pre">FILE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html#custom-output-format">Custom Output Format</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="output-filters-and-control.html">Controlling Scancode Output and Filters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="output-filters-and-control.html#all-output-control-scan-options">All “Output Control” Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-filters-and-control.html#strip-root-vs-full-root"><code class="docutils literal notranslate"><span class="pre">--strip-root</span></code> Vs. <code class="docutils literal notranslate"><span class="pre">--full-root</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-filters-and-control.html#ignore-author-pattern-option"><code class="docutils literal notranslate"><span class="pre">--ignore-author</span> <span class="pre">&lt;pattern&gt;</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-filters-and-control.html#ignore-copyright-holder-pattern-option"><code class="docutils literal notranslate"><span class="pre">--ignore-copyright-holder</span> <span class="pre">&lt;pattern&gt;</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-filters-and-control.html#only-findings-plugin"><code class="docutils literal notranslate"><span class="pre">--only-findings</span></code> Plugin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scan-options-pre.html">Pre-Scan Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html#all-pre-scan-options">All “Pre-Scan” Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html#ignore-option"><code class="docutils literal notranslate"><span class="pre">--ignore</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html#include-option"><code class="docutils literal notranslate"><span class="pre">--include</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html#classify"><code class="docutils literal notranslate"><span class="pre">--classify</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html#facet-option"><code class="docutils literal notranslate"><span class="pre">--facet</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html#glob-pattern-matching">Glob Pattern Matching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html#what-is-a-facet">What is a Facet?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scan-options-post.html">Post-Scan Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html#all-post-scan-options">All “Post-Scan” Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html#mark-source-option"><code class="docutils literal notranslate"><span class="pre">--mark-source</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html#consolidate-option"><code class="docutils literal notranslate"><span class="pre">--consolidate</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html#filter-clues-option"><code class="docutils literal notranslate"><span class="pre">--filter-clues</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html#is-license-text-option"><code class="docutils literal notranslate"><span class="pre">--is-license-text</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html#license-clarity-score-option"><code class="docutils literal notranslate"><span class="pre">--license-clarity-score</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html#license-policy-file-option"><code class="docutils literal notranslate"><span class="pre">--license-policy</span> <span class="pre">FILE</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html#summary-option"><code class="docutils literal notranslate"><span class="pre">--summary</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html#summary-by-facet-option"><code class="docutils literal notranslate"><span class="pre">--summary-by-facet</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html#summary-key-files-option"><code class="docutils literal notranslate"><span class="pre">--summary-key-files</span></code> Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html#summary-with-details-option"><code class="docutils literal notranslate"><span class="pre">--summary-with-details</span></code> Option</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="synopsis.html" class="btn btn-neutral float-right" title="Synopsis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../getting-started/whats-new.html" class="btn btn-neutral float-left" title="What’s New in This Release?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

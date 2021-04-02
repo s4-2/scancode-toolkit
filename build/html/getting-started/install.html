@@ -1,0 +1,639 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Comprehensive Installation &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="IDE Configuration" href="ide-config.html" />
+    <link rel="prev" title="Home" href="home.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Getting Started</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="home.html">Home</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Comprehensive Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#before-installing">Before Installing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-as-an-application-downloading-releases">Installation as an Application: Downloading Releases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installation-on-linux-and-mac">Installation on Linux and Mac</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation-on-windows-10">Installation on Windows 10</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#un-installation">Un-installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-via-docker">Installation via Docker:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#download-the-scancode-toolkit-source-code">Download the ScanCode-Toolkit Source Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-the-docker-image">Build the Docker image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-using-docker">Run using Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-from-source-code-git-clone">Installation from Source Code: Git Clone</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Download the ScanCode-Toolkit Source Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-the-build">Configure the build</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-as-a-library-via-pip">Installation as a library: via <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commands-variation">Commands Variation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ide-config.html">IDE Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whats-new.html">What’s New in This Release?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli-reference/index.html"><strong>Command Line Interface Reference</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Getting Started</strong></a> &raquo;</li>
+        
+      <li>Comprehensive Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/getting-started/install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="comprehensive-installation">
+<h1>Comprehensive Installation<a class="headerlink" href="#comprehensive-installation" title="Permalink to this headline">¶</a></h1>
+<p>There are 4 main ways you can install ScanCode.</p>
+<ul>
+<li><p><a class="reference internal" href="#app-install"><span class="std std-ref">Installation as an Application: Downloading Releases</span></a></p>
+<blockquote>
+<div><p>The recommended method for installing ScanCode is Downloading the latest release as an
+application and then configure and use directly. This is easy because no knowledge of pip/git
+or other developer tools is necessary.</p>
+</div></blockquote>
+</li>
+<li><p><a class="reference internal" href="#docker-install"><span class="std std-ref">Installation via Docker:</span></a></p>
+<blockquote>
+<div><p>An alternative to installing the latest Scancode Toolkit release natively is to build
+a Docker image from the included Dockerfile. This is easy because the only prerequisite
+is a working Docker installation.</p>
+</div></blockquote>
+</li>
+<li><p><a class="reference internal" href="#source-code-install"><span class="std std-ref">Installation from Source Code: Git Clone</span></a></p>
+<blockquote>
+<div><p>You can download/clone the source code repository via git/GitHub and then run a configure script
+to install ScanCode.</p>
+</div></blockquote>
+</li>
+<li><p><a class="reference internal" href="#pip-install"><span class="std std-ref">Installation as a library: via pip</span></a></p>
+<blockquote>
+<div><p>To use ScanCode as a library in your application, you can install it via <code class="docutils literal notranslate"><span class="pre">pip</span></code>. This is
+recommended for developers/users familiar with Package managers/virtualenv.</p>
+</div></blockquote>
+</li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="before-installing">
+<h2>Before Installing<a class="headerlink" href="#before-installing" title="Permalink to this headline">¶</a></h2>
+<p>ScanCode requires either Python 3.6.x and is tested on Linux, Mac, and Windows.
+Make sure Python 3.6 is installed first.</p>
+<div class="section" id="system-requirements">
+<h3>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Hardware : ScanCode will run best with a modern X86 processor and at least 2GB of RAM and
+250MB of disk.</p></li>
+<li><p>Supported operating systems : ScanCode should run on these OSes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Linux: on recent 64-bit Linux distributions running X86_64 proessors,</p></li>
+<li><p>Mac: on recent 64-bit macOS (10.14 and up) running X86_64 proessors,</p></li>
+<li><p>Windows: on Windows 7 and up (64-bit) running X86_64 proessors,</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="prerequisites">
+<span id="install-prerequisites"></span><h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<p>ScanCode needs a Python 3.6 (<em>highly recommended</em>) or a Python 2.7 interpreter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ScanCode currently doesn’t support versions above Python 3.6.x, though support will be added soon.</p>
+</div>
+<ul>
+<li><p><strong>On Linux</strong>:</p>
+<blockquote>
+<div><p>Use your package manager to install <code class="docutils literal notranslate"><span class="pre">python3.6</span></code> (<em>Recommended</em>) or <code class="docutils literal notranslate"><span class="pre">python2.7</span></code>.</p>
+<p>For ubuntu, it is <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3.6-dev</span></code></p>
+<ul class="simple">
+<li><p>On Ubuntu 14, 16 and 18, run:
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3.6-dev</span> <span class="pre">bzip2</span> <span class="pre">xz-utils</span> <span class="pre">zlib1g</span> <span class="pre">libxml2-dev</span> <span class="pre">libxslt1-dev</span></code></p></li>
+<li><p>On Debian and Debian-based distros run:
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python3.6-dev</span> <span class="pre">libbz2-1.0</span> <span class="pre">xz-utils</span> <span class="pre">zlib1g</span> <span class="pre">libxml2-dev</span> <span class="pre">libxslt1-dev</span></code></p></li>
+<li><p>On RPM-based distros run:
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">python3.6-devel</span> <span class="pre">zlib</span> <span class="pre">bzip2-libs</span> <span class="pre">xz-libs</span> <span class="pre">libxml2-devel</span> <span class="pre">libxslt-devel</span></code></p></li>
+<li><p>On Fedora 22 and later run:
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">dnf</span> <span class="pre">install</span> <span class="pre">python3.6-devel</span> <span class="pre">xz-libs</span> <span class="pre">zlib</span> <span class="pre">libxml2-devel</span> <span class="pre">libxslt-devel</span> <span class="pre">bzip2-libs</span></code></p></li>
+</ul>
+<p>If they are not available from your package manager, you must compile it from sources.
+For instance, visit this <a class="reference external" href="https://github.com/dejacode/about-code-tool/wiki/BuildingPython27OnCentos6">wiki</a>
+for instructions to compile Python 2.7 from sources on Centos.</p>
+</div></blockquote>
+</li>
+<li><p><strong>On Mac</strong>:</p>
+<blockquote>
+<div><p>Download and install Python from this url:</p>
+<ul class="simple">
+<li><p>Python 3.6.8 (<em>recommended</em>): <a class="reference external" href="https://www.python.org/ftp/python/3.6.8/python-3.6.8-macosx10.6.pkg">https://www.python.org/ftp/python/3.6.8/python-3.6.8-macosx10.6.pkg</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>On Windows</strong>:</p>
+<blockquote>
+<div><p>Download and install Python from this url:</p>
+<ul>
+<li><p>Python 3.6.8 (<em>recommended</em>): <a class="reference external" href="https://www.python.org/ftp/python/3.6.8/python-3.6.8.exe">https://www.python.org/ftp/python/3.6.8/python-3.6.8.exe</a></p>
+<blockquote>
+<div><p>Add python to PATH, as ScanCode uses the python from PATH. The last Python you install
+registers itself in the environment is the default, if you select the “Add to PATH” option
+while installing.</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>64-bit Python interpreters (x86-64) are the only interpreters supported by
+Scancode on all operating systems which means only 64-bit Windows is supported.</p>
+<p>If you have more than one installed Python version (eg: Python 3.6, Python3.9, etc) on Windows run this to get a list of these versions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span><span class="n">Users</span><span class="o">&gt;</span><span class="n">py</span> <span class="o">-</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<p>See the <a class="reference internal" href="#windows-app-install"><span class="std std-ref">Installation on Windows 10</span></a> section for more installation details.</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ScanCode comes with packaged with all dependencies, and so apart from downloading it as an
+application, only Python has to be downloaded and installed separately.</p>
+</div>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="installation-as-an-application-downloading-releases">
+<span id="app-install"></span><h2>Installation as an Application: Downloading Releases<a class="headerlink" href="#installation-as-an-application-downloading-releases" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installation-on-linux-and-mac">
+<h3>Installation on Linux and Mac<a class="headerlink" href="#installation-on-linux-and-mac" title="Permalink to this headline">¶</a></h3>
+<p>Get the Scancode Toolkit tarball archive of a specific version and your
+operating system by going to the <a class="reference external" href="https://github.com/nexB/scancode-toolkit/releases/">project releases page</a></p>
+<p>For example, Version 21.2.9 archive can be obtained from
+<a class="reference external" href="https://github.com/nexB/scancode-toolkit/releases/tag/v21.2.9">Toolkit release 21.2.9</a>
+under assets options. Download the archive for your operating systen and extract
+the archive from command line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span><span class="o">-</span><span class="mf">21.2</span><span class="o">.</span><span class="mi">9</span><span class="n">_py36</span><span class="o">-</span><span class="n">linux</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">xz</span>
+</pre></div>
+</div>
+<p>Or, on Linux, right click and select “Extract Here”.</p>
+<p>Check whether the <a class="reference internal" href="#install-prerequisites"><span class="std std-ref">Prerequisites</span></a> are installed. Open a terminal
+in the extracted directory and run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">scancode</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<p>This will configure ScanCode and display the command line <a class="reference internal" href="../cli-reference/help-text-options.html#cli-help-text"><span class="std std-ref">Help text</span></a>.</p>
+</div>
+<div class="section" id="installation-on-windows-10">
+<span id="windows-app-install"></span><h3>Installation on Windows 10<a class="headerlink" href="#installation-on-windows-10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Download the latest ScanCode release zip file for Windows from the latest
+version at <a class="reference external" href="https://github.com/nexB/scancode-toolkit/releases/">https://github.com/nexB/scancode-toolkit/releases/</a></p></li>
+<li><p>In the File Explorer, select the downloaded ScanCode zip and right-click.</p></li>
+<li><p>In the pop-up menu select ‘Extract All…’</p></li>
+<li><p>In the pop-up window ‘Extract Compressed (Zipped) Folders’ use the default options to extract.</p></li>
+<li><p>Once the extraction is complete, a new File Explorer window will pop up.</p></li>
+<li><p>In this Explorer window, select the new folder that was created and right-click.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On Windows 10, double-click the new folder, select one of the files inside the folder
+(e.g., ‘setup.py’), and right-click.</p>
+</div>
+<ul>
+<li><p>In the pop-up menu select ‘Properties’.</p></li>
+<li><p>In the pop-up window ‘Properties’, select the Location value. Copy this to the clipboard and
+close the ‘Properties’ window.</p></li>
+<li><p>Press the start menu button, click the search box or search icon in the taskbar.</p></li>
+<li><p>In the search box type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmd</span>
+</pre></div>
+</div>
+</li>
+<li><p>Select ‘cmd.exe’ or ‘Command Prompt’ listed in the search results.</p></li>
+<li><p>A new ‘Command Prompt’pops up.</p></li>
+<li><p>In this window (aka a ‘command prompt’), type ‘cd’ followed by a space and then Right-click in
+this window and select Paste. This will paste the path where you extracted ScanCode:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">extracted_ScanCode</span>
+</pre></div>
+</div>
+</li>
+<li><p>Press Enter.</p></li>
+<li><p>This will change the current location of your command prompt to the root directory where
+ScanCode is installed.</p></li>
+<li><p>Then type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">h</span>
+</pre></div>
+</div>
+</li>
+<li><p>Press enter. This first command will configure your ScanCode installation.</p></li>
+<li><p>Several messages are displayed followed by the ScanCode command help.</p></li>
+<li><p>The installation is complete.</p></li>
+</ul>
+<p>This uses the default Python present in the PATH environment variable i.e. the last Python
+installed registers itself in the environment as the default.</p>
+</div>
+<div class="section" id="un-installation">
+<h3>Un-installation<a class="headerlink" href="#un-installation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Delete the directory in which you extracted ScanCode.</p></li>
+<li><p>Delete any temporary files created in your system temp directory under a ScanCode directory.</p></li>
+</ul>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="installation-via-docker">
+<span id="docker-install"></span><h2>Installation via Docker:<a class="headerlink" href="#installation-via-docker" title="Permalink to this headline">¶</a></h2>
+<p>You can install Scancode Toolkit by building a Docker image from the included Dockerfile.
+The prerequisite is a working <a class="reference external" href="https://docs.docker.com/engine/install/">docker installation</a>.</p>
+<div class="section" id="download-the-scancode-toolkit-source-code">
+<h3>Download the ScanCode-Toolkit Source Code<a class="headerlink" href="#download-the-scancode-toolkit-source-code" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Either download the Source Code for one of the releases ( <a class="reference internal" href="#app-install"><span class="std std-ref">Installation as an Application: Downloading Releases</span></a> ) and unzip it.</p></li>
+<li><p>Or git clone the latest ( <a class="reference internal" href="#source-code-install"><span class="std std-ref">Installation from Source Code: Git Clone</span></a> ) Source Code.</p></li>
+</ul>
+</div>
+<div class="section" id="build-the-docker-image">
+<h3>Build the Docker image<a class="headerlink" href="#build-the-docker-image" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span></code> command needs to run in the directory of the source code,
+make sure to <code class="docutils literal notranslate"><span class="pre">cd</span></code> into the correct directory.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span>
+<span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-using-docker">
+<h3>Run using Docker<a class="headerlink" href="#run-using-docker" title="Permalink to this headline">¶</a></h3>
+<p>The docker image will forward all arguments it receives directly to the <code class="docutils literal notranslate"><span class="pre">scancode</span></code> command.</p>
+<p>Display help:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<p>Mount current working directory and run scan on mounted folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>docker run -v $PWD/:/project scancode-toolkit -clpeui --json-pp /project/result.json /project
+</pre></div>
+</div>
+<p>This will mount your current working from the host into <code class="docutils literal notranslate"><span class="pre">/project</span></code> in the container
+and then scan the contents. The output <code class="docutils literal notranslate"><span class="pre">result.json</span></code> will be written back to your
+current working directory on the host.</p>
+<p>Note that the parameters <em>before</em> <code class="docutils literal notranslate"><span class="pre">scancode-toolkit</span></code> are used for docker,
+those after will be forwarded to scancode.</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="installation-from-source-code-git-clone">
+<span id="source-code-install"></span><h2>Installation from Source Code: Git Clone<a class="headerlink" href="#installation-from-source-code-git-clone" title="Permalink to this headline">¶</a></h2>
+<p>You can also download the Scancode Toolkit Source Code and build from it yourself. This is how you
+would want to do it if:</p>
+<ul class="simple">
+<li><p>You are adding new patches to Scancode and want to test it. So you build ScanCode locally
+with your added changes.</p></li>
+<li><p>You want to test a specific version/checkpoint/branch from the VCS.</p></li>
+</ul>
+<div class="section" id="id1">
+<h3>Download the ScanCode-Toolkit Source Code<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>If you don’t have the ScanCode Toolkit Source Code downloaded, get it from its
+<a class="reference external" href="https://github.com/nexB/scancode-toolkit/">official Repository</a> (Downloaded as a .zip file)</p>
+<p>Or you can run the following if you have <a class="reference external" href="https://git-scm.com/">Git</a> installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nexB</span><span class="o">/</span><span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">scancode</span><span class="o">-</span><span class="n">toolkit</span>
+</pre></div>
+</div>
+<p>Now, by default the files are checked out to the develop branch, but you can jump to any checkpoint
+using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">master</span></code> branch has the latest release of Scancode-Toolkit. You can also check out to any
+of the following:</p>
+<ul class="simple">
+<li><p>Branches (Locally created or already present) [Example - <code class="docutils literal notranslate"><span class="pre">master</span></code>, <code class="docutils literal notranslate"><span class="pre">develop</span></code> etc]</p></li>
+<li><p>Tags (essentially Version Numbers) [Example - <code class="docutils literal notranslate"><span class="pre">v3.1.1</span></code>, <code class="docutils literal notranslate"><span class="pre">v3.1.0</span></code> etc]</p></li>
+<li><p>Commits (use the shortened commit hash) [Example - <code class="docutils literal notranslate"><span class="pre">4502055</span></code>, <code class="docutils literal notranslate"><span class="pre">f276398</span></code> etc]</p></li>
+</ul>
+</div>
+<div class="section" id="configure-the-build">
+<h3>Configure the build<a class="headerlink" href="#configure-the-build" title="Permalink to this headline">¶</a></h3>
+<p>ScanCode use the Configure scripts to install a virtualenv, install required packaged dependencies
+as pip requirements and more configure tasks such that ScanCode can be installed in a
+self-contained way with no network connectivity required.</p>
+<p>On Linux/Mac:</p>
+<ul class="simple">
+<li><p>Open a terminal</p></li>
+<li><p>cd to the clone directory</p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">./configure</span></code></p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">bin/activate</span></code></p></li>
+</ul>
+<p>On Windows:</p>
+<ul class="simple">
+<li><p>open a command prompt</p></li>
+<li><p>cd to the clone directory</p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">configure</span></code></p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">Scripts\activate</span></code></p></li>
+</ul>
+<p>Now you are ready to use the freshly configured scancode-toolkit.</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="installation-as-a-library-via-pip">
+<span id="pip-install"></span><h2>Installation as a library: via <code class="docutils literal notranslate"><span class="pre">pip</span></code><a class="headerlink" href="#installation-as-a-library-via-pip" title="Permalink to this headline">¶</a></h2>
+<p>ScanCode can be installed using <code class="docutils literal notranslate"><span class="pre">pip</span></code>, the default Python Package Manager. The steps are:</p>
+<ol class="arabic">
+<li><p>Create a Python 3.6 Virtual Environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">virtualenv</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span> <span class="n">venv</span><span class="o">-</span><span class="n">scancode</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>For more information on Python virtualenv, visit this <a class="reference external" href="https://docs.python-guide.org/dev/virtualenvs/#lower-level-virtualenv">page</a>.</p>
+<ol class="arabic">
+<li><p>Activate the Virtual Environment you just created:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">venv</span><span class="o">-</span><span class="n">scancode</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">scancode-toolkit</span></code> to install the latest version of Scancode.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For advanced usage, <code class="docutils literal notranslate"><span class="pre">scancode-toolkit-mini</span></code> is alternative package with
+no default dependencies on pre-built binaries. This may come handy for some
+special use cases such as packaging for a Linux of FreeBSD distro.</p>
+</div>
+<p>To uninstall, run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">uninstall</span> <span class="pre">scancode-toolkit</span></code>.</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="commands-variation">
+<span id="id2"></span><h2>Commands Variation<a class="headerlink" href="#commands-variation" title="Permalink to this headline">¶</a></h2>
+<p>The commands to run ScanCode varies for:</p>
+<ul class="simple">
+<li><p>Different Installation Methods</p></li>
+<li><p>OS used</p></li>
+</ul>
+<p>The two types of commands are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">scancode</span> <span class="pre">[OPTIONS]</span> <span class="pre">&lt;OUTPUT</span> <span class="pre">FORMAT</span> <span class="pre">OPTION(s)&gt;</span> <span class="pre">&lt;SCAN</span> <span class="pre">INPUT&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path/to/scancode</span> <span class="pre">OPTIONS]</span> <span class="pre">&lt;OUTPUT</span> <span class="pre">FORMAT</span> <span class="pre">OPTION(s)&gt;</span> <span class="pre">&lt;SCAN</span> <span class="pre">INPUT&gt;</span></code></p></li>
+</ul>
+<p>In the second case, <code class="docutils literal notranslate"><span class="pre">./scancode</span></code> is used if already in the directory.</p>
+<p>These variations are summed up in the following table:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 7%" />
+<col style="width: 13%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Installation Methods</p></th>
+<th class="head"><p>Application Install</p></th>
+<th class="head"><p>Pip Install</p></th>
+<th class="head"><p>Install from Source Code</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Linux</p></td>
+<td><p><cite>./scancode</cite></p></td>
+<td><p><cite>scancode</cite></p></td>
+<td><p><cite>./scancode</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>Mac</p></td>
+<td><p><cite>./scancode</cite></p></td>
+<td><p><cite>scancode</cite></p></td>
+<td><p><cite>./scancode</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>Windows</p></td>
+<td><p><cite>scancode</cite></p></td>
+<td><p><cite>scancode</cite></p></td>
+<td><p><cite>scancode</cite></p></td>
+</tr>
+</tbody>
+</table>
+<p>To sum it up, <code class="docutils literal notranslate"><span class="pre">scancode</span></code> is used in these two cases:</p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">pip</span></code> install is used.</p></li>
+<li><p>If the OS is Windows.</p></li>
+</ul>
+<p>In all other cases, <code class="docutils literal notranslate"><span class="pre">./scancode</span></code> is used.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="ide-config.html" class="btn btn-neutral float-right" title="IDE Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="home.html" class="btn btn-neutral float-left" title="Home" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

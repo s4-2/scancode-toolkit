@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Custom Output Format &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli-reference/index.html"><strong>Command Line Interface Reference</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Custom Output Format</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/rst_snippets/custom_output_format.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="custom-output-format">
+<h1>Custom Output Format<a class="headerlink" href="#custom-output-format" title="Permalink to this headline">¶</a></h1>
+<p>While the three built-in output formats are convenient for a verity of use-cases, one may wish to
+create their own output template, using the following arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``--custom-output FILE --custom-template TEMP_FILE``
+</pre></div>
+</div>
+<p>ScanCode makes this very easy, as it uses the popular Jinja2 template engine. Simply pass the path
+to the custom template to the <code class="docutils literal notranslate"><span class="pre">--custom-template</span></code> argument, or drop it in a folder to
+<code class="docutils literal notranslate"><span class="pre">src/scancode/templates</span></code> directory.</p>
+<p>For example, if I wanted a simple CLI output I would create a <code class="docutils literal notranslate"><span class="pre">template2.html</span></code> with the
+particular data I wish to see. In this case, I am only interested in the license and copyright
+data for this particular scan.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## template.html:</span>
+<span class="p">[</span>
+    <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">files</span><span class="o">.</span><span class="n">license_copyright</span> <span class="o">%</span><span class="p">}</span>
+        <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">location</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">files</span><span class="o">.</span><span class="n">license_copyright</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="o">%</span><span class="p">}</span>
+            <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span> <span class="o">%</span><span class="p">}</span>
+  <span class="n">location</span><span class="p">:</span><span class="s2">&quot;{{ location }}&quot;</span><span class="p">,</span>
+  <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">row</span><span class="o">.</span><span class="n">what</span> <span class="o">==</span> <span class="s1">&#39;copyright&#39;</span> <span class="o">%</span><span class="p">}</span><span class="n">copyright</span><span class="p">:</span><span class="s2">&quot;{{ row.value|escape }}&quot;</span><span class="p">,{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+             <span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
+         <span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="o">..</span> <span class="n">note</span><span class="p">::</span>
+
+    <span class="n">File</span> <span class="n">name</span> <span class="ow">and</span> <span class="n">extension</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">matter</span> <span class="k">for</span> <span class="n">the</span> <span class="n">template</span> <span class="n">file</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Now I can run ScanCode using my newly created template:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scancode -clpeui --custom-output output.json --custom-template template.html samples
+Scanning files...
+  [####################################]  46
+Scanning done.
+</pre></div>
+</div>
+<p>Now are results are saved in <code class="docutils literal notranslate"><span class="pre">output.json</span></code> and we can easily view them with <code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">output.json</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="n">location</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/LICENSE&quot;</span><span class="p">,</span>
+  <span class="n">copyright</span><span class="p">:</span><span class="s2">&quot;Copyright (c) 1991, 1999 Free Software Foundation, Inc.&quot;</span><span class="p">,</span>
+
+  <span class="n">location</span><span class="p">:</span><span class="s2">&quot;samples/JGroups/LICENSE&quot;</span><span class="p">,</span>
+  <span class="n">copyright</span><span class="p">:</span><span class="s2">&quot;copyrighted by the Free Software Foundation&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>For a more elaborate template, refer this <a class="reference external" href="https://github.com/nexB/scancode-toolkit/blob/develop/src/formattedcode/templates/html/template.html">default template</a>
+given with Scancode, to generate HTML output with the <code class="docutils literal notranslate"><span class="pre">--html</span></code> output format option.</p>
+<p>Documentation on <a class="reference external" href="https://jinja.palletsprojects.com/en/2.10.x/">Jinja templates</a>.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

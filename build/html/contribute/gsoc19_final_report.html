@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Google Summer of Code 2019 - Final report &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Long Running Issues - Help Needed" href="long_running_issues.html" />
+    <link rel="prev" title="Google Summer of Code 2017 - Final report" href="gsoc17_final_report.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli-reference/index.html"><strong>Command Line Interface Reference</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Contribute</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="contrib_dev.html">Contributing to Code Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cut_new_release.html">How to cut a new release:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contrib_doc.html">Contributing to the Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gsoc17_final_report.html">Google Summer of Code 2017 - Final report</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Google Summer of Code 2019 - Final report</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project-scancode-toolkit-to-python-3">Project: <strong>scancode-toolkit</strong> to Python 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implementation">Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#challenging-part-of-project">Challenging part of Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#outcome">Outcome</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="long_running_issues.html">Long Running Issues - Help Needed</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Contribute</strong></a> &raquo;</li>
+        
+      <li>Google Summer of Code 2019 - Final report</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/contribute/gsoc19_final_report.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="google-summer-of-code-2019-final-report">
+<h1>Google Summer of Code 2019 - Final report<a class="headerlink" href="#google-summer-of-code-2019-final-report" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="project-scancode-toolkit-to-python-3">
+<h2>Project: <strong>scancode-toolkit</strong> to Python 3<a class="headerlink" href="#project-scancode-toolkit-to-python-3" title="Permalink to this headline">¶</a></h2>
+<p><strong>Owner:</strong> <a class="reference external" href="https://github.com/Abhishek-Dev09">Abhishek Kumar</a></p>
+<p><strong>Mentor:</strong> <a class="reference external" href="https://github.com/pombredanne">Philippe Ombredanne</a></p>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p><strong>Problem:</strong> Since Python 2.7 will retire in few months and will not be maintained any longer.</p>
+<p><strong>Solution:</strong> <a class="reference external" href="https://github.com/nexB/scancode-toolkit/">Scancode</a> needs to be ported to
+python 3 and all test suites must pass on both version of Python. The main difference that
+makes Python 3 better than Python 2.x is that the support for unicode is greatly improved in
+Python 3. This will also be useful for scancode as scancode has users in more than 100 languages
+and it’s easy to translate strings from unicode to other languages.</p>
+<p><strong>Objective</strong>: To make scancode-toolkit installable on on Python 3.6 and higher, as presently it
+installs with Python 2.7 only.</p>
+</div>
+<div class="section" id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>It was started in development mode(editable mode) and then it was moved to work in virtual
+environments.</p></li>
+<li><p>I have worked module by module according to the order of hierarchy of modules. For example :All
+module is dependent on commoncode, so it must be ported first. In this way we have created the
+Porting order:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>commoncode</p></li>
+<li><p>plugincode</p></li>
+<li><p>typecode</p></li>
+<li><p>extractcode</p></li>
+<li><p>textcode</p></li>
+<li><p>scancode basics (some tests are integration tests and will have to wait to be ported)</p></li>
+<li><p>formattedcode, starting with JSON (some tests are integration tests and will have to wait
+to be ported)</p></li>
+<li><p>cluecode</p></li>
+<li><p>licensedcode</p></li>
+<li><p>packagedcode (depends on licensecode)</p></li>
+<li><p>summarycode</p></li>
+<li><p>fixup the remaining bits and tests</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+<p>After porting each module, I have marked these modules as ported <code class="docutils literal notranslate"><span class="pre">scanpy3</span></code> with help of
+<strong>conffest</strong> plugin (created by <a class="reference external" href="https://github.com/pombredanne">&#64;pombredanne</a>). <strong>Conffest</strong>
+plugin is heart of this project. Without this, it was very difficult to do. Dependencies was fixed
+at the time of porting the module where it was used.</p>
+</div>
+<div class="section" id="challenging-part-of-project">
+<h2>Challenging part of Project<a class="headerlink" href="#challenging-part-of-project" title="Permalink to this headline">¶</a></h2>
+<p>It is very difficult to deal with paths on different operating systems.The issue is around
+macOS/Windows/Linux. The first two OS handle unicode paths comfortably on Python 2 and 3 but not
+completely on macOS Mojave because its filesystem encoding is APFS. Linux paths are bytes and
+os.listdir is broken on Python 2. As a result you can only sanely handle Linux paths as bytes
+on Python 2. But on Python 3 path seems to be corrected as <code class="docutils literal notranslate"><span class="pre">unicode</span></code> on Linux.</p>
+<p>For more details visit here :</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://vstinner.github.io/painful-history-python-filesystem-encoding.html">https://vstinner.github.io/painful-history-python-filesystem-encoding.html</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jaraco/path.py/issues/130">jaraco/path.py#130</a></p></li>
+</ul>
+<p>We came with various Solution:</p>
+<ul class="simple">
+<li><p>To use pathlib which generally handle paths correctly across platforms. And for backports we use
+pathlib 2. But this solution also fails because pathlib 2 does not work as expected wrt unicode
+vs bytes. And os.listdir also doesn’t work properly.</p></li>
+<li><p>To use <a class="reference external" href="https://pypi.org/project/path.py/">path.py</a> which handles the paths across all the
+platforms even on macOS Mojave .</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">bytes</span></code> on linux and python 3 and <code class="docutils literal notranslate"><span class="pre">unicode</span></code> everywhere.</p></li>
+</ul>
+<p>We choose the third solution because it is most fundamental and simple and easy to use.</p>
+<p>Project was tracked in this ticket <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/295">nexB/scancode-toolkit#295</a></p>
+<p><strong>Project link :</strong> <a class="reference external" href="https://summerofcode.withgoogle.com/organizations/6118953540124672/">Port Scancode to Python 3</a></p>
+<p><strong>My contribution :</strong> <a class="reference external" href="https://github.com/nexB/scancode-toolkit/commits?author=Abhishek-Dev09">List of Commits</a></p>
+<p><strong>Note :</strong> Please give your feedback <a class="reference external" href="https://github.com/nexB/scancode-toolkit/issues/295">here</a></p>
+</div>
+<div class="section" id="outcome">
+<h2>Outcome<a class="headerlink" href="#outcome" title="Permalink to this headline">¶</a></h2>
+<p>Now we have liftoff on Python 3 . We are able to run basic scans without errors on develop branch.
+You check it by running <code class="docutils literal notranslate"><span class="pre">scancode</span> <span class="pre">-clipeu</span> <span class="pre">samples/</span> <span class="pre">--json-pp</span> <span class="pre">-</span> <span class="pre">-n4</span></code> .</p>
+<p>At last I would like to thanks my Mentor <strong>&#64;pombredanne</strong> aka
+<a class="reference external" href="https://github.com/pombredanne">Philippe Ombredanne</a> . He has helped lot in completing this
+project. He is very supportive and responsive. I have learned a lot from him. By his encouragement
+and motivation, I am very improving day by day, building and developing my skills. I have completed
+all the tasks that were in the scope of this GSoC project.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="long_running_issues.html" class="btn btn-neutral float-right" title="Long Running Issues - Help Needed" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="gsoc17_final_report.html" class="btn btn-neutral float-left" title="Google Summer of Code 2017 - Final report" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

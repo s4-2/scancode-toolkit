@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Controlling Scancode Output and Filters &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pre-Scan Options" href="scan-options-pre.html" />
+    <link rel="prev" title="Scancode Output Formats" href="output-format.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Command Line Interface Reference</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="synopsis.html">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html">Getting Help from the Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html">All Available Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html">How to Run a Scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html"><cite>Basic</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html"><cite>Core</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html">Scancode Output Formats</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Controlling Scancode Output and Filters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#all-output-control-scan-options">All “Output Control” Scan Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#strip-root-vs-full-root"><code class="docutils literal notranslate"><span class="pre">--strip-root</span></code> Vs. <code class="docutils literal notranslate"><span class="pre">--full-root</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ignore-author-pattern-option"><code class="docutils literal notranslate"><span class="pre">--ignore-author</span> <span class="pre">&lt;pattern&gt;</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ignore-copyright-holder-pattern-option"><code class="docutils literal notranslate"><span class="pre">--ignore-copyright-holder</span> <span class="pre">&lt;pattern&gt;</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#only-findings-plugin"><code class="docutils literal notranslate"><span class="pre">--only-findings</span></code> Plugin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html">Pre-Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html">Post-Scan Options</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Command Line Interface Reference</strong></a> &raquo;</li>
+        
+      <li>Controlling Scancode Output and Filters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/cli-reference/output-filters-and-control.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="controlling-scancode-output-and-filters">
+<span id="cli-output-control"></span><h1>Controlling Scancode Output and Filters<a class="headerlink" href="#controlling-scancode-output-and-filters" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="all-output-control-scan-options">
+<h2>All “Output Control” Scan Options<a class="headerlink" href="#all-output-control-scan-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd><span class="option">--strip-root</span></kbd></dt>
+<dd><p>Strip the root directory segment of all paths.</p>
+</dd>
+<dt><kbd><span class="option">--full-root</span></kbd></dt>
+<dd><p>Report full, absolute paths.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The options <code class="docutils literal notranslate"><span class="pre">--strip-root</span></code> and <code class="docutils literal notranslate"><span class="pre">--full-root</span></code> can’t be used together, i.e. Any one option
+may be used in a single scan.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default is to always include the last directory segment of the scanned path such that all
+paths have a common root directory.</p>
+</div>
+<dl class="option-list">
+<dt><kbd><span class="option">--ignore-author <var>&lt;pattern&gt;</var></span></kbd></dt>
+<dd><p>Ignore a file (and all its findings)
+if an author contains a match to the
+<code class="docutils literal notranslate"><span class="pre">&lt;pattern&gt;</span></code> regular expression.</p>
+</dd>
+<dt><kbd><span class="option">--ignore-copyright-holder <var>&lt;pattern&gt;</var></span></kbd></dt>
+<dd><p>Ignore a file (and all its findings)
+if a copyright holder contains a match
+to the <code class="docutils literal notranslate"><span class="pre">&lt;pattern&gt;</span></code> regular expression.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that this both the options <code class="docutils literal notranslate"><span class="pre">--ignore-author</span></code> and <code class="docutils literal notranslate"><span class="pre">--ignore-copyright-holder</span></code> will
+ignore a file even if it has other scanned data such as a license or errors.</p>
+</div>
+<dl class="option-list">
+<dt><kbd><span class="option">--only-findings</span></kbd></dt>
+<dd><p>Only return files or directories with
+findings for the requested scans.
+Files and directories without findings
+are omitted (file information is not
+treated as findings).</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that different for different install methods, scan commands vary.</p>
+<p>The basic command to perform a scan, in case of a download and configure installation
+(on Linux/MacOS) is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The basic usage, if Scancode is installed from <code class="docutils literal notranslate"><span class="pre">pip</span></code>, or in Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For more information on how the Scan Command varies for Various Installation
+Methods/Operating Systems, refer <a class="reference internal" href="../getting-started/install.html#commands-variation"><span class="std std-ref">Commands Variation</span></a>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="strip-root-vs-full-root">
+<h2><code class="docutils literal notranslate"><span class="pre">--strip-root</span></code> Vs. <code class="docutils literal notranslate"><span class="pre">--full-root</span></code><a class="headerlink" href="#strip-root-vs-full-root" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>For a default scan of the “samples” folder, this a comparison between the default,
+<code class="docutils literal notranslate"><span class="pre">strip-root</span></code> and <code class="docutils literal notranslate"><span class="pre">full-root</span></code> options.</p>
+<p>An example Scan</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">cplieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">full</span><span class="o">-</span><span class="n">root</span>
+</pre></div>
+</div>
+<p>These two changes only the “path” attribute of the file information. For this comparison we
+compare the “path” attributes of the file <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code> inside <code class="docutils literal notranslate"><span class="pre">JGroups</span></code> directory.</p>
+<p>The default path:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;samples/JGroups/LICENSE&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>For the <code class="docutils literal notranslate"><span class="pre">--full-root</span></code> option, the path relative to the Root of your local filesystem.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home/ayansm/Desktop/GSoD/scancode-toolkit-versions/scancode-toolkit-2.2.1/samples/JGroups/LICENSE&quot;</span>
+</pre></div>
+</div>
+<p>For the <code class="docutils literal notranslate"><span class="pre">--strip-root</span></code> option, the root directory (here <code class="docutils literal notranslate"><span class="pre">samples</span></code>) is removed from path :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;JGroups/LICENSE&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The options <code class="docutils literal notranslate"><span class="pre">--strip-root</span></code> and <code class="docutils literal notranslate"><span class="pre">--full-root</span></code> can’t be used together, i.e. Any one option
+may be used in a single scan.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default is to always include the last directory segment of the scanned path such that all
+paths have a common root directory.</p>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="ignore-author-pattern-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--ignore-author</span> <span class="pre">&lt;pattern&gt;</span></code> Option<a class="headerlink" href="#ignore-author-pattern-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>In a normal scan, all files inside the directory specified as an input argument is scanned and
+subsequently included in the scan report. But if you want to run the scan on only some selective
+files, with some specific <strong>common author</strong> then <code class="docutils literal notranslate"><span class="pre">--ignore-author</span></code> option can be used to do
+the same.</p>
+<p>This scan ignores all files with authors matching the string “Apache Software Foundation”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">cplieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">author</span> <span class="s2">&quot;Apache Software Foundation&quot;</span>
+</pre></div>
+</div>
+<p>More information on <a class="reference internal" href="scan-options-pre.html#glob-pattern-matching"><span class="std std-ref">Glob Pattern Matching</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that this both the options <code class="docutils literal notranslate"><span class="pre">--ignore-author</span></code> and <code class="docutils literal notranslate"><span class="pre">--ignore-copyright-holder</span></code> will
+ignore a file even if it has other scanned data such as a license or errors.</p>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="ignore-copyright-holder-pattern-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--ignore-copyright-holder</span> <span class="pre">&lt;pattern&gt;</span></code> Option<a class="headerlink" href="#ignore-copyright-holder-pattern-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>In a normal scan, all files inside the directory specified as an input argument is scanned and
+subsequently included in the scan report. But if you want to run the scan on only some selective
+files, with some specific <strong>common copyright holder</strong> then <code class="docutils literal notranslate"><span class="pre">--ignore-copyright-holder</span></code> option
+can be used to do the same.</p>
+<p>This scan ignores all files with Copyright Holders matching the string “Free Software Foundation”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">cplieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">copyright</span><span class="o">-</span><span class="n">holder</span> <span class="s2">&quot;Free Software Foundation&quot;</span>
+</pre></div>
+</div>
+<p>More information on <a class="reference internal" href="scan-options-pre.html#glob-pattern-matching"><span class="std std-ref">Glob Pattern Matching</span></a>.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="only-findings-plugin">
+<h2><code class="docutils literal notranslate"><span class="pre">--only-findings</span></code> Plugin<a class="headerlink" href="#only-findings-plugin" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>This option removes from the scan results, the files where nothing significant has been
+detected, like files which doesn’t contain any licenses, copyrights, emails or urls (if
+requested in the scan options), and isn’t a package.</p>
+<p>An example Scan:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">cplieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">output</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">only</span><span class="o">-</span><span class="n">findings</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This also changes in the result displayed, the number of files scanned.</p>
+</div>
+<p>For example, scanning the <code class="docutils literal notranslate"><span class="pre">sample</span></code> files (distributed by default with scancode-toolkit) without
+this option, displays in it’s report information of 43 files. But after enabling this option, the
+result shows information for only 31 files.</p>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="scan-options-pre.html" class="btn btn-neutral float-right" title="Pre-Scan Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="output-format.html" class="btn btn-neutral float-left" title="Scancode Output Formats" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

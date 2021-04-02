@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Pre-Scan Options &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Post-Scan Options" href="scan-options-post.html" />
+    <link rel="prev" title="Controlling Scancode Output and Filters" href="output-filters-and-control.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Command Line Interface Reference</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="synopsis.html">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html">Getting Help from the Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list-options.html">All Available Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html">How to Run a Scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html"><cite>Basic</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html"><cite>Core</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html">Scancode Output Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-filters-and-control.html">Controlling Scancode Output and Filters</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Pre-Scan Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#all-pre-scan-options">All “Pre-Scan” Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ignore-option"><code class="docutils literal notranslate"><span class="pre">--ignore</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#include-option"><code class="docutils literal notranslate"><span class="pre">--include</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#classify"><code class="docutils literal notranslate"><span class="pre">--classify</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#facet-option"><code class="docutils literal notranslate"><span class="pre">--facet</span></code> Option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glob-pattern-matching">Glob Pattern Matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-a-facet">What is a Facet?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html">Post-Scan Options</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Command Line Interface Reference</strong></a> &raquo;</li>
+        
+      <li>Pre-Scan Options</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/cli-reference/scan-options-pre.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pre-scan-options">
+<span id="cli-pre-scan"></span><h1>Pre-Scan Options<a class="headerlink" href="#pre-scan-options" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="all-pre-scan-options">
+<h2>All “Pre-Scan” Options<a class="headerlink" href="#all-pre-scan-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd><span class="option">--ignore <var>&lt;pattern&gt;</var></span></kbd></dt>
+<dd><p>Ignore files matching <code class="docutils literal notranslate"><span class="pre">&lt;pattern&gt;</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">--include <var>&lt;pattern&gt;</var></span></kbd></dt>
+<dd><p>Include files matching <code class="docutils literal notranslate"><span class="pre">&lt;pattern&gt;</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">--classify</span></kbd></dt>
+<dd><p>Classify files with flags telling if the
+file is a legal, or readme or test file,
+etc.</p>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--license-clarity-score</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--summary-key-files</span></code></p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">--facet <var>&lt;facet_pattern&gt;</var></span></kbd></dt>
+<dd><p>Here <code class="docutils literal notranslate"><span class="pre">&lt;facet_pattern&gt;</span></code> represents
+<code class="docutils literal notranslate"><span class="pre">&lt;facet&gt;=&lt;pattern&gt;</span></code>. Add the <code class="docutils literal notranslate"><span class="pre">&lt;facet&gt;</span></code>
+to files with a path matching <code class="docutils literal notranslate"><span class="pre">&lt;pattern&gt;</span></code>.</p>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--summary-by-facet</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that different for different install methods, scan commands vary.</p>
+<p>The basic command to perform a scan, in case of a download and configure installation
+(on Linux/MacOS) is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The basic usage, if Scancode is installed from <code class="docutils literal notranslate"><span class="pre">pip</span></code>, or in Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For more information on how the Scan Command varies for Various Installation
+Methods/Operating Systems, refer <a class="reference internal" href="../getting-started/install.html#commands-variation"><span class="std std-ref">Commands Variation</span></a>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="ignore-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--ignore</span></code> Option<a class="headerlink" href="#ignore-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>In a scan, all files inside the directory specified as an input argument is scanned. But if
+there are some files which you don’t want to scan, the <code class="docutils literal notranslate"><span class="pre">--ignore</span></code> option can be used to do
+the same.</p>
+<p>A sample usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">--</span><span class="n">ignore</span> <span class="s2">&quot;*.java&quot;</span> <span class="n">samples</span> <span class="n">samples</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>Here, Scancode ignores files ending with <cite>.java</cite>, and continues with other files as usual.</p>
+<p>More information on <a class="reference internal" href="#glob-pattern-matching"><span class="std std-ref">Glob Pattern Matching</span></a>.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="include-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--include</span></code> Option<a class="headerlink" href="#include-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>In a normal scan, all files inside the directory specified as an input argument is scanned. But
+if you want to run the scan on only some selective files, then <code class="docutils literal notranslate"><span class="pre">--include</span></code> option can be used
+to do the same.</p>
+<p>A sample usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">--</span><span class="n">include</span> <span class="s2">&quot;*.java&quot;</span> <span class="n">samples</span> <span class="n">samples</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>Here, Scancode selectively scans files that has names ending with <cite>.java</cite>, and ignores all other files. This
+is basically complementary in behavior to the <code class="docutils literal notranslate"><span class="pre">--ignore</span></code> option.</p>
+<p>More information on <a class="reference internal" href="#glob-pattern-matching"><span class="std std-ref">Glob Pattern Matching</span></a>.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="classify">
+<h2><code class="docutils literal notranslate"><span class="pre">--classify</span></code><a class="headerlink" href="#classify" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="admonition-sub-option admonition">
+<p class="admonition-title">Sub-Option</p>
+<p>The options <code class="docutils literal notranslate"><span class="pre">--license-clarity-score</span></code> and <code class="docutils literal notranslate"><span class="pre">--summary-key-files</span></code> are sub-options of
+<code class="docutils literal notranslate"><span class="pre">--classify</span></code>. <code class="docutils literal notranslate"><span class="pre">--license-clarity-score</span></code> and <code class="docutils literal notranslate"><span class="pre">--summary-key-files</span></code> are Post-Scan
+Options.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">--classify</span></code> option can be used like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">sample_facet</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">classify</span>
+</pre></div>
+</div>
+<p>This option makes ScanCode further classify scanned files/directories, to determine whether they
+fall in these following categories</p>
+<ul>
+<li><p>legal</p></li>
+<li><p>readme</p></li>
+<li><p>top-level</p></li>
+<li><p>manifest</p>
+<blockquote>
+<div><p>A manifest file in computing is a file containing metadata for a group of accompanying
+files that are part of a set or coherent unit.</p>
+</div></blockquote>
+</li>
+<li><p>key-file</p>
+<blockquote>
+<div><p>A KEY file is a generic file extension used by various programs when registering legal copies
+of the software. It may be saved in a plain text format, but generally contains some form of
+encrypted key string that authenticates the purchase and registers the software.</p>
+</div></blockquote>
+</li>
+</ul>
+<p>As in, to the JSON object of each file scanned, these extra attributes are added:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;is_legal&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+<span class="s2">&quot;is_manifest&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+<span class="s2">&quot;is_readme&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+<span class="s2">&quot;is_top_level&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+<span class="s2">&quot;is_key_file&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="facet-option">
+<h2><code class="docutils literal notranslate"><span class="pre">--facet</span></code> Option<a class="headerlink" href="#facet-option" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="admonition-sub-option admonition">
+<p class="admonition-title">Sub-Option</p>
+<p>The option <code class="docutils literal notranslate"><span class="pre">--summary-by-facet</span></code> is a sub-option of <code class="docutils literal notranslate"><span class="pre">--facet</span></code>. <code class="docutils literal notranslate"><span class="pre">--summary-by-facet</span></code> is
+a Post-Scan Option.</p>
+</div>
+<p>Valid <code class="docutils literal notranslate"><span class="pre">&lt;facet&gt;</span></code> values are:</p>
+<ul class="simple">
+<li><p>core,</p></li>
+<li><p>dev,</p></li>
+<li><p>tests,</p></li>
+<li><p>docs,</p></li>
+<li><p>data,</p></li>
+<li><p>examples.</p></li>
+</ul>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">--facet</span></code> option in the following manner:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="o">-</span><span class="n">clpieu</span> <span class="o">--</span><span class="n">json</span><span class="o">-</span><span class="n">pp</span> <span class="n">sample_facet</span><span class="o">.</span><span class="n">json</span> <span class="n">samples</span> <span class="o">--</span><span class="n">facet</span> <span class="n">dev</span><span class="o">=</span><span class="s2">&quot;*.java&quot;</span> <span class="o">--</span><span class="n">facet</span> <span class="n">dev</span><span class="o">=</span><span class="s2">&quot;*.c&quot;</span>
+</pre></div>
+</div>
+<p>This adds to the header object, the following attribute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;--facet&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s2">&quot;dev=*.java&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;dev=*.c&quot;</span>
+<span class="p">],</span>
+</pre></div>
+</div>
+<p>Here in this example, <code class="docutils literal notranslate"><span class="pre">.java</span></code> and <code class="docutils literal notranslate"><span class="pre">.c</span></code> files are marked as it belongs to facet <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+<p>As a result, <code class="docutils literal notranslate"><span class="pre">.java</span></code> file has the following attribute added:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;facets&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s2">&quot;dev&quot;</span>
+<span class="p">],</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All other files which are not <code class="docutils literal notranslate"><span class="pre">dev</span></code> are marked to be included in the facet <code class="docutils literal notranslate"><span class="pre">core</span></code>.</p>
+</div>
+<p>For each facet, the <code class="docutils literal notranslate"><span class="pre">--facet</span></code> option precedes the <code class="docutils literal notranslate"><span class="pre">&lt;facet&gt;=&lt;pattern&gt;</span></code> argument. For specifying
+multiple facets, this whole part is repeated, including the <code class="docutils literal notranslate"><span class="pre">--facet</span></code> option.</p>
+<p>For users who want to know <a class="reference internal" href="#what-is-a-facet"><span class="std std-ref">What is a Facet?</span></a>.</p>
+</div></blockquote>
+<hr class="docutils" />
+</div>
+<div class="section" id="glob-pattern-matching">
+<span id="id1"></span><h2>Glob Pattern Matching<a class="headerlink" href="#glob-pattern-matching" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>All the Pre-Scan options use pattern matching, so the basics of Glob Pattern Matching is
+discussed briefly below.</p>
+<p>Glob pattern matching is useful for matching a group of files, by using patterns in their
+names. Then using these patterns, files are grouped and treated differently as required.</p>
+<p>Here are some rules from the <a class="reference external" href="http://man7.org/linux/man-pages/man7/glob.7.html">Linux Manual</a>
+on glob patterns. Refer the same for more detailed information.</p>
+<p>A string is a wildcard pattern if it contains one of the characters ‘?’, ‘*’ or ‘[‘.  Globbing
+is the operation that expands a wildcard pattern into the list of pathnames matching the
+pattern. Matching is defined by:</p>
+<ul class="simple">
+<li><p>A ‘?’ (not between brackets) matches any single character.</p></li>
+<li><p>A ‘*’ (not between brackets) matches any string, including the empty string.</p></li>
+<li><p>An expression “[…]” where the first character after the leading ‘[‘ is not an ‘!’ matches a
+single character, namely any of the characters enclosed by the brackets.</p></li>
+<li><p>There is one special convention: two characters separated by ‘-‘ denote a range.</p></li>
+<li><p>An expression “[!…]” matches a single character, namely any character that is not matched
+by the expression obtained by removing the first ‘!’ from it.</p></li>
+<li><p>A ‘/’ in a pathname cannot be matched by a ‘?’ or ‘*’ wildcard, or by a range like “[.-0]”.</p></li>
+</ul>
+<p>Note that wildcard patterns are not regular expressions, although they are a bit similar.</p>
+<p>For more information on Glob pattern matching refer these resources:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://man7.org/linux/man-pages/man7/glob.7.html">Linux Manual</a></p></li>
+<li><p><a class="reference external" href="https://facelessuser.github.io/wcmatch/glob/">Wildcard Match Documentation</a>.</p></li>
+</ul>
+</div></blockquote>
+<p>You can also import these Python Libraries to practice UNIX style pattern matching:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/2/library/fnmatch.html">fnmatch</a> for File Name matching</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/2/library/glob.html#module-glob">glob</a> for File Path matching</p></li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+</div>
+<div class="section" id="what-is-a-facet">
+<span id="id3"></span><h2>What is a Facet?<a class="headerlink" href="#what-is-a-facet" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>A facet is defined as follows (by ClearlyDefined):</p>
+<p>A facet of a component is a subset of the files related to the component. It’s really just a
+grouping that helps us understand the shape of the project. Each facet is described by a set of
+glob expressions, essentially wildcard patterns that are matched against file names.</p>
+<p>Each facet definition can have zero or more glob expressions. A file can be captured by more
+than one facet. Any file found but not captured by a defined facet is automatically assigned to
+the core facet.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">core</span></code> - The files that go into making the release of the component. Note that the core
+facet is not explicitly defined. Rather, it is made up of whatever is not in any other facet.
+So, by default, all files are in the core facet unless otherwise specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> - The files included in any data distribution of the component.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dev</span></code> - Files primarily used at development time (e.g., build utilities) and not
+distributed with the component</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docs</span></code> - Documentation files. Docs may be included with the executable component or
+separately or not at all.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">examples</span></code> – Like docs, examples may be included in the main component release or
+separately.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tests</span></code> – Test files may include code, data and other artifacts.</p></li>
+</ul>
+<p>Important Links:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/clearlydefined/clearlydefined/blob/master/docs/clearly.md">Facets</a></p></li>
+<li><p><a class="reference external" href="https://clearlydefined.io/about">ClearlyDefined</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="scan-options-post.html" class="btn btn-neutral float-right" title="Post-Scan Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="output-filters-and-control.html" class="btn btn-neutral float-left" title="Controlling Scancode Output and Filters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

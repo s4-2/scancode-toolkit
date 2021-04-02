@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>All Available Options &mdash; ScanCode-Toolkit  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How to Run a Scan" href="simple-examples.html" />
+    <link rel="prev" title="Getting Help from the Command Line" href="help-text-options.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ScanCode-Toolkit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/newcomer.html">Are you new to Scancode-Toolkit?</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html"><strong>Getting Started</strong></a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Command Line Interface Reference</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="synopsis.html">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help-text-options.html">Getting Help from the Command Line</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">All Available Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#all-basic-scan-options">All “Basic” Scan Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all-extractcode-options">All Extractcode Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all-core-scan-options">All “Core” Scan Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all-scan-output-options">All Scan Output Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all-output-control-scan-options">All “Output Control” Scan Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all-pre-scan-options">All “Pre-Scan” Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all-post-scan-options">All “Post-Scan” Options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="simple-examples.html">How to Run a Scan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-options.html"><cite>Basic</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core-options.html"><cite>Core</cite> Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-format.html">Scancode Output Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-filters-and-control.html">Controlling Scancode Output and Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-pre.html">Pre-Scan Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan-options-post.html">Post-Scan Options</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html"><strong>Basic Tutorials</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-guides/index.html"><strong>How-To Guides</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html"><strong>Contribute</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html"><strong>Plugins</strong></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html"><strong>Miscellaneous</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../explanations/index.html"><strong>How it all Works</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ScanCode-Toolkit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><strong>Command Line Interface Reference</strong></a> &raquo;</li>
+        
+      <li>All Available Options</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/cli-reference/list-options.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="all-available-options">
+<span id="cli-list-options"></span><h1>All Available Options<a class="headerlink" href="#all-available-options" title="Permalink to this headline">¶</a></h1>
+<p>This section contains an exhaustive list of all Scancode options, arranged in various sections.
+The sections are as follows:</p>
+<ul class="simple">
+<li><p>Basic Scan Options</p></li>
+<li><p>Core Scan Options</p></li>
+<li><p>Output Formats</p></li>
+<li><p>Controlling Output and Filters</p></li>
+<li><p>Pre-Scan Options</p></li>
+<li><p>Post-Scan Options</p></li>
+</ul>
+<p>There’s also another section for <code class="docutils literal notranslate"><span class="pre">extractcode</span></code> options.</p>
+<p>The order of the sections and all their options is the same as in the :ref:’cli_help_text’,
+available in the command line.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that different for different install methods, scan commands vary.</p>
+<p>The basic command to perform a scan, in case of a download and configure installation
+(on Linux/MacOS) is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The basic usage, if Scancode is installed from <code class="docutils literal notranslate"><span class="pre">pip</span></code>, or in Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancode</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">OUTPUT</span> <span class="n">FORMAT</span> <span class="n">OPTION</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">SCAN</span> <span class="n">INPUT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For more information on how the Scan Command varies for Various Installation
+Methods/Operating Systems, refer <a class="reference internal" href="../getting-started/install.html#commands-variation"><span class="std std-ref">Commands Variation</span></a>.</p>
+</div>
+<div class="section" id="all-basic-scan-options">
+<span id="cli-basic"></span><h2>All “Basic” Scan Options<a class="headerlink" href="#all-basic-scan-options" title="Permalink to this headline">¶</a></h2>
+<p>Option lists are two-column lists of command-line options and descriptions,
+documenting a program’s options. For example:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-c</span>, <span class="option">--copyright</span></kbd></dt>
+<dd><p>Scan <code class="docutils literal notranslate"><span class="pre">&lt;input&gt;</span></code> for copyrights.</p>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--consolidate</span></code></p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">-l</span>, <span class="option">--license</span></kbd></dt>
+<dd><p>Scan <code class="docutils literal notranslate"><span class="pre">&lt;input&gt;</span></code> for licenses.</p>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--consolidate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--license-score</span> <span class="pre">INT</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--license-text</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--license-url-template</span> <span class="pre">TEXT</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--license-text-diagnostics</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--is-license-text</span></code></p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">-p</span>, <span class="option">--package</span></kbd></dt>
+<dd><p>Scan <code class="docutils literal notranslate"><span class="pre">&lt;input&gt;</span></code> for packages.</p>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--consolidate</span></code></p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">-e</span>, <span class="option">--email</span></kbd></dt>
+<dd><p>Scan <code class="docutils literal notranslate"><span class="pre">&lt;input&gt;</span></code> for emails.</p>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--max-email</span> <span class="pre">INT</span></code></p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">-u</span>, <span class="option">--url</span></kbd></dt>
+<dd><p>Scan <code class="docutils literal notranslate"><span class="pre">&lt;input&gt;</span></code> for urls.</p>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--max-url</span> <span class="pre">INT</span></code></p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">-i</span>, <span class="option">--info</span></kbd></dt>
+<dd><p>Include information such as:</p>
+<ul class="simple">
+<li><p>Size,</p></li>
+<li><p>Type,</p></li>
+<li><p>Date,</p></li>
+<li><p>Programming language,</p></li>
+<li><p>sha1 and md5 hashes,</p></li>
+<li><p>binary/text/archive/media/source/script flags</p></li>
+<li><p>Additional options through more CLI options</p></li>
+</ul>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--mark-source</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unlike previous 2.x versions, -c, -l, and -p are not default. If any of combination of these
+options are used, ScanCode only performs that specific task, and not the others.
+<code class="docutils literal notranslate"><span class="pre">scancode</span> <span class="pre">-e</span></code> only scans for emails, and doesn’t scan for copyright/license/packages/general
+information.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These options, i.e. -c, -l, -p, -e, -u, and -i can be used together. As in, instead of
+<code class="docutils literal notranslate"><span class="pre">scancode</span> <span class="pre">-c</span> <span class="pre">-i</span> <span class="pre">-p</span></code>, you can write <code class="docutils literal notranslate"><span class="pre">scancode</span> <span class="pre">-cip</span></code> and it will be the same.</p>
+</div>
+<dl class="option-list">
+<dt><kbd><span class="option">--generated</span></kbd></dt>
+<dd><p>Classify automatically generated code files with a flag.</p>
+</dd>
+<dt><kbd><span class="option">--max-email <var>INT</var></span></kbd></dt>
+<dd><p>Report only up to INT emails found in a
+file. Use 0 for no limit.  [Default: 50]</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--email</span></code></p>
+</dd>
+<dt><kbd><span class="option">--max-url <var>INT</var></span></kbd></dt>
+<dd><p>Report only up to INT urls found in a
+file. Use 0 for no limit.  [Default: 50]</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--url</span></code></p>
+</dd>
+<dt><kbd><span class="option">--license-score <var>INTEGER</var></span></kbd></dt>
+<dd><p>Do not return license matches with scores lower than this score.
+A number between 0 and 100.  [Default: 0]
+Here, a bigger number means a better match, i.e. Setting a higher license score
+translates to a higher threshold (with equal or less number of matches).</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--license</span></code></p>
+</dd>
+<dt><kbd><span class="option">--license-text</span></kbd></dt>
+<dd><p>Include the matched text for the detected licenses in the output report.</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--license</span></code></p>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--license-text-diagnostics</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--is-license-text</span></code></p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">--license-url-template <var>TEXT</var></span></kbd></dt>
+<dd><p>Set the template URL used for the license reference URLs.</p>
+<p>In a template URL, curly braces ({}) are replaced by the license key.
+[Default: <a class="reference external" href="https://enterprise.dejacode.com/urn/urn:dje:license">https://enterprise.dejacode.com/urn/urn:dje:license</a>:{}]</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--license</span></code></p>
+</dd>
+<dt><kbd><span class="option">--license-text-diagnostics</span></kbd></dt>
+<dd><p>In the matched license text, include diagnostic highlights surrounding with
+square brackets [] words that are not matched.</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--license</span></code> and <code class="docutils literal notranslate"><span class="pre">--license-text</span></code></p>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="all-extractcode-options">
+<h2>All Extractcode Options<a class="headerlink" href="#all-extractcode-options" title="Permalink to this headline">¶</a></h2>
+<p>This is intended to be used as an input preparation step, before running the scan. Archives found
+in an extracted archive are extracted <strong>recursively</strong> by default. Extraction is done in-place
+in a directory named ‘-extract’ side-by-side with an archive.</p>
+<p>To extract the packages in the <code class="docutils literal notranslate"><span class="pre">samples</span></code> directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extractcode</span> <span class="n">samples</span>
+</pre></div>
+</div>
+<p>This extracts the zlib.tar.gz package:</p>
+<img alt="../_images/extractcode.png" src="../_images/extractcode.png" />
+<dl class="option-list" id="cli-extract">
+<dt><kbd><span class="option">--shallow</span></kbd></dt>
+<dd><p>Do not extract recursively nested archives (e.g. Not
+archives in archives).</p>
+</dd>
+<dt><kbd><span class="option">--verbose</span></kbd></dt>
+<dd><p>Print verbose file-by-file progress messages.</p>
+</dd>
+<dt><kbd><span class="option">--quiet</span></kbd></dt>
+<dd><p>Do not print any summary or progress message.</p>
+</dd>
+<dt><kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></dt>
+<dd><p>Show the extractcode help message and exit.</p>
+</dd>
+<dt><kbd><span class="option">--about</span></kbd></dt>
+<dd><p>Show information about ScanCode and licensing and exit.</p>
+</dd>
+<dt><kbd><span class="option">--version</span></kbd></dt>
+<dd><p>Show the version and exit.</p>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="all-core-scan-options">
+<h2>All “Core” Scan Options<a class="headerlink" href="#all-core-scan-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd><span class="option">-n</span>, <span class="option">--processes <var>INTEGER</var></span></kbd></dt>
+<dd><p>Scan <code class="docutils literal notranslate"><span class="pre">&lt;input&gt;</span></code> using n parallel processes.
+[Default: 1]</p>
+</dd>
+<dt><kbd><span class="option">--verbose</span></kbd></dt>
+<dd><p>Print verbose file-by-file progress messages.</p>
+</dd>
+<dt><kbd><span class="option">--quiet</span></kbd></dt>
+<dd><p>Do not print summary or progress messages.</p>
+</dd>
+<dt><kbd><span class="option">--timeout <var>FLOAT</var></span></kbd></dt>
+<dd><p>Stop scanning a file if scanning takes longer
+than a timeout in seconds.  [Default: 120]</p>
+</dd>
+<dt><kbd><span class="option">--reindex-licenses</span></kbd></dt>
+<dd><p>Force a check and possible reindexing of the
+cached license index.</p>
+</dd>
+<dt><kbd><span class="option">--from-json</span></kbd></dt>
+<dd><p>Load codebase from an existing JSON scan</p>
+</dd>
+<dt><kbd><span class="option">--max-in-memory <var>INTEGER</var></span></kbd></dt>
+<dd><p>Maximum number of files and directories scan
+details kept in memory during a scan.
+Additional files and directories scan details
+above this number are cached on-disk rather
+than in memory. Use 0 to use unlimited memory
+and disable on-disk caching. Use -1 to use
+only on-disk caching.  [Default: 10000]</p>
+</dd>
+<dt><kbd><span class="option">--max-depth <var>INTEGER</var></span></kbd></dt>
+<dd><p>Descend at most INTEGER levels of directories
+including and below the starting point. INTEGER
+must be positive or zero for no limit.
+[Default: 0]</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All the Core Options are independent options, i.e. They don’t depend on other options.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="all-scan-output-options">
+<h2>All Scan Output Options<a class="headerlink" href="#all-scan-output-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd><span class="option">--json <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as compact JSON to FILE.</p>
+</dd>
+<dt><kbd><span class="option">--json-pp <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as pretty-printed JSON to
+FILE.</p>
+</dd>
+<dt><kbd><span class="option">--json-lines <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as JSON Lines to FILE.</p>
+</dd>
+<dt><kbd><span class="option">--csv <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as CSV to FILE.</p>
+</dd>
+<dt><kbd><span class="option">--html <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as HTML to FILE.</p>
+</dd>
+<dt><kbd><span class="option">--custom-output</span></kbd></dt>
+<dd><p>Write scan output to FILE formatted with the
+custom Jinja template file.</p>
+<p>Mandatory Sub-option:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--custom-template</span> <span class="pre">FILE</span></code></p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">--custom-template <var>FILE</var></span></kbd></dt>
+<dd><p>Use this Jinja template FILE as a custom
+template.</p>
+<p>Sub-Option of: <code class="docutils literal notranslate"><span class="pre">--custom-output</span></code></p>
+</dd>
+<dt><kbd><span class="option">--spdx-rdf <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as SPDX RDF to FILE.</p>
+</dd>
+<dt><kbd><span class="option">--spdx-tv <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as SPDX Tag/Value to FILE.</p>
+</dd>
+<dt><kbd><span class="option">--html-app <var>FILE</var></span></kbd></dt>
+<dd><p>Write scan output as a mini HTML
+application to FILE.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The html-app feature has been deprecated and you should use Scancode Workbench instead
+to visualize scan results. The official Repository <a class="reference external" href="https://github.com/nexB/scancode-workbench">link</a>.
+Also refer <a class="reference internal" href="../tutorials/how_to_visualize_scan_results.html#how-to-visualize-scan-results"><span class="std std-ref">How to Visualize Scan results</span></a>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="all-output-control-scan-options">
+<h2>All “Output Control” Scan Options<a class="headerlink" href="#all-output-control-scan-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd><span class="option">--strip-root</span></kbd></dt>
+<dd><p>Strip the root directory segment of all paths.</p>
+</dd>
+<dt><kbd><span class="option">--full-root</span></kbd></dt>
+<dd><p>Report full, absolute paths.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The options <code class="docutils literal notranslate"><span class="pre">--strip-root</span></code> and <code class="docutils literal notranslate"><span class="pre">--full-root</span></code> can’t be used together, i.e. Any one option
+may be used in a single scan.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default is to always include the last directory segment of the scanned path such that all
+paths have a common root directory.</p>
+</div>
+<dl class="option-list">
+<dt><kbd><span class="option">--ignore-author <var>&lt;pattern&gt;</var></span></kbd></dt>
+<dd><p>Ignore a file (and all its findings)
+if an author contains a match to the
+<code class="docutils literal notranslate"><span class="pre">&lt;pattern&gt;</span></code> regular expression.</p>
+</dd>
+<dt><kbd><span class="option">--ignore-copyright-holder <var>&lt;pattern&gt;</var></span></kbd></dt>
+<dd><p>Ignore a file (and all its findings)
+if a copyright holder contains a match
+to the <code class="docutils literal notranslate"><span class="pre">&lt;pattern&gt;</span></code> regular expression.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that this both the options <code class="docutils literal notranslate"><span class="pre">--ignore-author</span></code> and <code class="docutils literal notranslate"><span class="pre">--ignore-copyright-holder</span></code> will
+ignore a file even if it has other scanned data such as a license or errors.</p>
+</div>
+<dl class="option-list">
+<dt><kbd><span class="option">--only-findings</span></kbd></dt>
+<dd><p>Only return files or directories with
+findings for the requested scans.
+Files and directories without findings
+are omitted (file information is not
+treated as findings).</p>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="all-pre-scan-options">
+<h2>All “Pre-Scan” Options<a class="headerlink" href="#all-pre-scan-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd><span class="option">--ignore <var>&lt;pattern&gt;</var></span></kbd></dt>
+<dd><p>Ignore files matching <code class="docutils literal notranslate"><span class="pre">&lt;pattern&gt;</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">--include <var>&lt;pattern&gt;</var></span></kbd></dt>
+<dd><p>Include files matching <code class="docutils literal notranslate"><span class="pre">&lt;pattern&gt;</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">--classify</span></kbd></dt>
+<dd><p>Classify files with flags telling if the
+file is a legal, or readme or test file,
+etc.</p>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--license-clarity-score</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--summary-key-files</span></code></p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">--facet <var>&lt;facet_pattern&gt;</var></span></kbd></dt>
+<dd><p>Here <code class="docutils literal notranslate"><span class="pre">&lt;facet_pattern&gt;</span></code> represents
+<code class="docutils literal notranslate"><span class="pre">&lt;facet&gt;=&lt;pattern&gt;</span></code>. Add the <code class="docutils literal notranslate"><span class="pre">&lt;facet&gt;</span></code>
+to files with a path matching <code class="docutils literal notranslate"><span class="pre">&lt;pattern&gt;</span></code>.</p>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--summary-by-facet</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="all-post-scan-options">
+<h2>All “Post-Scan” Options<a class="headerlink" href="#all-post-scan-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd><span class="option">--mark-source</span></kbd></dt>
+<dd><p>Set the “is_source” flag to true for directories that
+contain over 90% of source files as direct children
+and descendants. Count the number of source files in a
+directory as a new “source_file_counts” attribute</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--url</span></code></p>
+</dd>
+<dt><kbd><span class="option">--consolidate</span></kbd></dt>
+<dd><p>Group resources by Packages or license and
+copyright holder and return those groupings
+as a list of consolidated packages and a list
+of consolidated components.</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--copyright</span></code>, <code class="docutils literal notranslate"><span class="pre">--license</span></code> and
+<code class="docutils literal notranslate"><span class="pre">--packages</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">--filter-clues</span></kbd></dt>
+<dd><p>Filter redundant duplicated clues already
+contained in detected licenses, copyright
+texts and notices.</p>
+</dd>
+<dt><kbd><span class="option">--is-license-text</span></kbd></dt>
+<dd><p>Set the “is_license_text” flag to true for
+files that contain mostly license texts and
+notices (e.g. over 90% of the content).</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--info</span></code> and <code class="docutils literal notranslate"><span class="pre">--license-text</span></code>.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">--is-license-text</span></code> is an experimental Option.</p>
+</div>
+<dl class="option-list">
+<dt><kbd><span class="option">--license-clarity-score</span></kbd></dt>
+<dd><p>Compute a summary license clarity score at
+the codebase level.</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--classify</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">--license-policy <var>FILE</var></span></kbd></dt>
+<dd><p>Load a License Policy file and apply it to
+the scan at the Resource level.</p>
+</dd>
+<dt><kbd><span class="option">--summary</span></kbd></dt>
+<dd><p>Summarize license, copyright and other scans
+at the codebase level.</p>
+<p>Sub-Options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--summary-by-facet</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--summary-key-files</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--summary-with-details</span></code></p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">--summary-by-facet</span></kbd></dt>
+<dd><p>Summarize license, copyright and other scans
+and group the results by facet.</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--summary</span></code> and <code class="docutils literal notranslate"><span class="pre">--facet</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">--summary-key-files</span></kbd></dt>
+<dd><p>Summarize license, copyright and other scans
+for key, top-level files. Key files are top-
+level codebase files such as COPYING, README
+and package manifests as reported by the
+<code class="docutils literal notranslate"><span class="pre">--classify</span></code> option “is_legal”, “is_readme”,
+“is_manifest” and “is_top_level” flags.</p>
+<p>Sub-Option of - <code class="docutils literal notranslate"><span class="pre">--classify</span></code> and <code class="docutils literal notranslate"><span class="pre">--summary</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">--summary-with-details</span></kbd></dt>
+<dd><p>Summarize license, copyright and other scans
+at the codebase level, keeping intermediate
+details at the file and directory level.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="simple-examples.html" class="btn btn-neutral float-right" title="How to Run a Scan" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="help-text-options.html" class="btn btn-neutral float-left" title="Getting Help from the Command Line" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019 ScanCode-Toolkit.org.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
